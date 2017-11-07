@@ -1,0 +1,20 @@
+{
+  "name": "geogebra",
+  "version": "1.0.0",
+  "description": "GeoGebra Centar Beograd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1"
+  },
+  "dependencies": {
+    "parallax-js": "^1.0.0",
+    "particles.js": "^2.0.0"
+  }
+}

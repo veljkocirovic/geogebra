@@ -1,0 +1,93 @@
+a:link{
+    color: $main-color;
+    text-decoration: none;    
+}
+
+a:hover{
+    color: $dark-gray-color !important;
+    text-decoration: none;
+}
+
+a:visited{
+    color: $main-color;    
+    text-decoration: none;
+}
+
+a:active{
+    color: $main-color;    
+    text-decoration: none;
+}
+
+.light-link:link{
+    color: $light-gray-color;
+    text-decoration: none;    
+}
+
+.light-link:hover{
+    color: $light-color !important;
+    text-decoration: none;
+}
+
+.light-link:visited{
+    color: $light-gray-color;    
+    text-decoration: none;
+}
+
+.light-link:active{
+    color: $light-gray-color;    
+    text-decoration: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.font-md{
+    font-size: 16px;
+}
+
+.font-xl{
+    font-size: 24px;
+}
+
+.font-xxl{
+    font-size: 28px;
+}
+
+.line-md{
+    line-height: 2em;
+}
+
+.sample-list{
+    list-style-type: none;
+    padding: 0;
+    li{
+        margin: 15px 0 15px 0; 
+    }
+}
+
+ul{
+    li{
+        margin: 15px 0 15px 0; 
+    }
+}
+
+.main-color{
+    color: $main-color;
+}
+
+.display-4{
+    color: $dark-gray-color;
+}

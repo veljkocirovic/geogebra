@@ -1,0 +1,40 @@
+footer{
+    
+}
+
+#footer-header{
+    background-color: $dark-color;    
+    padding: 20px 0 20px 0;
+    color: $light-color;
+    text-align: center;  
+    border-top: 3px solid $main-color;  
+}
+
+#footer-main{
+    background-color: $dark-color;    
+    padding: 20px 15px 20px 15px;
+    color: $light-color;
+}
+
+#footer-bottom{
+    background-color: $dark-gray-color;
+    color: $light-color;
+    min-height: 60px;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    line-height: 60px;
+}
+
+#footer-links{
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer-links > li{
+    margin: 5px 0 5px 0;
+}
+
+#footer-contact{
+    color: $light-gray-color;
+}
