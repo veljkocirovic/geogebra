@@ -1,76 +1,98 @@
 * {
-  font-family: 'Segoe UI', 'Arial', sans-serif; }
+  font-family: "Segoe UI", "Arial", sans-serif;
+}
 
 a:link {
   color: #9999ff;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:hover {
   color: #606060 !important;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:visited {
   color: #9999ff;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:active {
   color: #9999ff;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .light-link:link {
   color: #b0b0b0;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .light-link:hover {
   color: #f7f7f7 !important;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .light-link:visited {
   color: #b0b0b0;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .light-link:active {
   color: #b0b0b0;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .text-center {
-  text-align: center; }
+  text-align: center;
+}
 
 .text-left {
-  text-align: left; }
+  text-align: left;
+}
 
 .text-right {
-  text-align: right; }
+  text-align: right;
+}
 
 .text-justify {
-  text-align: justify; }
+  text-align: justify;
+}
 
 .font-md {
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .font-xl {
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 .font-xxl {
-  font-size: 28px; }
+  font-size: 28px;
+}
 
 .line-md {
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .sample-list {
   list-style-type: none;
-  padding: 0; }
-  .sample-list li {
-    margin: 15px 0 15px 0; }
+  padding: 0;
+}
+.sample-list li {
+  margin: 15px 0 15px 0;
+}
 
 ul li {
-  margin: 15px 0 15px 0; }
+  margin: 15px 0 15px 0;
+}
 
 .main-color {
-  color: #9999ff; }
+  color: #9999ff;
+}
 
 .display-4 {
-  color: #606060; }
+  color: #606060;
+}
 
 /* Underline From Center */
 .hvr-underline-from-center {
@@ -80,7 +102,8 @@ ul li {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .hvr-underline-from-center:before {
   content: "";
@@ -96,53 +119,64 @@ ul li {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out; }
+  transition-timing-function: ease-out;
+}
 
 .hvr-underline-from-center:hover:before {
   left: 0;
-  right: 0; }
+  right: 0;
+}
 
 .nav-item {
-  margin: 0 10px 0 10px; }
+  margin: 0 10px 0 10px;
+}
 
 .navbar-toggler {
-  border: none; }
+  border: none;
+}
 
 header {
   width: 100%;
   height: 550px;
   background-color: #f7f7f7;
   position: relative;
-  top: -30px; }
+  top: -30px;
+}
 
 #scene-wrapper {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  height: inherit; }
+  height: inherit;
+}
 
 #scene {
   overflow: hidden;
-  height: inherit; }
+  height: inherit;
+}
 
 .layer {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 #layer10 {
-  padding-top: 150px; }
+  padding-top: 150px;
+}
 
 #footer-header {
   background-color: #505050;
   padding: 20px 0 20px 0;
   color: #f7f7f7;
   text-align: center;
-  border-top: 3px solid #9999ff; }
+  border-top: 3px solid #9999ff;
+}
 
 #footer-main {
   background-color: #505050;
   padding: 20px 15px 20px 15px;
-  color: #f7f7f7; }
+  color: #f7f7f7;
+}
 
 #footer-bottom {
   background-color: #606060;
@@ -151,60 +185,75 @@ header {
   position: relative;
   bottom: 0;
   text-align: center;
-  line-height: 60px; }
+  line-height: 60px;
+}
 
 #footer-links {
   list-style-type: none;
-  padding: 0; }
+  padding: 0;
+}
 
 #footer-links > li {
-  margin: 5px 0 5px 0; }
+  margin: 5px 0 5px 0;
+}
 
 #footer-contact {
-  color: #b0b0b0; }
+  color: #b0b0b0;
+}
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .box-shadow-small {
-  box-shadow: 0 0 20px #b0b0b0; }
+  box-shadow: 0 0 20px #b0b0b0;
+}
 
 button:active, button:focus {
-  outline: none; }
+  outline: none;
+}
 
 #states {
-  margin-top: 80px !important; }
+  margin-top: 80px !important;
+}
 
 #manual:hover {
   cursor: pointer;
-  color: #9999ff; }
+  color: #9999ff;
+}
 
 .materials-logo {
-  height: 80px; }
+  height: 80px;
+}
 
 .row-centered {
-  text-align: center; }
+  text-align: center;
+}
 
 .col-centered {
   display: inline-block;
   float: none;
   text-align: left;
   margin-right: -4px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .material-image {
   width: 200px;
   height: 120px;
   border: 2px solid #b0b0b0;
-  margin: 15px; }
+  margin: 15px;
+}
 
 .centered-image {
   display: block;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .centered {
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=style.css.map */
