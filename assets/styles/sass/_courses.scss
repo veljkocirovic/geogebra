@@ -1,0 +1,39 @@
+.courses-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.courses-menu {
+  background-color: rgba($light-color, 0.5);
+  border-right: 1px solid rgba($light-gray-color, 0.2);
+  width: 350px;
+  height: calc(100vh - 60px);
+  padding-left: 12px;
+  .course-title {
+    margin: 24px 0 24px 0;
+    color: $dark-color;
+    font-weight: 200;
+  }
+  .lesson-title {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    border: none;
+    background: none;
+    height: 40px;
+    cursor: pointer;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.courses-content {
+  width: calc(100vw - 350px);
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+#course-text {
+  padding: 24px;
+}

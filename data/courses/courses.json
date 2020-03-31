@@ -1,0 +1,20 @@
+[
+  {
+    "id": "course-1",
+    "title": "Course 1",
+    "folder": "course-1",
+    "description": "Description of course 1",
+    "lessons": [
+      {
+        "id": "lesson-1",
+        "file": "lesson-1",
+        "title": "Lesson 1"
+      },
+      {
+        "id": "lesson-2",
+        "file": "lesson-2",
+        "title": "Lesson 2"
+      }
+    ]
+  }
+]
