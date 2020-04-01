@@ -18,10 +18,7 @@ function loadCourses() {
       );
     });
 
-    $("<div/>", {
-      class: "course-menu-item",
-      html: courses.join("")
-    }).appendTo("#courses-menu");
+    $("#courses-menu").html(courses.join(""));
 
     data.forEach(function(course) {
       var lessons = [];
@@ -38,10 +35,7 @@ function loadCourses() {
         );
       });
 
-      $("<div/>", {
-        class: "lessons-menu-item",
-        html: lessons.join("")
-      }).appendTo("#" + course.id);
+      $("#" + course.id).html(lessons.join(""));
     });
   });
 }
