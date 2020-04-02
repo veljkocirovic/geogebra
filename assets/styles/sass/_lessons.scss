@@ -1,0 +1,46 @@
+.courses-content{
+    @for $index from 3 to 6 {
+        h#{$index}{
+            margin-top: 3rem;
+        }
+    }
+    @for $index from 1 to 6 {
+        h#{$index}{
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.display-5 {
+  color: $dark-gray-color;
+}
+
+@mixin typed-paragraph($color) {
+  background-color: rgba($color, 0.1);
+  border-left: 7px solid $color;
+  padding: 20px 25px 20px 25px;
+  margin: 25px 0;
+  h4 {
+    color: darken($color: $color, $amount: 60);
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+}
+
+.deffinition-paragraph {
+  @include typed-paragraph($main-color);
+}
+
+.tips-paragraph {
+  @include typed-paragraph($warning-color);
+}
+
+.success-paragraph {
+  @include typed-paragraph($success-color);
+}
+
+.error-paragraph {
+  @include typed-paragraph($error-color);
+}

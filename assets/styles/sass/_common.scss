@@ -1,54 +1,61 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-.box-shadow-small{
-    box-shadow: 0 0 20px $light-gray-color;
+.box-shadow-small {
+  box-shadow: 0 0 20px $light-gray-color;
 }
 
-button:active, button:focus{
-    outline: none;
+button:active,
+button:focus {
+  outline: none;
 }
 
-#states{
-    margin-top: 60px !important;
+.btn-link {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
-#manual:hover{
-    cursor: pointer;
-    color: $main-color;
+#states {
+  margin-top: 60px !important;
 }
 
-.materials-logo{
-    height: 80px;
+#manual:hover {
+  cursor: pointer;
+  color: $main-color;
+}
+
+.materials-logo {
+  height: 80px;
 }
 
 .row-centered {
-    text-align:center;
+  text-align: center;
 }
 
 .col-centered {
-    display:inline-block;
-    float:none;
-    text-align:left;
-    margin-right:-4px;
-    margin: 0 auto;
+  display: inline-block;
+  float: none;
+  text-align: left;
+  margin-right: -4px;
+  margin: 0 auto;
 }
 
-.material-image{
-    width: 200px;
-    height: 120px;
-    border: 2px solid $light-gray-color;
-    margin: 15px;
+.material-image {
+  width: 200px;
+  height: 120px;
+  border: 2px solid $light-gray-color;
+  margin: 15px;
 }
 
-.centered-image{
-    display: block;
-    position: relative;
-    margin: 0 auto;
+.centered-image {
+  display: block;
+  position: relative;
+  margin: 0 auto;
 }
 
-.centered{
-    position: relative;
-    margin: 0 auto;
+.centered {
+  position: relative;
+  margin: 0 auto;
 }
