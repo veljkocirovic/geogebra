@@ -1,14 +1,15 @@
-.courses-content{
-    @for $index from 3 to 6 {
-        h#{$index}{
-            margin-top: 3rem;
-        }
+.courses-content {
+  @for $index from 3 to 6 {
+    h#{$index} {
+      margin-top: 3rem;
     }
-    @for $index from 1 to 6 {
-        h#{$index}{
-            margin-bottom: 2rem;
-        }
+  }
+  @for $index from 1 to 6 {
+    h#{$index} {
+      margin-bottom: 2rem;
+      font-weight: 400;
     }
+  }
 }
 
 .display-5 {
@@ -43,4 +44,41 @@
 
 .error-paragraph {
   @include typed-paragraph($error-color);
+}
+
+.light-paragraph {
+  background-color: $light-color;
+  padding: 20px 25px 20px 25px;
+  margin: 25px 0;
+}
+
+.dark-paragraph {
+  background-color: $dark-gray-color;
+  color: white;
+  padding: 20px 25px 20px 25px;
+  margin: 25px 0;
+}
+
+.btn {
+  border: none;
+}
+
+.btn-primary {
+  background-color: $main-color;
+  &:hover {
+    background-color: $main-color-dark;
+  }
+}
+
+.btn-secondary {
+  background-color: $light-color;
+  color: $dark-color;
+}
+
+.btn-success {
+  background-color: $success-color;
+}
+
+.btn-danger {
+  background-color: $error-color;
 }
