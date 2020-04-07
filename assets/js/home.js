@@ -9,6 +9,6 @@ $('.news-link').click(function(e){
     if(!$(this).attr('data-state')){
         return;
     }
-    e.preventDefault();
+    e.preventDefault();s
     app.loadState($(this).attr('data-state'), $(this).attr('data-state-params'));
 })
