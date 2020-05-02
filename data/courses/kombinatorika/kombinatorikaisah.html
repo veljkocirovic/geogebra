@@ -2,19 +2,202 @@
 <html lang="en">
 
 <head>
-<title>Kombinatorika i sah</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra Lesson</title>
-    <link rel="icon" href="assets/images/geogebra-logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <title>Kombinatorika i sah</title>
+</head>
 
-<script type="text/x-mathjax-config">
+
+<body>
+  <h2 class="display-4">KOMBINATORIKA I ŠAH</h2>
+
+
+  <div class="deffinition-paragraph">
+    <h4>Osvrt</h4>
+    Veza kombinatorike i šaha je veoma značajna, zbog prirode te drevne igre i
+    mogućnosti koje pruža za razna istraživanja i uočavanje zakonitosti.
+
+    Šahovska tabla je pogodna za generisanje i proučavanje određenih kombinatornih konfiguracija i problema sa
+    ograničenjima.
+    U ovoj lekciji će biti prikazan jedan izbor zadataka koji to ilustruju. <br> <br>
+    <center><img width="300" src="data/courses/kombinatorika/setupchess.jpg"> <br>
+      <i>Inicijalni raspored šahovskih figura.</i></center>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 1.</h4>
+      Na koliko načina se mogu postaviti na šahovsku tablu dva istobojna topa, tako da ne napadaju jedan drugog?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Jedan od njih može se postaviti na jedno od 64 polja. Ta figura, gde god da se postavi, u horizontali i
+          verikali u kojoj stoji, napada 14 polja i pokriva
+          još jedno polje, na kome ona sama stoji.
+          Drugom topu preostaje $64-15=49$ polja na koje ga možemo postaviti. Dakle, primenjujući pravilo proizvoda,
+          dolazimo do ukupnog broja načina koji je jednak
+          $$64\cdot49=3136.$$
+        </p>
+      </div>
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 2.</h4>
+      Na koliko načina je moguće postaviti na šahovsku tablu dva topa tako da se međusobno napadaju?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Zadatak je sličan sa prethodnim, samo što ovde nakon postavljanja prvog topa, na jedno od 64 mogućih polja,
+          drugi mora biti na jednom od 14 polja koja su napadnuta, pa je broj takvih mogućnosti jednak $64\cdot14=896.$
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 3.</h4>
+      Na koliko načina se 8 šahovskih figura: dva topa, dva skakača, dva lovca, dama i kralj, mogu poređati u prvom redu
+      šahovske table?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Kako šahovska tabla u prvom redu ima 8 polja, i pošto imamo toliko figura, to zaključujemo da se radi o
+          permutacijama sa ponavljanjima.
+          Tri figure se javljaju u parovima, pa je broj takvih različitih rasporeda jednak
+          $$\frac{8!}{2!\cdot2!\cdot2!}=7!.$$
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 4.</h4>
+      Koliko se najviše kraljeva može postaviti na šahovsku tablu, a da se ne napadaju međusobno?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Podelimo šahovsku tablu na 16 kvadrata sa $2\times 2$ polja. Ako u svaki od ovih kvadrata, na odgovarajući
+          način,
+          postavimo po jednog kralja, oni se neće napadati.
+          Pretpostavimo da je moguće postaviti i sedamnaestog kralja na neko od praznih polja na tabli.
+
+          Po Dirihleovom principu, ako se postavi 17 kraljeva, postojaće jedan od manjih kvadrata $2\times 2$, na čija
+          dva polja bi bila dva kralja,
+          pa bi se oni napadali! To znači da je 16 najveći broj kraljeva koje možemo postaviti na šahovsku tablu a da se
+          ne napadaju.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 5.</h4>
+      Da li se šahovska tabla, iz koje su odstranjena četiri ugaona kvadrata, može prekriti pravougaonicima dimenzije
+      $3\times 1$?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Da, može. Četiri ivice takve table sadrže još po 6 polja i svaka se može prekriti sa po dve pločice.
+          Ostatak table (njen centralni deo) je tabla dimenzija $6 \times 6$, i ona se može prekriti sa dvanaest takvih
+          pločica,
+          tako da odatle sledi pozitivan odgovor.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 6.</h4>
+      Na koliko načina se na šahovsku tablu dimenzija $m\times n$ može postaviti $k$, gde je $k\leq m \leq n$,
+      istovetnih topova tako da se nikoja dva od njih ne napadaju međusobno?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Proiznog topa možemo postaviti na $mn$ načina. On napada $m+n-1$ polja.
+          Narednog topa možemo postaviti na $mn-m-n+1$ načina. On napada $m+n-1-2$ novih polja
+          ($-2$ se pojavljuje jer postoje dva polja koja napada i prvi).
+          Slično dolazimo i da se treći top može postaviti na $(m-2)(n-2)$ načina.
+          Ponavljajući postupak do momenta postavljenja svih $k$ topova, došlo bi se do zaključka da se poslednji
+          može postaviti na $(m-k+1)(n-k+1)$ načina. S obzirom da se postavljeni topovi ne razlikuju,
+          dolazimo do ukupnog broja mogućih rasporeda datih topova, pri kojima se nikoja dva međusobno ne napadaju, koji
+          je jednak
+          $$\frac{m(m-1)\cdots (m-k+1)n(n-1)\cdots (n-k+1)}{k!}.$$
+        </p>
+      </div>
+
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 7.</h4>
+      Koliko se skakača može postaviti na šahovsku tablu tako da se oni međusobno ne napadaju?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+
+          Kod zadataka sa skakačima mora se voditi računa o boji polja na kojem skakač stoji i polja koje napada.
+          Naime, skakač koji se nalazi na belom polju napada samo crna polja i obratno. <br>
+          <center><img width="260" src="data/courses/kombinatorika/skakaci.jpg"> </center> <br>
+          S obzirom na to, može se postaviti 32 skakača na šahovsku
+          tablu, koji se međusobno ne napadaju, stavljajući ih sve na polja iste boje.
+          Ukoliko bismo želeli da postavimo još jednog skakača on bi bio na polju različite boje i bio bi napadnut od
+          nekog već postavljenog
+          skakača, pa zaključujemo da je 32 najveći broj skakača koji mogu biti postavljeni na tablu, a da se ne
+          napadaju međusobno.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 8.</h4>
+      Da li je moguće postaviti četiri dame i jednog pešaka na šahovsku tablu, tako da sva preostala polja table budu
+      napadnuta?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Moguće je. Jedno od mogućih rešenja je kada dame postavimo na poljima $c2$, $d6$, $g1$ i $h5$, a pešaka na
+          polju $b7$.<br>
+          <center><img width="300" src="data/courses/kombinatorika/resenje8.png"> </center>
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 9.</h4>
+      Sa šahovske table su izbačena dva crna ugaona polja $a1$ (donje levo polje) i $h8$ (gornje desno polje).
+      Da li je takvu tablu moguće prekriti sa 31 dominom?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Svaka domina prekriva par polja u kojima je tačno jedno belo i jedno crno polje. Sa 31 dominom moguće je
+          prekriti po isto toliko belih
+          i crnih polja. Tabla bez dva ugaona polja sadrži različit broj crnih (30) i belih polja (32), pa je nemoguće
+          prekriti je sa 31 dominom.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    extensions: ["[a11y]/accessibility-menu.js"],
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
@@ -22,205 +205,9 @@
   });
 </script>
 
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</head>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 
-<style>
-.collapsible {
-background-color: #3cbe63;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #9999ff;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
-<body>
-    <h2 class="display-4">KOMBINATORIKA I ŠAH</h2>
-
-
-    <div class="deffinition-paragraph">
-        <h4>Osvrt</h4>
-Veza kombinatorike i šaha je veoma značajna, zbog prirode te drevne igre i 
-mogućnosti koje pruža za razna istraživanja i uočavanje zakonitosti. 
-
-Šahovska tabla je pogodna za generisanje i proučavanje određenih kombinatornih konfiguracija i problema sa ograničenjima. 
-U ovoj lekciji će biti prikazan jedan izbor zadataka koji to ilustruju. <br> <br>
- <center><img width="300" src="data/courses/kombinatorika/setupchess.jpg">  <br>
-<i>Inicijalni raspored šahovskih figura.</i></center>
-
-    <div class="success-paragraph">
-        <h4>Zadatak 1.</h4>
- Na koliko načina se mogu postaviti na šahovsku tablu dva istobojna topa, tako da ne napadaju jedan drugog?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Jedan od njih može se postaviti na jedno od 64 polja. Ta figura, gde god da se postavi, u horizontali i verikali u kojoj stoji, napada 14 polja i pokriva
-još jedno polje, na kome ona sama stoji. 
-Drugom topu preostaje $64-15=49$ polja na koje ga možemo postaviti. Dakle, primenjujući pravilo proizvoda, 
-dolazimo do ukupnog broja načina koji je jednak
-$$64\cdot49=3136.$$
-</p>
-</div>
-    </div>
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 2.</h4>
-Na koliko načina je moguće postaviti na šahovsku tablu dva topa tako da se međusobno napadaju?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Zadatak je sličan sa prethodnim, samo što ovde nakon postavljanja prvog topa, na jedno od 64 mogućih polja, 
-drugi mora biti na jednom od 14 polja koja su napadnuta, pa je broj takvih mogućnosti jednak $64\cdot14=896.$
-</p>
-</div>
-    </div>
-
-    <div class="success-paragraph">
-        <h4>Zadatak 3.</h4>
-Na koliko načina se 8 šahovskih figura: dva topa, dva skakača, dva lovca, dama i kralj, mogu poređati u prvom redu šahovske table?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Kako šahovska tabla u prvom redu ima 8 polja, i pošto imamo toliko figura, to zaključujemo da se radi o permutacijama sa ponavljanjima. 
-Tri figure se javljaju u parovima, pa je broj takvih različitih rasporeda jednak $$\frac{8!}{2!\cdot2!\cdot2!}=7!.$$
-</p>
-</div>
-    </div>
-
-    <div class="success-paragraph">
-        <h4>Zadatak 4.</h4>
-Koliko se najviše kraljeva može postaviti na šahovsku tablu, a da se ne napadaju međusobno?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Podelimo šahovsku tablu na 16 kvadrata sa $2\times 2$ polja. Ako u svaki od ovih kvadrata, na odgovarajući način, 
-postavimo po jednog kralja, oni se neće napadati. 
-Pretpostavimo da je moguće postaviti i sedamnaestog kralja na neko od praznih polja na tabli. 
-
-Po Dirihleovom principu, ako se postavi 17 kraljeva, postojaće jedan od manjih kvadrata $2\times 2$, na čija dva polja bi bila dva kralja,
- pa bi se oni napadali! To znači da je 16 najveći broj kraljeva koje možemo postaviti na šahovsku tablu a da se ne napadaju.
- </p>
-</div>
-    </div>
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 5.</h4>
-Da li se šahovska tabla, iz koje su odstranjena četiri ugaona kvadrata, može prekriti pravougaonicima dimenzije $3\times 1$?
-    
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Da, može. Četiri ivice takve table sadrže još po 6 polja i svaka se može prekriti sa po dve pločice. 
-Ostatak table (njen centralni deo) je tabla dimenzija $6 \times 6$, i ona se može prekriti sa dvanaest takvih pločica, 
-tako da odatle sledi pozitivan odgovor.
- </p>
-</div>
-
-</div>
-
-   <div class="success-paragraph">
-        <h4>Zadatak 6.</h4>
-Na koliko načina se na šahovsku tablu dimenzija $m\times n$ može postaviti $k$, gde je $k\leq m \leq n$, istovetnih topova tako da se nikoja dva od njih ne napadaju međusobno?
-   
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Proiznog topa možemo postaviti na $mn$ načina. On napada $m+n-1$ polja. 
-Narednog topa možemo postaviti na $mn-m-n+1$ načina. On napada $m+n-1-2$ novih polja 
-($-2$ se pojavljuje jer postoje dva polja koja napada i prvi). 
-Slično dolazimo i da se treći top može postaviti na $(m-2)(n-2)$ načina. 
-Ponavljajući postupak do momenta postavljenja svih $k$ topova, došlo bi se do zaključka da se poslednji 
-može postaviti na $(m-k+1)(n-k+1)$ načina. S obzirom da se postavljeni topovi ne razlikuju, 
-dolazimo do ukupnog broja mogućih rasporeda datih topova, pri kojima se nikoja dva međusobno ne napadaju, koji je jednak
-$$\frac{m(m-1)\cdots (m-k+1)n(n-1)\cdots (n-k+1)}{k!}.$$
- </p>
-</div>
-
-</div>
-
- <div class="success-paragraph">
-        <h4>Zadatak 7.</h4>
-Koliko se skakača može postaviti na šahovsku tablu tako da se oni međusobno ne napadaju?
-   
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-
-Kod zadataka sa skakačima mora se voditi računa o boji polja na kojem skakač stoji i polja koje napada. 
-Naime, skakač koji se nalazi na belom polju napada samo crna polja i obratno. <br>
-<center><img width="260" src="data/courses/kombinatorika/skakaci.jpg"> </center> <br>
-S obzirom na to, može se postaviti 32 skakača na šahovsku
-tablu, koji se međusobno ne napadaju, stavljajući ih sve na polja iste boje. 
-Ukoliko bismo želeli da postavimo još jednog skakača on bi bio na polju različite boje i bio bi napadnut od nekog već postavljenog
- skakača, pa zaključujemo da je 32 najveći broj skakača koji mogu biti postavljeni na tablu, a da se ne napadaju međusobno.
- </p>
-</div>
-</div>
-
- <div class="success-paragraph">
-        <h4>Zadatak 8.</h4>
-Da li je moguće postaviti četiri dame i jednog pešaka na šahovsku tablu, tako da sva preostala polja table budu napadnuta?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Moguće je. Jedno od mogućih rešenja je kada dame postavimo na poljima $c2$, $d6$, $g1$ i $h5$, a pešaka na polju $b7$.<br>
-<center><img width="300" src="data/courses/kombinatorika/resenje8.png"> </center> 
- </p>
-</div>
-</div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 9.</h4>
-Sa šahovske table su izbačena dva crna ugaona polja $a1$ (donje levo polje) i $h8$ (gornje desno polje). 
-Da li je takvu tablu moguće prekriti sa 31 dominom?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
- <p>
-Svaka domina prekriva par polja u kojima je tačno jedno belo i jedno crno polje. Sa 31 dominom moguće je prekriti po isto toliko belih
-i crnih polja. Tabla bez dva ugaona polja sadrži različit broj crnih (30) i belih polja (32), pa je nemoguće prekriti je sa 31 dominom.
- </p>
-</div>
-</div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
 </body>
 
 </html>

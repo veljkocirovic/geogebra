@@ -2,19 +2,365 @@
 <html lang="en">
 
 <head>
-<title>Kombinacije</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra Lesson</title>
-    <link rel="icon" href="assets/images/geogebra-logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <title>Kombinacije</title>
+</head>
 
-<script type="text/x-mathjax-config">
+
+<body>
+  <h2 class="display-4">KOMBINACIJE</h2>
+
+  <div class="deffinition-paragraph">
+    <h4>Kombinacije bez ponavljanja</h4>
+
+    Neka je $A$ skup sa $n$ elemenata i $k$ prirodan broj, takav da je $0\leq k \leq n$, k-kombinacija skupa $A$ je
+    svaki njegov $k-$točlani podskup. <br><br>
+
+    <div class="tips-paragraph">
+      <h4>Primer 1.</h4>
+
+      Napisati sve: <br>
+
+      a) 2-kombinacije; b) 3-kombinacije;<br>
+
+      elemenata skupa $\{a,b,c,d\}$<br><br>
+
+      <b>Rešenje.</b> a) $\{a,b\}, \{a,c\}, \{a,d\}, \{b,c\}, \{b,d\}, \{c,d\}$; <br>
+      b) $\{a,b,c\}, \{a,c,d\}, \{a,b,d\}, \{b,c,d\}$.
+    </div>
+
+    <div class="dark-paragraph">
+      <b>Teorema 1.</b> Broj $k$-kombinacija elemenata skupa koji ima $n$ elemenata jednak je $\displaystyle
+      \binom{n}{k}=\dfrac{n!}{k! \cdot (n-k)!}$.
+    </div>
+
+    <div class="tips-paragraph">
+      <h4>Primer 2.</h4>
+      Na koliko različitih načina je moguće od 12 košarkaša u jednom klubu, među kojima trojica igraju na poziciji
+      centra, petorica su bekovi i četiri igraju na poziciji krila, izabrati
+      ekipu za meč u kojoj su dva beka, dva krila i jedan centar?<br><br>
+
+      <b>Rešenje.</b>
+      Bekove možemo izabrati na $\displaystyle \binom{5}{2}$, krila na $\displaystyle \binom{4}{2}$ i centra na
+      $\displaystyle \binom{3}{1}$ načina, pa koristeći princip proizvida dobijamo
+      ukupno $\displaystyle \binom{5}{2}\cdot \binom{4}{2}\cdot \binom{3}{1}$ načina da se odabre ekipa za meč.
+    </div>
+
+    <div class="tips-paragraph">
+
+      <h4>Primer 3.</h4> Na koliko načina četvoro dece mogu da podele 15 jednakih lešnika, tako da svako dete dobije bar
+      po jedan lešnik?
+      <br><br>
+      <b>Rešenje.</b>
+      Poređajmo u niz tih 15 lešnika. Sve različite podele na četvoro dece dobiće se kada između tih lešnika postavimo 3
+      pregrade, kojim ih delimo na četiri grupe.
+      $$\oplus\ \ \oplus\ | \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ | \ \oplus\ \ \oplus\
+      | \ \oplus\ \ \oplus\ \ \oplus \ \ \oplus $$
+      Kako postoji 14 mesta za postavljanje tih pregrada, sledi da je ukupan broj načina da se lešnici podele jednak
+      $\displaystyle \binom{14}{3}=364$.
+
+    </div>
+
+    <h4>Kombinacije sa ponavljanjem</h4>
+
+    $k-$kombinacije sa ponavljanjem od $n$ elemenata predstavljaju sve načine na koje iz skupa od $n$ elemenata možemo
+    $k$ puta
+    izabrati po jedan element, pri čemu je moguće da neki elementi budu izabrani i više puta, a da pritom nije važan
+    redosled odabira.
+
+    <div class="tips-paragraph">
+      <h4>Primer 4.</h4>
+      Napisati sve 2-kombinacije sa ponavljanjem skupa $\{a,b,c\}$<br><br>
+
+      <b>Rešenje.</b> To su: $aa, ab, ac, bb, bc, cc$.
+    </div>
+
+    <div class="dark-paragraph">
+      <b>Teorema 2.</b> Broj $k$-kombinacija sa ponavljanjem elemenata skupa koji ima $n$ elemenata jednak je
+      $\displaystyle \binom{k+n-1}{k}$.</div>
+
+    <div class="tips-paragraph">
+
+      <h4>Primer 5.</h4> Koliko rešenja u skupu nenegativnih celih brojeva ima jednačina $x_1+x_2+x_3=15$?
+      <br><br>
+      <b>Rešenje.</b> Broj rešenja ove jednačine jednak je broju načina da troje dece podele 15 jednakih lešnika, bez
+      ograničenja da svako dete dobije bar jedan lešnik.
+      Ako poređamo u niz tih 15 lešnika, na tri grupe ih možemo podeliti tako što ćemo postaviti dve pregrade negde
+      između (ili pored) lešnika.
+      Na taj način se dobijaju tri grupe, od kojih neke mogu biti i sa nula lešnika.
+      $$\oplus\ \ \oplus\ | \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ | \ \oplus\ \ \oplus\
+      \ \oplus\ \ \oplus\ \ \oplus \ \ \oplus $$
+      $$ | \oplus\ \ \oplus\ \ \oplus | \ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \
+      \oplus\ \ \oplus\ \ \oplus\ \ \oplus \ \ \oplus $$
+      Prema podeli koja je prikazana na ilustraciji, u prvom primeru prvo dete dobija dva lešnika, drugo sedam lešnika i
+      treće šest lešnika, dok u
+      drugom primeru prvo dete ne dobija nijedan lešnik, drugo dobija tri, a treće 12 lešnika. <br>
+
+      Uočavamo da je broj rešenja jednačine, odnosno broj načina da se podele ovi lešnici, jedanak broju svih različitih
+      rasporeda 15 kružića i
+      2 dve uspravne crte, a to je ukupno $\displaystyle \binom{17}{2}$ načina (biramo 2 mesta u 17-očlanom nizu da na
+      njima postavimo crte).
+    </div>
+
+
+    Prethodni primer posledica je znatno opštije teoreme.
+
+    <div class="dark-paragraph">
+      <b>Teorema 3.</b> Neka su $k$ i $n$ prirodni brojevi takvi da je $1\leq k \leq n$.
+      Broj nenegativnih celobrojnih rešenja jednačine $x_1+x_2+\ldots+x_k=n$ jednak je $\displaystyle
+      \binom{k+n-1}{k-1}$.</div>
+
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 1.</h4>
+
+      Komplet od 32 karte sadrži 4 keca. Na koliko načina se može izabrati 5 karata tako da među njima bude tačno 2
+      keca?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+
+          Kečeve možemo izabrati na $\displaystyle \binom{4}{2}$ načina, a preostale tri karte od 28 na $\displaystyle
+          \binom{28}{3}$ načina.
+          Koristeći princip proizvoda dobijamo da je ukupan broj takvih načina jednak $\displaystyle \binom{4}{2}\cdot
+          \binom{28}{3}=19656$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 2.</h4>
+      Koliko petočlanih podskupova skupa $\{1,2,\ldots,10\}$ sadrži brojeve $1$ i $5$, a ne sadrži brojeve $2$ i $6$?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Petočlanih podskupova datog skupa, koji sadrže brojeve $1$ i $5$, a ne sadrže $2$ i $6$ ima koliko i
+          3-elementnih podskupova skupa $\{3,4,7,8,9,10\}$, a to je
+          $\binom{6}{3}=$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 3.</h4>
+      Dat je pravilni desetougao. Na koliko načina se mogu odabrati dve njegove dijagonale koje se seku?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Broj načina da se izaberu dve dijagonale tog desetougla, koje se seku, jednak je broju četvorouglova određenih
+          njegovim temenima, a to je
+          $\displaystyle \binom{10}{4}=210$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 4.</h4>
+      Koliko ima četvorocifrenih prirodnih brojeva čije cifre gledano sleva na desno čine opadajući niz?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Uočimo da svaki izbor četiri cifre iz niza $9876543210$ daje tačno jedan traženi broj. Takvih brojeva ima
+          $\displaystyle \binom{10}{4}$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 5.</h4>
+      Na koliko načina se osam istih svezaka, devet istih olovki i deset istih knjiga može podeliti trojici učenika
+      tako da svaki od njih dobije bar po jedan predmet svake vrste?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Ako osam svezaka poređamo u niz, na tačno sedam mesta izmedju njih možemo postaviti dve pregrade da bi ih
+          podelili na troje dece.
+          Dakle, takvih podela ima ukupno $\displaystyle \binom{7}{2}$. Slično, devet olovki možemo podeliti na
+          $\displaystyle \binom{8}{2}$ načina,
+          a deset knjiga na $\displaystyle \binom{9}{2}$ načina.
+
+          Koristeći princip proizvoda, dobijamo se da se svi predmeti mogu podeliti na
+          $\displaystyle \binom{7}{2}\cdot\binom{8}{2}\cdot\binom{9}{2}=21168$ načina.
+
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 6.</h4>
+
+      Na koliko načina se mogu poređati u niz $n$ nula i $k$ jedinica, tako da nikoje dve jedinice nisu susedne? $(n\geq
+      k)$.
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Ako se sve nule zapišu u red, postoji $n+1$ mesto (između nula, ispred prve i posle poslednje) na kojma možemo
+          postaviti $k$ jedinica.
+          Ukupan broj načina jednak je $\displaystyle \binom{n+1}{k}$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 7.</h4>
+      Na koliko načina se mogu odabrati tri broja iz skupa koga čine prirodni brojevi $\{1,2,3,\ldots,40\}$, tako da im
+      zbir bude neparan broj?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+
+          Da bi zbir tri broja bio neparan, ili svi moraju biti neparni ili su tačno dva parna i jedna neparan.
+          U ovom skupu je po 20 parnih i neparnih brojeva. Jasno je da se tri neparna broja mogu izabrati na
+          $\displaystyle \binom{20}{3}$ načina, a dva parna na $\displaystyle \binom{20}{2}$ i jedan neparan na
+          $\displaystyle \binom{20}{1}$ načina. Pa je broj traženih načina jednak $\displaystyle \binom{20}{3} +
+          \binom{20}{2}\cdot \binom{20}{1}=4940$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 8.</h4>
+      Koliko rešenja u skupu nenegativnih celih brojeva ima jednačina $x+y+z+t+v=17$?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Prema teoremi 3. broj rešenja te jednačine jednak je \binom{17+4-1}{4-1}=\binom{20}{3}=\dfrac{20\cdot 19 \cdot
+          18}{3\cdot 2 \cdot 1}=1140.$$
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 9.</h4>
+      Iz skupa od 11 ljudi, među kojima je pet matematičara i šest programera,
+      biramo komisiju od pet članova, ali tako da u komisiji bude bar 3 programera. Koliko se takvih komisija može
+      formirati?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          U takvim komisijama može biti $3$, $4$ ili svih $5$ programera, pa takvih različitih komisija ima ukupno
+          $\displaystyle \binom{6}{3}\cdot\binom{5}{2} + \binom{6}{4}\cdot\binom{5}{1}+\binom{6}{5}\cdot\binom{5}{0}=20
+          \cdot 10+ 15 \cdot 5 + 6\cdot 1=281.$
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 10.</h4>
+      U kartaškoj igri bridž komplet od $52$ karte dele četiri igrača na delove od po 13 karata. U svakom takvom
+      kompletu postoji po 13 karara u četiri boje: karo, herc, tref i pik.
+      Na koliko različitih načina Milan, među 13 dobijenih karata, može dobiti: <br>
+      a) četiri karte herc, tri karte druge pik, jednu kartu treće karo i 5 karata četvrte tref;<br>
+      b) četiri karte jedne boje, tri karte druge boje, jednu kartu treće boje i 5 karata četvrte boje?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          a) $\displaystyle \binom{13}{4}\cdot \binom{13}{3} \cdot \binom{13}{1} \cdot \binom{13}{5}$;<br>
+          b) $\displaystyle 4!\cdot \binom{13}{4}\cdot \binom{13}{3} \cdot \binom{13}{1} \cdot \binom{13}{5}$.
+
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 11.</h4>
+      U ravni je dato nekoliko tačaka od kojih nikoje tri i nikoje četiri nisu kolinearne.
+      Ako je broj četvorouglova određenih tim tačkama
+      osam puta veći od broja trouglova određenih tim tačkama, koliko je tačaka dato u toj ravni?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Broj četvorouglova koje određuju te tačke jednak je $\displaystyle {n\choose4}$, a broj trouglova
+          $\displaystyle {n\choose3}$.
+          Iz uslova $\displaystyle {n\choose4}=8{n\choose3}$ sledi da је $n=35$ тачака.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 12.</h4>
+      Zapisati sve kombinacija s ponavljenjem 4. klase elemenata skupa $\{A, B, C\}$.
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          To su sve sledeće reči zapisane tim slovima.
+          $$\begin{array}{lllll} AAAA & AABB & ABBB & ACCC & BBCC\\ AAAB & AABC & ABBC & BBBB & BCCC\\ AAAC & AACC &
+          ABCC & BBBC & CCCC \end{array}$$
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 13.</h4>
+      Neka su $n$ i $k$ pozitivni celi brojevi i $S$ skup u kome je $n$ tačaka u ravni takvih da: <br>
+      i) ne postoje tri kolinearne tačke u $S$;<br>
+      ii) za svaku tačku $P$ iz skupa $S$ postoji bar $k$ tačaka u $S$ koje su jednako udaljene od $P$.<br>
+
+      Dokazati da je $k\lt \dfrac{1}{2}+\sqrt{2n}$. (IMO 1989.)<br>
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Nazovimo duž u toj ravni ivicom ako je određena sa bilo koje dve tačke iz skupa $S$. Neka je $l$ broj ivica u
+          toj ravni. Tada je $l=\binom{n}{2}$.<br>
+          Uočimo da se za bilo koju tacku $P$ iz $S$, po uslovu ii) može konstruisati krug $K(P)$ koji sadrži bar $k$
+          tačaka datog skupa. Jasno je da tačke u krugu
+          $K(P)$ određuju bar $\binom{k}{2}$ ivica.
+          Kako u skupu $S$ postoji tačno $n$ tačaka, to je ukupna broj ivica bar $n\cdot \binom{k}{2}$.<br>
+
+          Razmotrimo koje su od tih ivica brojane više puta. Neka ivica je brojana više od jednom onda i samo onda kada
+          je ona zajednička tetiva za bar dva kruga.
+          Kako dva kruga mogu imati samo jednu zajedničku tetivu, to je broj ivica koje su brojane više od jednom
+          najviše $\binom{n}{2}$.
+          Sada je
+          $$l \geq n\binom{k}{2}-\binom{n}{2}$$
+          odnosno
+          $$\binom{n}{2} \geq n\binom{k}{2}-\binom{n}{2}$$.
+          Odatle se dobija da je
+
+          $$2\binom{n}{2} \geq n\binom{k}{2}.$$
+          Odatle sledi da je
+          $$k^2-k-2(n-1)\leq 0,$$
+          odakle je
+          $$k\leq \dfrac{1+\sqrt{1+8(n-1)}}{2}<\dfrac{1}{2}+\sqrt{2n}.$$ </p>
+      </div>
+    </div>
+
+    <div class="error-paragraph">
+      <h4>Istraživački zadatak</h4>
+      U nekoj igri se koristi komplet od $n$ različitih karata, $n \geq 6.$ Ako je broj svih ražličitih izbora $6$
+      karata iz tog skupa šest puta veći od broja svih mogućih izbora $3$
+      karte iz tog skupa, odrediti $n$.
+    </div>
+
+
+  </div>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    extensions: ["[a11y]/accessibility-menu.js"],
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
@@ -22,344 +368,9 @@
   });
 </script>
 
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</head>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
-<style>
-.collapsible {
-background-color: #3cbe63;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #9999ff;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
-<body>
-    <h2 class="display-4">KOMBINACIJE</h2>
-
-    <div class="deffinition-paragraph">
-        <h4>Kombinacije bez ponavljanja</h4>
-
-Neka je $A$ skup sa $n$ elemenata i $k$ prirodan broj, takav da je $0\leq k \leq n$, k-kombinacija skupa $A$ je
- svaki njegov $k-$točlani podskup. <br><br>
-
-<div class="tips-paragraph">
-        <h4>Primer 1.</h4>
-
-Napisati sve: <br>
-
-a) 2-kombinacije;  b) 3-kombinacije;<br>
-
-elemenata skupa $\{a,b,c,d\}$<br><br>
-
-<b>Rešenje.</b> a) $\{a,b\}, \{a,c\}, \{a,d\}, \{b,c\}, \{b,d\}, \{c,d\}$; <br>
-b) $\{a,b,c\}, \{a,c,d\}, \{a,b,d\}, \{b,c,d\}$.
- </div>
-
- <div class="dark-paragraph">
-<b>Teorema 1.</b> Broj $k$-kombinacija elemenata skupa koji ima $n$ elemenata jednak je $\displaystyle \binom{n}{k}=\dfrac{n!}{k! \cdot (n-k)!}$.
-</div>
-
-<div class="tips-paragraph">
-        <h4>Primer 2.</h4>
-Na koliko različitih načina je moguće od 12 košarkaša u jednom klubu, među kojima trojica igraju na poziciji centra, petorica su bekovi i četiri igraju na poziciji krila, izabrati
-ekipu za meč u kojoj su dva beka, dva krila i jedan centar?<br><br>
-
-<b>Rešenje.</b> 
-Bekove možemo izabrati na $\displaystyle \binom{5}{2}$, krila na $\displaystyle \binom{4}{2}$ i centra na $\displaystyle \binom{3}{1}$ načina, pa koristeći princip proizvida dobijamo 
-ukupno $\displaystyle \binom{5}{2}\cdot \binom{4}{2}\cdot \binom{3}{1}$ načina da se odabre ekipa za meč. 
- </div>
-
-<div class="tips-paragraph">
-
- <h4>Primer 3.</h4> Na koliko načina četvoro dece mogu da podele 15 jednakih lešnika, tako da svako dete dobije bar po jedan lešnik?
-<br><br>
-<b>Rešenje.</b> 
-Poređajmo u niz tih 15 lešnika. Sve različite podele na četvoro dece dobiće se kada između tih lešnika postavimo 3 pregrade, kojim ih delimo na četiri grupe.
-$$\oplus\ \ \oplus\ | \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ | \ \oplus\ \ \oplus\ |  \ \oplus\ \ \oplus\ \ \oplus \ \ \oplus $$ 
-Kako postoji 14 mesta za postavljanje tih pregrada, sledi da je ukupan broj načina da se lešnici podele jednak $\displaystyle \binom{14}{3}=364$.
-
- </div>
-
- <h4>Kombinacije sa ponavljanjem</h4>
-
-$k-$kombinacije sa ponavljanjem od $n$ elemenata predstavljaju sve načine na koje iz skupa od $n$ elemenata možemo $k$ puta
- izabrati po jedan element, pri čemu je moguće da neki elementi budu izabrani i više puta, a da pritom nije važan redosled odabira. 
-
-<div class="tips-paragraph">
-        <h4>Primer 4.</h4>
-Napisati sve 2-kombinacije sa ponavljanjem skupa $\{a,b,c\}$<br><br>
-
-<b>Rešenje.</b> To su: $aa, ab, ac, bb, bc, cc$. 
- </div>
-
-<div class="dark-paragraph">
-<b>Teorema 2.</b> Broj $k$-kombinacija sa ponavljanjem elemenata skupa koji ima $n$ elemenata jednak je $\displaystyle \binom{k+n-1}{k}$.</div>
-
-<div class="tips-paragraph">
-
- <h4>Primer 5.</h4> Koliko rešenja u skupu nenegativnih celih brojeva ima jednačina $x_1+x_2+x_3=15$?
-<br><br>
-<b>Rešenje.</b> Broj rešenja ove jednačine jednak je broju načina da troje dece podele 15 jednakih lešnika, bez ograničenja da svako dete dobije bar jedan lešnik. 
-Ako poređamo u niz tih 15 lešnika, na tri grupe ih možemo podeliti tako što ćemo postaviti dve pregrade negde između (ili pored) lešnika.
-Na taj način se dobijaju tri grupe, od kojih neke mogu biti i sa nula lešnika. 
-$$\oplus\ \ \oplus\ | \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ | \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus \ \ \oplus $$ 
-$$ | \oplus\ \ \oplus\ \ \oplus | \ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\  \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus\ \ \oplus \ \ \oplus $$ 
-Prema podeli koja je prikazana na ilustraciji, u prvom primeru prvo dete dobija dva lešnika, drugo sedam lešnika i treće šest lešnika, dok u
-drugom primeru prvo dete ne dobija nijedan lešnik, drugo dobija tri, a treće 12 lešnika. <br>
-
-Uočavamo da je broj rešenja jednačine, odnosno broj načina da se podele ovi lešnici, jedanak broju svih različitih rasporeda 15 kružića i 
-2 dve uspravne crte, a to je ukupno $\displaystyle \binom{17}{2}$ načina (biramo 2 mesta u 17-očlanom nizu da na njima postavimo crte). 
- </div>
-
- 
-Prethodni primer posledica je znatno opštije teoreme.
-
-<div class="dark-paragraph">
-<b>Teorema 3.</b> Neka su $k$ i $n$ prirodni brojevi takvi da je $1\leq k \leq n$.
- Broj nenegativnih celobrojnih rešenja jednačine $x_1+x_2+\ldots+x_k=n$ jednak je $\displaystyle \binom{k+n-1}{k-1}$.</div>
-
-
-
-<div class="success-paragraph">
-        <h4>Zadatak 1.</h4>
- 
-Komplet od 32 karte sadrži 4 keca. Na koliko načina se može izabrati 5 karata tako da među njima bude tačno 2 keca?
- 
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-
-Kečeve možemo izabrati na $\displaystyle \binom{4}{2}$ načina, a preostale tri karte od 28 na $\displaystyle \binom{28}{3}$ načina. 
-Koristeći princip proizvoda dobijamo da je ukupan broj takvih načina jednak $\displaystyle \binom{4}{2}\cdot \binom{28}{3}=19656$.
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 2.</h4>
- Koliko petočlanih podskupova skupa $\{1,2,\ldots,10\}$ sadrži brojeve $1$ i $5$, a ne sadrži brojeve $2$ i $6$?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Petočlanih podskupova datog skupa, koji sadrže brojeve $1$ i $5$, a ne sadrže $2$ i $6$ ima koliko i
-3-elementnih podskupova skupa $\{3,4,7,8,9,10\}$, a to je 
-$\binom{6}{3}=$.
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 3.</h4>
-Dat je pravilni desetougao. Na koliko načina se mogu odabrati dve njegove dijagonale koje se seku?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Broj načina da se izaberu dve dijagonale tog desetougla, koje se seku, jednak je broju četvorouglova određenih njegovim temenima, a to je
-$\displaystyle \binom{10}{4}=210$.
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 4.</h4>
-Koliko ima četvorocifrenih prirodnih brojeva čije cifre gledano sleva na desno čine opadajući niz?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Uočimo da svaki izbor četiri cifre iz niza $9876543210$ daje tačno jedan traženi broj. Takvih brojeva ima $\displaystyle \binom{10}{4}$.
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 5.</h4>
-Na koliko načina se osam istih svezaka, devet istih olovki i deset istih knjiga može podeliti trojici učenika 
-tako da svaki od njih dobije bar po jedan predmet svake vrste?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Ako osam svezaka poređamo u niz, na tačno sedam mesta izmedju njih možemo postaviti dve pregrade da bi ih podelili na troje dece. 
-Dakle, takvih podela ima ukupno $\displaystyle \binom{7}{2}$. Slično, devet olovki možemo podeliti na $\displaystyle \binom{8}{2}$ načina,
-a deset knjiga na $\displaystyle \binom{9}{2}$ načina. 
-
-Koristeći princip proizvoda, dobijamo se da se svi predmeti mogu podeliti na
- $\displaystyle \binom{7}{2}\cdot\binom{8}{2}\cdot\binom{9}{2}=21168$ načina. 
-
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 6.</h4>
-
-Na koliko načina se mogu poređati u niz $n$ nula i $k$ jedinica, tako da nikoje dve jedinice nisu susedne? $(n\geq k)$.
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Ako se sve nule zapišu u red, postoji $n+1$ mesto (između nula, ispred prve i posle poslednje) na kojma možemo postaviti $k$ jedinica. 
-Ukupan broj načina jednak je $\displaystyle \binom{n+1}{k}$.
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 7.</h4>
-Na koliko načina se mogu odabrati tri broja iz skupa koga čine prirodni brojevi $\{1,2,3,\ldots,40\}$, tako da im zbir bude neparan broj?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-
-Da bi zbir tri broja bio neparan, ili svi moraju biti neparni ili su tačno dva parna i jedna neparan. 
-U ovom skupu je po 20 parnih i neparnih brojeva. Jasno je da se tri neparna broja mogu izabrati na $\displaystyle \binom{20}{3}$ načina, a dva parna na $\displaystyle \binom{20}{2}$ i jedan neparan na $\displaystyle \binom{20}{1}$ načina. Pa je broj traženih načina jednak $\displaystyle \binom{20}{3} + \binom{20}{2}\cdot \binom{20}{1}=4940$.
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 8.</h4>
-Koliko rešenja u skupu nenegativnih celih brojeva ima jednačina $x+y+z+t+v=17$?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Prema teoremi 3. broj rešenja te jednačine jednak je \binom{17+4-1}{4-1}=\binom{20}{3}=\dfrac{20\cdot 19 \cdot 18}{3\cdot 2 \cdot 1}=1140.$$
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 9.</h4>
-Iz skupa od 11 ljudi, među kojima je pet matematičara i šest programera, 
-biramo komisiju od pet članova, ali tako da u komisiji bude bar 3 programera. Koliko se takvih komisija može formirati?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-U takvim komisijama može biti $3$, $4$ ili svih $5$ programera, pa takvih različitih komisija ima ukupno
-$\displaystyle \binom{6}{3}\cdot\binom{5}{2} + \binom{6}{4}\cdot\binom{5}{1}+\binom{6}{5}\cdot\binom{5}{0}=20 \cdot 10+ 15 \cdot 5 + 6\cdot 1=281.$
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 10.</h4>
-U kartaškoj igri bridž komplet od $52$ karte dele četiri igrača na delove od po 13 karata. U svakom takvom kompletu postoji po 13 karara u četiri boje: karo, herc, tref i pik. 
-Na koliko različitih načina Milan, među 13 dobijenih karata, može dobiti: <br>
-a) četiri karte herc, tri karte druge pik, jednu kartu treće karo i 5 karata četvrte tref;<br>
-b) četiri karte jedne boje, tri karte druge boje, jednu kartu treće boje i 5 karata četvrte boje?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-a) $\displaystyle \binom{13}{4}\cdot \binom{13}{3} \cdot \binom{13}{1} \cdot \binom{13}{5}$;<br>
-b) $\displaystyle 4!\cdot \binom{13}{4}\cdot \binom{13}{3} \cdot \binom{13}{1} \cdot \binom{13}{5}$.
-
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 11.</h4>
-U ravni je dato nekoliko tačaka od kojih nikoje tri i nikoje četiri nisu kolinearne. 
-Ako je broj četvorouglova određenih tim tačkama
-osam puta veći od broja trouglova određenih tim tačkama, koliko je tačaka dato u toj ravni?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Broj četvorouglova koje određuju te tačke jednak je $\displaystyle {n\choose4}$, a broj trouglova $\displaystyle {n\choose3}$. 
-Iz uslova $\displaystyle {n\choose4}=8{n\choose3}$ sledi da је $n=35$ тачака. 
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 12.</h4>
-Zapisati sve kombinacija s ponavljenjem 4. klase elemenata skupa $\{A, B, C\}$.
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-To su sve sledeće reči zapisane tim slovima. 
-$$\begin{array}{lllll} AAAA & AABB & ABBB & ACCC & BBCC\\ AAAB & AABC & ABBC & BBBB & BCCC\\ AAAC & AACC & ABCC & BBBC & CCCC \end{array}$$
-</p> 
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 13.</h4>
-Neka su $n$ i $k$ pozitivni celi brojevi i $S$ skup u kome je $n$ tačaka u ravni takvih da: <br>
-i) ne postoje tri kolinearne tačke u $S$;<br>
-ii) za svaku tačku $P$ iz skupa $S$ postoji bar $k$ tačaka u $S$ koje su jednako udaljene od $P$.<br>
-
-Dokazati da je $k\lt \dfrac{1}{2}+\sqrt{2n}$. (IMO 1989.)<br>
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Nazovimo duž u toj ravni ivicom ako je određena sa bilo koje dve tačke iz skupa $S$. Neka je $l$ broj ivica u toj ravni. Tada je $l=\binom{n}{2}$.<br>
-Uočimo da se za bilo koju tacku $P$ iz $S$, po uslovu ii) može konstruisati krug $K(P)$ koji sadrži bar $k$ tačaka datog skupa. Jasno je da tačke u krugu
-$K(P)$ određuju bar $\binom{k}{2}$ ivica. 
-Kako u skupu $S$ postoji tačno $n$ tačaka, to je ukupna broj ivica bar $n\cdot \binom{k}{2}$.<br>
-
-Razmotrimo koje su od tih ivica brojane više puta. Neka ivica je brojana više od jednom onda i samo onda kada je ona zajednička tetiva za bar dva kruga. 
-Kako dva kruga mogu imati samo jednu zajedničku tetivu, to je broj ivica koje su brojane više od jednom najviše $\binom{n}{2}$.
-Sada je 
-$$l \geq n\binom{k}{2}-\binom{n}{2}$$
-odnosno 
-$$\binom{n}{2} \geq n\binom{k}{2}-\binom{n}{2}$$.
-Odatle se dobija da je 
-
-$$2\binom{n}{2} \geq n\binom{k}{2}.$$
-Odatle sledi da je 
-$$k^2-k-2(n-1)\leq 0,$$
-odakle je 
-$$k\leq \dfrac{1+\sqrt{1+8(n-1)}}{2}<\dfrac{1}{2}+\sqrt{2n}.$$
-</p> 
-</div>
-    </div>
-
-    <div class="error-paragraph">
-        <h4>Istraživački zadatak</h4> 
-U nekoj igri se koristi komplet od $n$ različitih karata, $n \geq 6.$ Ako je broj svih ražličitih izbora $6$ karata iz tog skupa šest puta veći od broja svih mogućih izbora $3$ 
-karte iz tog skupa, odrediti $n$.    </div>
-
-
-    </div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
 </body>
 
 </html>

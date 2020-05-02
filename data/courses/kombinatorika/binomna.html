@@ -2,364 +2,362 @@
 <html lang="en">
 
 <head>
-<title>Binomna formula</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra Lesson</title>
-    <link rel="icon" href="assets/images/geogebra-logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  <title>Binomna formula</title>
 </head>
 
-<style>
-.collapsible {
-background-color: #3cbe63;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
 
-.active, .collapsible:hover {
-  background-color: #9999ff;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
 <body>
-    <h2 class="display-4">BINOMNA FORMULA</h2>
+  <h2 class="display-4">BINOMNA FORMULA</h2>
 
 
-    <div class="deffinition-paragraph">
-        <h4></h4>
-Cilj ove lekcije je određivanje pogodnog načina za račiunanje $n-$tog stepena binom $x+y$. <br>
-Poznato je da je $(x+y)^1=x+y$, kao i da je $(x+y)^2=x^2+2xy+y^2$ i $ (x+y)^3= x^3 + 3 x^2 y + 3xy^2 + y^3$. <br>
+  <div class="deffinition-paragraph">
+    <h4></h4>
+    Cilj ove lekcije je određivanje pogodnog načina za račiunanje $n-$tog stepena binom $x+y$. <br>
+    Poznato je da je $(x+y)^1=x+y$, kao i da je $(x+y)^2=x^2+2xy+y^2$ i $ (x+y)^3= x^3 + 3 x^2 y + 3xy^2 + y^3$. <br>
 
 
-<div class="dark-paragraph">
-<b>Teorema.</b> Za svaki prirodan broj $n$ važi 
- $$(x+y)^n={n\choose0}x^n + {n\choose1}x^{n-1}y^1 + {n\choose2}x^{n-2}y^{2} + \cdots + {n\choose n-1}x^1y^{n-1} + {n\choose n}y^{n}$$
-
-    </div>
-
-Formulu kojom se, prema prethodnoj teoremi, računa $n$-ti stepen binoma $(x+y)$, zvaćemo <i>binomnom formulom</i>.<br>
-
-Brojevi $\displaystyle \binom{n}{k}$ u toj formuli, nazivaju se <i>binomnim koeficijentima</i> i o njima je bilo reči u lekciji o kombinacijama.
-<br>
-
-Binomne koeficijente za konkretne vrednosti stepena $n$ možemo poređati u redove, koji čine tzv. ,,Paskalov trougao". <br>
-
-<center>
-$\begin{matrix}
-n=0:&    &    &    &    &  1\\
-n=1:&    &    &    &  1 &    &  1\\
-n=2:&    &    &  1 &    &  2 &    &  1\\
-n=3:&    &  1 &    &  3 &    &  3 &    &  1\\
-n=4:&  1 &    &  4 &    &  6 &    &  4 &    &  1\\
-\end{matrix}$
-</center>
-<br>
-
-Prethodnu opštu formulu za računanje $n$-tog stepena binoma, možemo kraće zapisati kao
-
-$$(x+y)^n = \sum_{k=0}^n {n\choose k}x^{n-k} y^k.$$
-
-Ovde je korišćen znak $\displaystyle \Sigma$- suma, koji predstavlja skraćeni zapis za sabiranje $$\sum_{k=1}^nx_k=x_1+x_2+\ldots+n_n.$$
-
-Na osnovu uvedenog zapisa, za $k \in \{0,1,2, \ldots,\}$, član u razvoju stepena binoma $(x+y)^n$, koji se nalazi na $k+1$-vom
-mestu (opšti član), može se izraziti kao
-$$B_{k+1}=\binom{n}{k}x^{n-k}y^{k}$$
-
-<i>Napomena:
-<br>
- Za $k=0$ dobijamo prvi član $B_1$, za $k=1$ drugi i tako dalje.
-</i>
- <br><br>
-
-
-  <h5><b> Navodimo dve važne osobine binomnih koeficijenata:</b> </h5> 
-
-$\displaystyle  1^{\circ}\ \ \ \binom{n}{k}=\binom{n}{n-k}$
-<br>
-Prethodna jednakost jednostavno sledi iz:
-$$\frac{n!}{k!\cdot(n-k)!}=\frac{n!}{(n-k)!\cdot(n-(n-k))!}=\frac{n!}{(n-k)!\cdot k!}.$$
-
-$\displaystyle  2^{\circ}\ \ \ \binom{n}{k} + \binom{n}{k+1}=\binom{n+1}{k+1}$<br>
-
-U nastavku je dokaz ove osobine<br>
-$\displaystyle {n\choose k}+{n\choose k+1}=\frac{n!}{(n-k)!k!}+\frac{n!}{(n-k-1)!(k+1)!}=
-\frac{n!(k+1)+n!(n-k)}{(n-k)!(k+1)!}=\frac{n!(n+1)}{(n-k)!(k+1)!}=\frac{(n+1)!}{(n-k)!(k+1)!}={n+1\choose k+1}.$
-
-<div class="tips-paragraph">
-        <h4>Primer 1.</h4>
-Zapisati u razvijenom obliku stepen binoma $(2x+1)^5$.
-<br><br>
-<b>Rešenje:</b>
-  <p> Primenjujući binomnu formulu dobija se da je 
-$$(2x+1)^5=\binom{5}{0}(2x)^5\cdot1^0+\binom{5}{1}(2x)^4\cdot1^1+\binom{5}{2}(2x)^3\cdot1^2+\binom{5}{3}(2x)^2\cdot1^3+ \binom{5}{4}(2x)^1\cdot1^4+ \binom{5}{5}(2x)^0\cdot1^5 =$$
-$$= 80x^5+80x^3+40x^2+10x+10.$$</p>
+    <div class="dark-paragraph">
+      <b>Teorema.</b> Za svaki prirodan broj $n$ važi
+      $$(x+y)^n={n\choose0}x^n + {n\choose1}x^{n-1}y^1 + {n\choose2}x^{n-2}y^{2} + \cdots + {n\choose n-1}x^1y^{n-1} +
+      {n\choose n}y^{n}$$
 
     </div>
 
-<div class="tips-paragraph">
-        <h4>Primer 2.</h4>
-  Poređati po veličini binomne koeficijente $\displaystyle a=\binom{2012}{1005}$, $\displaystyle b=\binom{2012}{1006}$, $\displaystyle c=\binom{2012}{1007}$.
-<br><br>
-<b>Rešenje:</b>
-  <p> Koristeći osobine binomnih koeficijenata jednostavno zaključujemo da je
-    $$a=\binom{2012}{1005}=\frac{2012!}{1005!\cdot 1007!}=\binom{2012}{1007}=c.$$
+    Formulu kojom se, prema prethodnoj teoremi, računa $n$-ti stepen binoma $(x+y)$, zvaćemo <i>binomnom
+      formulom</i>.<br>
 
-    Uporedimo sada koeficijent $\displaystyle b=\binom{2012}{1006}$ sa $\displaystyle a=\binom{2012}{1005}$, odnosno uporedimo 
-brojeve $\displaystyle \frac{2012!}{1006!\cdot 1006!}$ i $\displaystyle \frac{2012!}{1005!\cdot 1007!}$. 
-<br>
-Kako su im brojioci jednaki, uporedimo njihove imenioce.
-    Pošto je $\displaystyle 1006!\cdot 1006! < 1005!\cdot 1007!$ to je $\displaystyle \binom{2012}{1006} > \binom{2012}{1005}$. 
-<br>Dakle, važi $b>a=c$. 
-</p>
+    Brojevi $\displaystyle \binom{n}{k}$ u toj formuli, nazivaju se <i>binomnim koeficijentima</i> i o njima je bilo
+    reči u lekciji o kombinacijama.
+    <br>
+
+    Binomne koeficijente za konkretne vrednosti stepena $n$ možemo poređati u redove, koji čine tzv. ,,Paskalov
+    trougao". <br>
+
+    <center>
+      $\begin{matrix}
+      n=0:& & & & & 1\\
+      n=1:& & & & 1 & & 1\\
+      n=2:& & & 1 & & 2 & & 1\\
+      n=3:& & 1 & & 3 & & 3 & & 1\\
+      n=4:& 1 & & 4 & & 6 & & 4 & & 1\\
+      \end{matrix}$
+    </center>
+    <br>
+
+    Prethodnu opštu formulu za računanje $n$-tog stepena binoma, možemo kraće zapisati kao
+
+    $$(x+y)^n = \sum_{k=0}^n {n\choose k}x^{n-k} y^k.$$
+
+    Ovde je korišćen znak $\displaystyle \Sigma$- suma, koji predstavlja skraćeni zapis za sabiranje
+    $$\sum_{k=1}^nx_k=x_1+x_2+\ldots+n_n.$$
+
+    Na osnovu uvedenog zapisa, za $k \in \{0,1,2, \ldots,\}$, član u razvoju stepena binoma $(x+y)^n$, koji se nalazi na
+    $k+1$-vom
+    mestu (opšti član), može se izraziti kao
+    $$B_{k+1}=\binom{n}{k}x^{n-k}y^{k}$$
+
+    <i>Napomena:
+      <br>
+      Za $k=0$ dobijamo prvi član $B_1$, za $k=1$ drugi i tako dalje.
+    </i>
+    <br><br>
+
+
+    <h5><b> Navodimo dve važne osobine binomnih koeficijenata:</b> </h5>
+
+    $\displaystyle 1^{\circ}\ \ \ \binom{n}{k}=\binom{n}{n-k}$
+    <br>
+    Prethodna jednakost jednostavno sledi iz:
+    $$\frac{n!}{k!\cdot(n-k)!}=\frac{n!}{(n-k)!\cdot(n-(n-k))!}=\frac{n!}{(n-k)!\cdot k!}.$$
+
+    $\displaystyle 2^{\circ}\ \ \ \binom{n}{k} + \binom{n}{k+1}=\binom{n+1}{k+1}$<br>
+
+    U nastavku je dokaz ove osobine<br>
+    $\displaystyle {n\choose k}+{n\choose k+1}=\frac{n!}{(n-k)!k!}+\frac{n!}{(n-k-1)!(k+1)!}=
+    \frac{n!(k+1)+n!(n-k)}{(n-k)!(k+1)!}=\frac{n!(n+1)}{(n-k)!(k+1)!}=\frac{(n+1)!}{(n-k)!(k+1)!}={n+1\choose k+1}.$
+
+    <div class="tips-paragraph">
+      <h4>Primer 1.</h4>
+      Zapisati u razvijenom obliku stepen binoma $(2x+1)^5$.
+      <br><br>
+      <b>Rešenje:</b>
+      <p> Primenjujući binomnu formulu dobija se da je
+        $$(2x+1)^5=\binom{5}{0}(2x)^5\cdot1^0+\binom{5}{1}(2x)^4\cdot1^1+\binom{5}{2}(2x)^3\cdot1^2+\binom{5}{3}(2x)^2\cdot1^3+
+        \binom{5}{4}(2x)^1\cdot1^4+ \binom{5}{5}(2x)^0\cdot1^5 =$$
+        $$= 80x^5+80x^3+40x^2+10x+10.$$</p>
+
+    </div>
+
+    <div class="tips-paragraph">
+      <h4>Primer 2.</h4>
+      Poređati po veličini binomne koeficijente $\displaystyle a=\binom{2012}{1005}$, $\displaystyle
+      b=\binom{2012}{1006}$, $\displaystyle c=\binom{2012}{1007}$.
+      <br><br>
+      <b>Rešenje:</b>
+      <p> Koristeći osobine binomnih koeficijenata jednostavno zaključujemo da je
+        $$a=\binom{2012}{1005}=\frac{2012!}{1005!\cdot 1007!}=\binom{2012}{1007}=c.$$
+
+        Uporedimo sada koeficijent $\displaystyle b=\binom{2012}{1006}$ sa $\displaystyle a=\binom{2012}{1005}$, odnosno
+        uporedimo
+        brojeve $\displaystyle \frac{2012!}{1006!\cdot 1006!}$ i $\displaystyle \frac{2012!}{1005!\cdot 1007!}$.
+        <br>
+        Kako su im brojioci jednaki, uporedimo njihove imenioce.
+        Pošto je $\displaystyle 1006!\cdot 1006! < 1005!\cdot 1007!$ to je $\displaystyle \binom{2012}{1006}>
+          \binom{2012}{1005}$.
+          <br>Dakle, važi $b>a=c$.
+      </p>
 
     </div>
 
 
-<div class="tips-paragraph">
-        <h4>Primer 3.</h4>
-  Koji je koeficijent uz član $x^{11}y^{7}$ u razvoju stepena binoma $(x+y)^{18}$?
-<br><br>
-<b>Rešenje:</b>
+    <div class="tips-paragraph">
+      <h4>Primer 3.</h4>
+      Koji je koeficijent uz član $x^{11}y^{7}$ u razvoju stepena binoma $(x+y)^{18}$?
+      <br><br>
+      <b>Rešenje:</b>
 
-  <p> Opšti član u razvoju stepena binoma $(x+y)^{18}$ ima oblik $\displaystyle \binom{n}{k}x^{n-k}y^{k}$. 
-<br>Kako je $n-k=11$ i $k=7$, pa sledi da je binomni koeficijent uz taj član jednak $$\binom{18}{11}=31824.$$
-</p>
+      <p> Opšti član u razvoju stepena binoma $(x+y)^{18}$ ima oblik $\displaystyle \binom{n}{k}x^{n-k}y^{k}$.
+        <br>Kako je $n-k=11$ i $k=7$, pa sledi da je binomni koeficijent uz taj član jednak $$\binom{18}{11}=31824.$$
+      </p>
 
     </div>
-<div class="success-paragraph">
-        <h4>Zadatak 1.</h4>
-Koliki je koeficijent uz treći član u razvoju binoma $\displaystyle \left(\frac{1}{\sqrt[3]{x}} - x\right)^{12}$?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Treći član ovog razvoja je
-$$\binom{12}{2}\left(\frac{1}{\sqrt[3]{x}}\right)^{10}\cdot x^2,$$
-a sam koeficijent je $\displaystyle \binom{12}{2}=66$. 
-</p>
-</div>
+    <div class="success-paragraph">
+      <h4>Zadatak 1.</h4>
+      Koliki je koeficijent uz treći član u razvoju binoma $\displaystyle \left(\frac{1}{\sqrt[3]{x}} - x\right)^{12}$?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Treći član ovog razvoja je
+          $$\binom{12}{2}\left(\frac{1}{\sqrt[3]{x}}\right)^{10}\cdot x^2,$$
+          a sam koeficijent je $\displaystyle \binom{12}{2}=66$.
+        </p>
+      </div>
     </div>
 
-<div class="success-paragraph">
-        <h4>Zadatak 2.</h4>
-U razvoju binoma $\displaystyle \left(x\sqrt[3]{x^2}+\frac{\sqrt{x}}{x^2}\right)^n$ binomni koeficijenti petog i desetog člana su jednaki.
- Da li postoji član u razvoju koji ne sadrži $x$?
-    <button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Zbog uslova da su koeficijenti uz peti i deseti član jednaki imamo da je
-<br> $$\binom{n}{4}=\binom{n}{9},$$ odakle se dobija da je $n=13$. 
-<br>
-Uočimo sada opšti član u razvoju ovog binoma
-    $$\binom{13}{k} (x\sqrt[3]{x^2})^{13-k} (\frac{\sqrt{x}}{x^2})^{k}=\binom{13}{k} (x^{\frac{5}{2}})^{13-k} ({x}^{-\frac{3}{2}})^{k}=$$ $$=\binom{13}{k} x^{\frac{5}{2}\cdot(13-k)-\frac{3}{2}k}$$
-  
-Sada će član u razvoju ovog binoma koji ne sadrži $x$, ako takav uopšte postoji, biti onaj kod koga je 
-$$\frac{5}{2}\cdot(13-k)-\frac{3}{2}k=0.$$ 
- Međutim, kako rešenje poslednje jednačine $\displaystyle k=\frac{65}{8}$, nije ceo broj, zaključujemo da takav član ne postoji.<br> 
- Da je dobijena vrednost za $k$ bio ceo broj između $0$ i $n$, onda bi takav član postojao. 
-</p>
-</div>
-    </div>
+    <div class="success-paragraph">
+      <h4>Zadatak 2.</h4>
+      U razvoju binoma $\displaystyle \left(x\sqrt[3]{x^2}+\frac{\sqrt{x}}{x^2}\right)^n$ binomni koeficijenti petog i
+      desetog člana su jednaki.
+      Da li postoji član u razvoju koji ne sadrži $x$?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Zbog uslova da su koeficijenti uz peti i deseti član jednaki imamo da je
+          <br> $$\binom{n}{4}=\binom{n}{9},$$ odakle se dobija da je $n=13$.
+          <br>
+          Uočimo sada opšti član u razvoju ovog binoma
+          $$\binom{13}{k} (x\sqrt[3]{x^2})^{13-k} (\frac{\sqrt{x}}{x^2})^{k}=\binom{13}{k} (x^{\frac{5}{2}})^{13-k}
+          ({x}^{-\frac{3}{2}})^{k}=$$ $$=\binom{13}{k} x^{\frac{5}{2}\cdot(13-k)-\frac{3}{2}k}$$
 
-
-<div class="success-paragraph">
-        <h4>Zadatak 3.</h4>
- Ako se koeficijenti trećeg i petog člana u razvoju binoma $\displaystyle \left(\sqrt{x}+\frac{1}{\sqrt[3]{x^2}}\right)^n$ odnose kao $2:7$, odrediti koeficijent uz $x$ u ovom razvoju.
-    <button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Zbog uslova o odnosu koeficijenata imamo da je $$\binom{n}{2}:\binom{n}{4}=2:7.$$ 
-Rešavanjem ove jednačine, jednostavno se dobija da je $n=9$. 
-
-Opšti član u ovom razvoju je
-    $$\binom{9}{k} (\sqrt{x})^{9-k} \left(\frac{1}{\sqrt[3]{x^2}}\right)^{k}=\binom{9}{k} x^{\frac{9-k}{2}} x^{-\frac{2}{3}k}=\binom{9}{k}x^{\frac{9-k}{2}-\frac{2}{3}k}.$$
-Da bismo odredili koeficijent uz $x$, odredimo $k$ za koje je $$\frac{9-k}{2}-\frac{2}{3}k=1.$$
-
-Odatle se dobija da je $k=3$, pa je koeficijent uz $x$ u ovom razvoju jednak $\displaystyle\binom{9}{3}=84$. </p>
-</div>
+          Sada će član u razvoju ovog binoma koji ne sadrži $x$, ako takav uopšte postoji, biti onaj kod koga je
+          $$\frac{5}{2}\cdot(13-k)-\frac{3}{2}k=0.$$
+          Međutim, kako rešenje poslednje jednačine $\displaystyle k=\frac{65}{8}$, nije ceo broj, zaključujemo da takav
+          član ne postoji.<br>
+          Da je dobijena vrednost za $k$ bio ceo broj između $0$ i $n$, onda bi takav član postojao.
+        </p>
+      </div>
     </div>
 
 
-<div class="success-paragraph">
-        <h4>Zadatak 4.</h4>
- Ako je zbir koeficijenata prva tri člana u razvoju binoma $\displaystyle \left(\frac{1}{\sqrt{x}}+\sqrt[4]{x}\right)^n$ jednak 46, 
-odrediti član tog razvoja koji ne sadrži $x$.
-    <button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Za zbir koeficijenata prva tri člana u razvoju ovog binoma važi
-$$\binom{n}{0}+\binom{n}{1}+\binom{n}{2}=46.$$
-Odatle je 
-$$1+n+\frac{n!}{(n-2)!\cdot2}=46,$$
-$$2+2n+n(n-1)=92,$$
-$$n^2-n-90=0.$$
-Rešavanjem ove kvadratne jednačine, dobija se 
-$$n_{1,2}=\frac{-1\pm\sqrt{361}}{2}=\frac{-1\pm 19}{2},$$
-odnosno $n_1=9$, $n_2=-10$. Negativno rešenje odbacujemo, a zadržavamo $n=9$ i nastavljamo sa
-stepenom binoma $\displaystyle \left(\frac{1}{\sqrt{x}}+\sqrt[4]{x}\right)^9$. 
-<br>
-Sada, slično prethodnim zadacima uočavamo opšti član i određujemo traženi koeficijent. 
-</p>
-</div>
-    </div>
+    <div class="success-paragraph">
+      <h4>Zadatak 3.</h4>
+      Ako se koeficijenti trećeg i petog člana u razvoju binoma $\displaystyle
+      \left(\sqrt{x}+\frac{1}{\sqrt[3]{x^2}}\right)^n$ odnose kao $2:7$, odrediti koeficijent uz $x$ u ovom razvoju.
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Zbog uslova o odnosu koeficijenata imamo da je $$\binom{n}{2}:\binom{n}{4}=2:7.$$
+          Rešavanjem ove jednačine, jednostavno se dobija da je $n=9$.
 
-<div class="success-paragraph">
-        <h4>Zadatak 5.</h4>
-Dokazati da za proizvoljan skup $A$, za koji je $|A|=n$, važi $|\mathcal{P}(A)|=2^n$, gde je $\mathcal{P}(A)$ partitivni skup skupa $A$.
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Uočimo sve podskupove skupa $A$, krenuvši od onog podskupa koji ima $0$ elemenata, preko onih koji imaju po $1$ element
- i tako redom do $n$ i saberimo ih. Tako dobijamo da je
-    $$|\mathcal{P}(A)|=\binom{n}{0}+\binom{n}{1}+\ldots +\binom{n}{2} +\binom{n}{n}.$$
-    S druge strane, ako posmatramo razvoj binoma $(1+1)^n$, dobija se
-    $$(1+1)^n=\binom{n}{0}+\binom{n}{1}+\ldots +\binom{n}{2} +\binom{n}{n}.$$
-    Kako su desne strane prethodne dve jednakosti jednake, sledi da su i leve, tj. važi $|\mathcal{P}(A)|=2^n$. 
-</p>
-</div>
-    </div>
+          Opšti član u ovom razvoju je
+          $$\binom{9}{k} (\sqrt{x})^{9-k} \left(\frac{1}{\sqrt[3]{x^2}}\right)^{k}=\binom{9}{k} x^{\frac{9-k}{2}}
+          x^{-\frac{2}{3}k}=\binom{9}{k}x^{\frac{9-k}{2}-\frac{2}{3}k}.$$
+          Da bismo odredili koeficijent uz $x$, odredimo $k$ za koje je $$\frac{9-k}{2}-\frac{2}{3}k=1.$$
 
-<div class="success-paragraph">
-        <h4>Zadatak 6.</h4>
-Odrediti članove razvoja binoma $(\sqrt{2}+\sqrt[3]{2})^{11}$ koji su racionalni.
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Za opšti član u razvoju stepena ovog binoma važi
-    $$\binom{11}{k}(\sqrt{2})^{11-k}(\sqrt[3]{2})^k=\binom{11}{k} 2^{\frac{11-k}{2}}\cdot 2^{\frac{k}{3}}$$ $$=\binom{11}{k}2^{\frac{11-k}{2} + \frac{k}{3}}$$
-$$=\binom{11}{k}2^\frac{33-k}{6}.$$
-Članovi koji su racionalni dobijaju se kada je izložilac jednak celom broju, tj. za one celobrojne vrednosti $k$, $(0 \leq k \leq 11)$, 
-za koje je broj $33-k$ deljiv sa $6$. Odavde sledi da je $k \in \{3,9\}$, a odgovarajući članovi razvoja koji su racionalni jesu 
-$\displaystyle \binom{11}{3}\cdot 2^5$ i $\displaystyle \binom{11}{9}\cdot 2^4$.
-
-</p>
-</div>
+          Odatle se dobija da je $k=3$, pa je koeficijent uz $x$ u ovom razvoju jednak $\displaystyle\binom{9}{3}=84$.
+        </p>
+      </div>
     </div>
 
 
-
-<div class="success-paragraph">
-        <h4>Zadatak 7.</h4>
-Odrediti koeficijent uz $x^3$ u razvoju $(1-x)^5(1+x+x^2)$.
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Primetimo da je
-$$(1-x)^5=1-5x+10x^2-10x^3+...$$
-Prethodni razvoj je prekinut kod trećeg stepena, jer nam je to dovoljno za uočavanje člana koji sadrži $x^3$ u proizvodu  $(1-x)^5(1+x+x^2)$.
-<br>
-Činilac $a\cdot x^3$ će se dobiti samo prilikom množenja:
-$$-5x\cdot x^2=-5x^3,\ -10x^2\cdot x=-10x^3,\ -10x^3\cdot 1=-10x^3.$$
-Sabiranjem dobijenih koeficijenata uz $x^3$ dobija se $(-5+(-10)+(-10))x^3=-25x^3$. 
-</p>
-</div>
+    <div class="success-paragraph">
+      <h4>Zadatak 4.</h4>
+      Ako je zbir koeficijenata prva tri člana u razvoju binoma $\displaystyle
+      \left(\frac{1}{\sqrt{x}}+\sqrt[4]{x}\right)^n$ jednak 46,
+      odrediti član tog razvoja koji ne sadrži $x$.
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Za zbir koeficijenata prva tri člana u razvoju ovog binoma važi
+          $$\binom{n}{0}+\binom{n}{1}+\binom{n}{2}=46.$$
+          Odatle je
+          $$1+n+\frac{n!}{(n-2)!\cdot2}=46,$$
+          $$2+2n+n(n-1)=92,$$
+          $$n^2-n-90=0.$$
+          Rešavanjem ove kvadratne jednačine, dobija se
+          $$n_{1,2}=\frac{-1\pm\sqrt{361}}{2}=\frac{-1\pm 19}{2},$$
+          odnosno $n_1=9$, $n_2=-10$. Negativno rešenje odbacujemo, a zadržavamo $n=9$ i nastavljamo sa
+          stepenom binoma $\displaystyle \left(\frac{1}{\sqrt{x}}+\sqrt[4]{x}\right)^9$.
+          <br>
+          Sada, slično prethodnim zadacima uočavamo opšti član i određujemo traženi koeficijent.
+        </p>
+      </div>
     </div>
 
+    <div class="success-paragraph">
+      <h4>Zadatak 5.</h4>
+      Dokazati da za proizvoljan skup $A$, za koji je $|A|=n$, važi $|\mathcal{P}(A)|=2^n$, gde je $\mathcal{P}(A)$
+      partitivni skup skupa $A$.
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Uočimo sve podskupove skupa $A$, krenuvši od onog podskupa koji ima $0$ elemenata, preko onih koji imaju po
+          $1$ element
+          i tako redom do $n$ i saberimo ih. Tako dobijamo da je
+          $$|\mathcal{P}(A)|=\binom{n}{0}+\binom{n}{1}+\ldots +\binom{n}{2} +\binom{n}{n}.$$
+          S druge strane, ako posmatramo razvoj binoma $(1+1)^n$, dobija se
+          $$(1+1)^n=\binom{n}{0}+\binom{n}{1}+\ldots +\binom{n}{2} +\binom{n}{n}.$$
+          Kako su desne strane prethodne dve jednakosti jednake, sledi da su i leve, tj. važi $|\mathcal{P}(A)|=2^n$.
+        </p>
+      </div>
+    </div>
 
-<div class="success-paragraph">
-        <h4>Zadatak 8.</h4>
-Dokazati da za sve prirodne brojeve $m$ i $n$, takve da je $m\leq n$, važi
-$$\sum_{k=m}^n \binom{n}{k}\binom{k}{m}=\binom{n}{m}2^{n-m}.$$
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> S obzirom da je
-$$\binom{n}{k}\binom{k}{m}=\frac{n!}{k!(n-k)!}\frac{k!}{m!(k-m)!}=$$
-$$=\frac{n!}{m!}\frac{1}{(n-k)!(k-m)!}=\frac{n!}{m!(n-m)!}\frac{(n-m)!}{(n-k)!(k-m)!}=$$
-$$=\binom{n}{m}\binom{n-m}{k-m},$$
-odatle sledi da je
-$$\sum_{k=m}^n \binom{n}{k}\binom{k}{m}=\sum_{k=m}^n \binom{n}{m}\binom{n-m}{k-m}=\binom{n}{m}\sum_{k=m}^n \binom{n-m}{k-m}=$$
-$$=\binom{n}{m}\sum_{j=0}^{n-m}\binom{n-m}{j}=\binom{n}{m} 2^{n-m}.\ $$
-</p>
-</div>
+    <div class="success-paragraph">
+      <h4>Zadatak 6.</h4>
+      Odrediti članove razvoja binoma $(\sqrt{2}+\sqrt[3]{2})^{11}$ koji su racionalni.
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Za opšti član u razvoju stepena ovog binoma važi
+          $$\binom{11}{k}(\sqrt{2})^{11-k}(\sqrt[3]{2})^k=\binom{11}{k} 2^{\frac{11-k}{2}}\cdot 2^{\frac{k}{3}}$$
+          $$=\binom{11}{k}2^{\frac{11-k}{2} + \frac{k}{3}}$$
+          $$=\binom{11}{k}2^\frac{33-k}{6}.$$
+          Članovi koji su racionalni dobijaju se kada je izložilac jednak celom broju, tj. za one celobrojne vrednosti
+          $k$, $(0 \leq k \leq 11)$,
+          za koje je broj $33-k$ deljiv sa $6$. Odavde sledi da je $k \in \{3,9\}$, a odgovarajući članovi razvoja koji
+          su racionalni jesu
+          $\displaystyle \binom{11}{3}\cdot 2^5$ i $\displaystyle \binom{11}{9}\cdot 2^4$.
+
+        </p>
+      </div>
     </div>
 
 
 
-<div class="success-paragraph">
-        <h4>Zadatak 9.</h4>
-Dokazati da je $\displaystyle \binom{n}{0}^2 + \binom{n}{1}^2 + \ldots + \binom{n}{n}^2=\binom{2n}{n}$.
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Primetimo da za stepen binoma $(1+x)^{2n}$ važi
-    $$(1+x)^{2n}=(1+x)^n\cdot(1+x)^n.$$
-    Kada se razviju obe strane jednakosti, dobija se da je
-    $$\sum_{j=0}^{2n}\binom{2n}{j}x^j =\sum_{j=0}^{n}\binom{n}{j}x^j\cdot \sum_{j=0}^{n} \binom{n}{j}x^j.$$
-Koeficijent uz $x^n$ na levoj strani jednak je $\displaystyle \binom{2n}{n}$, a na desnoj $x^n$ dobija se kad god pomnožimo $x^j$ i $x^{n-j}$. 
-<br>
-Takvih faktora ima $n+1$, a odgovarajući koeficijenti uz ove članove su: $\displaystyle \binom{n}{0}\binom{n}{n}$, $\displaystyle \binom{n}{1}\binom{n}{n-1}$, $\displaystyle \ldots$, $\displaystyle \binom{n}{n}\binom{n}{n}$.
-<br>
-    Sada je $$\binom{2n}{n} x^n= \left(\binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n-1}+ \ldots + \binom{n}{n}\binom{n}{n}\right)x^n$$
-odnosno
-    $$\binom{2n}{n}=\binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n-1}+ \ldots + \binom{n}{n}\binom{n}{n},$$
-    što je i trebalo dokazati.
-</p>
-</div>
+    <div class="success-paragraph">
+      <h4>Zadatak 7.</h4>
+      Odrediti koeficijent uz $x^3$ u razvoju $(1-x)^5(1+x+x^2)$.
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Primetimo da je
+          $$(1-x)^5=1-5x+10x^2-10x^3+...$$
+          Prethodni razvoj je prekinut kod trećeg stepena, jer nam je to dovoljno za uočavanje člana koji sadrži $x^3$ u
+          proizvodu $(1-x)^5(1+x+x^2)$.
+          <br>
+          Činilac $a\cdot x^3$ će se dobiti samo prilikom množenja:
+          $$-5x\cdot x^2=-5x^3,\ -10x^2\cdot x=-10x^3,\ -10x^3\cdot 1=-10x^3.$$
+          Sabiranjem dobijenih koeficijenata uz $x^3$ dobija se $(-5+(-10)+(-10))x^3=-25x^3$.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 8.</h4>
+      Dokazati da za sve prirodne brojeve $m$ i $n$, takve da je $m\leq n$, važi
+      $$\sum_{k=m}^n \binom{n}{k}\binom{k}{m}=\binom{n}{m}2^{n-m}.$$
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> S obzirom da je
+          $$\binom{n}{k}\binom{k}{m}=\frac{n!}{k!(n-k)!}\frac{k!}{m!(k-m)!}=$$
+          $$=\frac{n!}{m!}\frac{1}{(n-k)!(k-m)!}=\frac{n!}{m!(n-m)!}\frac{(n-m)!}{(n-k)!(k-m)!}=$$
+          $$=\binom{n}{m}\binom{n-m}{k-m},$$
+          odatle sledi da je
+          $$\sum_{k=m}^n \binom{n}{k}\binom{k}{m}=\sum_{k=m}^n \binom{n}{m}\binom{n-m}{k-m}=\binom{n}{m}\sum_{k=m}^n
+          \binom{n-m}{k-m}=$$
+          $$=\binom{n}{m}\sum_{j=0}^{n-m}\binom{n-m}{j}=\binom{n}{m} 2^{n-m}.\ $$
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 9.</h4>
+      Dokazati da je $\displaystyle \binom{n}{0}^2 + \binom{n}{1}^2 + \ldots + \binom{n}{n}^2=\binom{2n}{n}$.
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Primetimo da za stepen binoma $(1+x)^{2n}$ važi
+          $$(1+x)^{2n}=(1+x)^n\cdot(1+x)^n.$$
+          Kada se razviju obe strane jednakosti, dobija se da je
+          $$\sum_{j=0}^{2n}\binom{2n}{j}x^j =\sum_{j=0}^{n}\binom{n}{j}x^j\cdot \sum_{j=0}^{n} \binom{n}{j}x^j.$$
+          Koeficijent uz $x^n$ na levoj strani jednak je $\displaystyle \binom{2n}{n}$, a na desnoj $x^n$ dobija se kad
+          god pomnožimo $x^j$ i $x^{n-j}$.
+          <br>
+          Takvih faktora ima $n+1$, a odgovarajući koeficijenti uz ove članove su: $\displaystyle
+          \binom{n}{0}\binom{n}{n}$, $\displaystyle \binom{n}{1}\binom{n}{n-1}$, $\displaystyle \ldots$, $\displaystyle
+          \binom{n}{n}\binom{n}{n}$.
+          <br>
+          Sada je $$\binom{2n}{n} x^n= \left(\binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n-1}+ \ldots +
+          \binom{n}{n}\binom{n}{n}\right)x^n$$
+          odnosno
+          $$\binom{2n}{n}=\binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n-1}+ \ldots + \binom{n}{n}\binom{n}{n},$$
+          što je i trebalo dokazati.
+        </p>
+      </div>
     </div>
 
 
 
 
-<div class="success-paragraph">
-        <h4>Zadatak 10.</h4>
-Odrediti koeficijent uz $x^5$ u sređenom obliku polinoma
-$$1+x + (1+x)^2+(1+x)^3+\ldots+ (1+x)^{10}$$
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> Uputstvo: Primetimo da se dati izraz može posmatrati i kao geometrijski niz od 10 članova sa početnim članom $(1+x)$
- i količnikom, takođe $(1+x)$. Našavši zbir tog niza, dalje se jednostavno određuje traženi koeficijent.
+    <div class="success-paragraph">
+      <h4>Zadatak 10.</h4>
+      Odrediti koeficijent uz $x^5$ u sređenom obliku polinoma
+      $$1+x + (1+x)^2+(1+x)^3+\ldots+ (1+x)^{10}$$
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p> Uputstvo: Primetimo da se dati izraz može posmatrati i kao geometrijski niz od 10 članova sa početnim članom
+          $(1+x)$
+          i količnikom, takođe $(1+x)$. Našavši zbir tog niza, dalje se jednostavno određuje traženi koeficijent.
 
-</p>
-</div>
+        </p>
+      </div>
     </div>
 
 
- <div class="error-paragraph">
-        <h4>Istraživački zadatak</h4>
+    <div class="error-paragraph">
+      <h4>Istraživački zadatak</h4>
 
-Set u stonoteniskom meču traje do trenutka dok jedan od igrača ne osvoji $11$ poena, a drugi igrač nema više od $9$ poena. 
-Ukoliko nije tako, igra se dok jedan od igrača ne ostvari prednost od $2$ poena razlike. Pretpostavimo da je set završen rezultatom $11:x$, 
-gde je $x\leq9$. Koliko ima mogućih različitih tokova rezultata u toku seta? 
+      Set u stonoteniskom meču traje do trenutka dok jedan od igrača ne osvoji $11$ poena, a drugi igrač nema više od
+      $9$ poena.
+      Ukoliko nije tako, igra se dok jedan od igrača ne ostvari prednost od $2$ poena razlike. Pretpostavimo da je set
+      završen rezultatom $11:x$,
+      gde je $x\leq9$. Koliko ima mogućih različitih tokova rezultata u toku seta?
 
     </div>
 
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["[a11y]/accessibility-menu.js"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </body>
 
 </html>

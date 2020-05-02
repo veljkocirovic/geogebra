@@ -2,29 +2,7 @@
 <html lang="en">
 
 <head>
-<title>Skupovi</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra Lesson</title>
-    <link rel="icon" href="assets/images/geogebra-logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+    <title>Skupovi</title>
 </head>
 
 <body>
@@ -33,89 +11,115 @@
 
     <div class="deffinition-paragraph">
         <h4>Skup</h4>
-  Skup smatramo osnovim i najznačajnijim pojmom u matematici. O njegovoj određenosti se govori ako je poznato kakve 
-ili koje elemente sadrži. Često upotrebljavane asocijacije za skup su da je to kolekcija nekih objekata ili njihovo mnoštvo.<br>
+        Skup smatramo osnovim i najznačajnijim pojmom u matematici. O njegovoj određenosti se govori ako je poznato
+        kakve
+        ili koje elemente sadrži. Često upotrebljavane asocijacije za skup su da je to kolekcija nekih objekata ili
+        njihovo mnoštvo.<br>
 
-Skupovi se predstavljaju nabrajanjem elemenata, opisom ili Venovim dijagramom. <br>
+        Skupovi se predstavljaju nabrajanjem elemenata, opisom ili Venovim dijagramom. <br>
 
-Na primer, zapis $A=\{1,2,3,4,5\}$ označava skup čiji su elementi brojevi $1, 2, 3, 4$ i $5$, a sa $B=\{x \mid x \in N \land x|6\}$ smo zapisali skup
-svih prirodnih delilaca prirodnog broja $6$.<br>
+        Na primer, zapis $A=\{1,2,3,4,5\}$ označava skup čiji su elementi brojevi $1, 2, 3, 4$ i $5$, a sa $B=\{x \mid x
+        \in N \land x|6\}$ smo zapisali skup
+        svih prirodnih delilaca prirodnog broja $6$.<br>
 
-Upravo navedeni skup $A$ predstavljen je nabrajanjem elemenata, a skup $B$ opisom.<br>
+        Upravo navedeni skup $A$ predstavljen je nabrajanjem elemenata, a skup $B$ opisom.<br>
 
-Sa $1\in A$ zapisujemo da je broj $1$ element skupa $A$, a kada želimo naglasiti da neki element ne pripada skupu, 
-onda zapisujemo $6\notin A$.<br>
+        Sa $1\in A$ zapisujemo da je broj $1$ element skupa $A$, a kada želimo naglasiti da neki element ne pripada
+        skupu,
+        onda zapisujemo $6\notin A$.<br>
 
-Skup koji nema elemenata nazivamo praznim skupom i obeležavamo ga $\varnothing$ ili $\{\}$.<br>
-Tvorac teorije skupova je nemački matematičar Georg Cantor (1845 - 1918).
+        Skup koji nema elemenata nazivamo praznim skupom i obeležavamo ga $\varnothing$ ili $\{\}$.<br>
+        Tvorac teorije skupova je nemački matematičar Georg Cantor (1845 - 1918).
 
-<br><br>
+        <br><br>
 
- <h4>Podskup</h4>
-Kažemo da je skup $A$ podskup skupa $B$ ako su svi elementi skupa $A$ sadržani i u skupu $B$ i to obeležavamo sa $A\subseteq B$ 
-ili $B \supseteq A$. U ovom slučaju kažemo i da je skup $B$ nadskup skupa $A$, a onda kada je ispunjeno $A \subseteq B$ i $B \subseteq A$ kažemo da su skupovi 
-$A$ i $B$ jednaki i zapisujemo $A=B$.<br><br>
+        <h4>Podskup</h4>
+        Kažemo da je skup $A$ podskup skupa $B$ ako su svi elementi skupa $A$ sadržani i u skupu $B$ i to obeležavamo sa
+        $A\subseteq B$
+        ili $B \supseteq A$. U ovom slučaju kažemo i da je skup $B$ nadskup skupa $A$, a onda kada je ispunjeno $A
+        \subseteq B$ i $B \subseteq A$ kažemo da su skupovi
+        $A$ i $B$ jednaki i zapisujemo $A=B$.<br><br>
 
-Partitativni skup skupa $A$ je skup svih njegovih podskupova. Obeležavamo ga sa $\mathcal{P}(A)=\{B \mid B \subset A\}$. 
+        Partitativni skup skupa $A$ je skup svih njegovih podskupova. Obeležavamo ga sa $\mathcal{P}(A)=\{B \mid B
+        \subset A\}$.
 
- <div class="tips-paragraph">
-        <h4>Primer 1.</h4> Zapisati paritivni skup skupa: <br>
-a) $A=\{a, b, c\}$; <br>
-b) $B=\{1, 2, 3, 4\}.$<br><br>
-<b>Rešenje.</b> a) $\mathcal{P}(A)=\{\varnothing, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, A\}$; <br>
-b) $\mathcal{P}(B)=\{\varnothing, \{1\}, \{2\}, \{3\}, \{4\}, \{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}, \{1,2,3\}, \{1,2,4\}, \{1,3,4\}, \{2,3,4\}, B \}$.
-    </div>
+        <div class="tips-paragraph">
+            <h4>Primer 1.</h4> Zapisati paritivni skup skupa: <br>
+            a) $A=\{a, b, c\}$; <br>
+            b) $B=\{1, 2, 3, 4\}.$<br><br>
+            <b>Rešenje.</b> a) $\mathcal{P}(A)=\{\varnothing, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, A\}$; <br>
+            b) $\mathcal{P}(B)=\{\varnothing, \{1\}, \{2\}, \{3\}, \{4\}, \{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\},
+            \{3,4\}, \{1,2,3\}, \{1,2,4\}, \{1,3,4\}, \{2,3,4\}, B \}$.
+        </div>
 
-U lekciji Principi prebrojavanja biće, kao zadatak, pokazana sledeća važna:
+        U lekciji Principi prebrojavanja biće, kao zadatak, pokazana sledeća važna:
 
-<div class="dark-paragraph">
-<b>Teorema. </b> Ako je $A$ skup sa $n$ elemenata onda je $|\mathcal{P}(A)|=2^n$.</div>
+        <div class="dark-paragraph">
+            <b>Teorema. </b> Ako je $A$ skup sa $n$ elemenata onda je $|\mathcal{P}(A)|=2^n$.</div>
 
         <h4>Skupovne operacije</h4>
-Unija skupova $A$ i $B$ je skup $A\cup B=\{x \mid x\in A\ \vee\ x\in B\}$.<br>
- <center><img width="250" src="data/courses/kombinatorika/unija.jpg"> </center><br><br>
+        Unija skupova $A$ i $B$ je skup $A\cup B=\{x \mid x\in A\ \vee\ x\in B\}$.<br>
+        <center><img width="250" src="data/courses/kombinatorika/unija.jpg"> </center><br><br>
 
-Presek skupova $A$ i $B$ je skup $A\cap B=\{x \mid x\in A\ \wedge\ x\in B\}$.<br>
-Za dva skupa kažemo da su disjunktni ako im je presek jednak praznom skupu. <br>
- <center><img width="250" src="data/courses/kombinatorika/presek.jpg"> </center><br><br>
-Razlika skupova $A$ i $B$ je skup $A \setminus B=\{x \mid x\in A\ \wedge\ x\notin B\}$.<br>
- <center> <img width="250" src="data/courses/kombinatorika/razlika.jpg"> </center> <br><br>
+        Presek skupova $A$ i $B$ je skup $A\cap B=\{x \mid x\in A\ \wedge\ x\in B\}$.<br>
+        Za dva skupa kažemo da su disjunktni ako im je presek jednak praznom skupu. <br>
+        <center><img width="250" src="data/courses/kombinatorika/presek.jpg"> </center><br><br>
+        Razlika skupova $A$ i $B$ je skup $A \setminus B=\{x \mid x\in A\ \wedge\ x\notin B\}$.<br>
+        <center> <img width="250" src="data/courses/kombinatorika/razlika.jpg"> </center> <br><br>
 
-Neka je skup $A$ podskup nekog skupa $X$, tada za skup $C_{X}A:=X\setminus A$ kažemo da je komplement skupa $A$ u odnosu na skup $X$. <br>
-<center><img width="250" src="data/courses/kombinatorika/komplement.jpg"> </center><br><br>
-Simetrična razlika skupova $A$ i $B$ je skup $A \triangle B= A \setminus B \cup B\setminus A$.<br>
- <center><img width="250" src="data/courses/kombinatorika/simrazlika.jpg"> </center><br>
+        Neka je skup $A$ podskup nekog skupa $X$, tada za skup $C_{X}A:=X\setminus A$ kažemo da je komplement skupa $A$
+        u odnosu na skup $X$. <br>
+        <center><img width="250" src="data/courses/kombinatorika/komplement.jpg"> </center><br><br>
+        Simetrična razlika skupova $A$ i $B$ je skup $A \triangle B= A \setminus B \cup B\setminus A$.<br>
+        <center><img width="250" src="data/courses/kombinatorika/simrazlika.jpg"> </center><br>
 
-<div class="tips-paragraph">
-<h4>Primer 2.</h4>
-Za skupove $A=\{1,2,3,5,7,8\}$ i $B=\{4,5,6,8\}$ imamo da je:<br>
+        <div class="tips-paragraph">
+            <h4>Primer 2.</h4>
+            Za skupove $A=\{1,2,3,5,7,8\}$ i $B=\{4,5,6,8\}$ imamo da je:<br>
 
-$A\cup B=\{1,2,3,4,5,6,7,8\}$, 
-$A\cap B=\{5,8\}$, 
-$A\setminus B=\{1,2,3,7\}$, 
-$B\setminus A=\{4,6\}$, $A\triangle B=\{1,2,3,4,6,7\}$<br><br>
-<center><img width="250" src="data/courses/kombinatorika/sop_primer.jpg"> </center>
-</div>
+            $A\cup B=\{1,2,3,4,5,6,7,8\}$,
+            $A\cap B=\{5,8\}$,
+            $A\setminus B=\{1,2,3,7\}$,
+            $B\setminus A=\{4,6\}$, $A\triangle B=\{1,2,3,4,6,7\}$<br><br>
+            <center><img width="250" src="data/courses/kombinatorika/sop_primer.jpg"> </center>
+        </div>
 
 
-<h4>Dekartov proizvod skupova</h4>
-Dekartov proizvod skupova $A$ i $B$ je skup
-$$A\times B=\{(a,b)\mid a\in A\ \wedge\ b\in B\}.$$
+        <h4>Dekartov proizvod skupova</h4>
+        Dekartov proizvod skupova $A$ i $B$ je skup
+        $$A\times B=\{(a,b)\mid a\in A\ \wedge\ b\in B\}.$$
 
-Dekartov proizvod $n$ skupova $A_1, A_2, \ldots, A_n$, je skup
-$$A_1\times A_2 \times \ldots \times A_n =\{(a_1,a_2,\ldots,a_n) \mid a_1\in A_1, a_2\in A_2,\ldots, a_n\in A_n)\}$$
+        Dekartov proizvod $n$ skupova $A_1, A_2, \ldots, A_n$, je skup
+        $$A_1\times A_2 \times \ldots \times A_n =\{(a_1,a_2,\ldots,a_n) \mid a_1\in A_1, a_2\in A_2,\ldots, a_n\in
+        A_n)\}$$
 
-Elemente Dekartovog proizvoda $A\times B$ zovemo uredjenim parovima, a elemente proizvoda $A_1\times A_2 \times \ldots \times A_n$
-uređenim $n$-torkama. <br>
+        Elemente Dekartovog proizvoda $A\times B$ zovemo uredjenim parovima, a elemente proizvoda $A_1\times A_2 \times
+        \ldots \times A_n$
+        uređenim $n$-torkama. <br>
 
-Tako na primer, uređena trojka $(3,1,5)$ je element skupa $Z\times Z \times Z=Z^3$.
+        Tako na primer, uređena trojka $(3,1,5)$ je element skupa $Z\times Z \times Z=Z^3$.
 
-    <div class="tips-paragraph">
-        <h4>Primer 3.</h4>
-Dekartov proizvod skupova $A=\{1,2,3,4\}$ i $B=\{a,b\}$ je skup $A\times B=\{(1,a), (1,b), (2,a), (2,b), (3,a), (3,b), (4,a), (4,b)\}$.<br>
-   <center><img width="350" src="data/courses/kombinatorika/dekart.png"> </center>
+        <div class="tips-paragraph">
+            <h4>Primer 3.</h4>
+            Dekartov proizvod skupova $A=\{1,2,3,4\}$ i $B=\{a,b\}$ je skup $A\times B=\{(1,a), (1,b), (2,a), (2,b),
+            (3,a), (3,b), (4,a), (4,b)\}$.<br>
+            <center><img width="350" src="data/courses/kombinatorika/dekart.png"> </center>
+        </div>
     </div>
-</div>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          extensions: ["[a11y]/accessibility-menu.js"],
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
 </body>
 
 </html>

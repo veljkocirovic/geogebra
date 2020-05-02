@@ -2,19 +2,309 @@
 <html lang="en">
 
 <head>
-<title>Principi prebrojavanja u kombinatorici</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra Lesson</title>
-    <link rel="icon" href="assets/images/geogebra-logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <title>Principi prebrojavanja u kombinatorici</title>
+</head>
 
-<script type="text/x-mathjax-config">
+
+<body>
+  <h2 class="display-4">PRINCIPI PREBROJAVANJA SKUPOVA</h2>
+
+  <div class="deffinition-paragraph">
+    <h4>Pravilo jednakog broja (pravilo bijekcije)</h4>
+
+    Neka su $A$ i $B$ dva neprazna skupa. Ako postoji bijekcija (obostrano jednoznačno pridruživanje)
+    $f : A \rightarrow B$, onda je $ | A | = | B |$.
+
+    <div class="tips-paragraph">
+      <h4>Primer 1.</h4>
+      Koliko članova ima niz brojeva $5, 9, 13, \ldots, 2021$?<br><br>
+
+      <b>Rešenje.</b> Uočimo funkcije $f_1$: $\begin{pmatrix} 5 & 9 & 13 & \cdots & 2021 \\ 4 & 8 & 12 & \cdots & 2020
+      \end{pmatrix}$, odnosno $f_1(x)=x-1$, i
+      $f_2$: $\begin{pmatrix} 4 & 8 & 12 & \cdots & 2020 \\ 1 & 2 & 3 & \cdots & 505 \end{pmatrix}$, odnosno
+      $f_2(x)=\dfrac{x}{4}$.
+      Jasno je i da
+      $f_2\circ f_1$: $\begin{pmatrix} 5 & 9 & 13 & \cdots & 2021 \\ 1 & 2 & 3 & \cdots & 505 \end{pmatrix}$ i da je ova
+      funkcija bijekcija, kao kompozicija takvih.
+      S obzirom da skup $\{1, 2, \ldots, 505\}$ ima $505$ elemenata, to prema principu bijekcije sledi da niz $5, 9, 13,
+      \ldots, 2021$
+      ima $505$ članova.
+    </div>
+
+    <h4>Pravilo zbira</h4>
+
+    Ako se svi elementi nekog skupa $A$ mogu podeliti na neprazne disjunktne podskupove $B$ i $C$ tada je broj elemenata
+    skupa $A$
+    jednak zbiru broja elemenata skupova $B$ i $C$, tj.
+    $$|A|=|B|+|C|.$$
+
+    Neka su $A_1, A_2, \ldots , A_n$ neprazni konačni podskupovi skupa $A$, takvi da su svaka dva međusobno disjunktna,
+    tada je
+    $$|A|=| A_1 \cup A_2 \cup \ldots \cup A_n| = | A_1 | + | A_2 | + \ldots + | A_n | .$$
+
+    <div class="tips-paragraph">
+      <h4>Primer 2.</h4>
+      Na koliko različitih načina je moguće dvoma dece podeliti 10 bombona tako da svako dete dobije bar po jednu
+      bombonu?<br><br>
+
+      <b>Rešenje.</b>
+      Neka je $A$ skup svih načina da se izvrši takva podela. Neka je $A_1$ skup svih načina da prvo dete dobije jednu
+      bombonu, a drugo devet
+      (postoji tačno 1 takav način), $A_2$ da prvo dete dobije dve bombone, a drugo osam i tako dalje do $A_{9}$, da
+      prvo dete dobije devet,
+      a drugo jednu bombonu.
+      Kako su svi ovi skupovi disjunktni, to je ukupan broj načina da se izvrši takva podela jednak $9$.
+    </div>
+
+    <h4>Pravilo proizvoda</h4>
+
+    Ako se jedan postupak može uraditi na $p$ načina, a drugi na $q$ načina, onda se i jedan i drugi postupak mogu
+    uraditi na
+    $p\cdot q$ načina.<br><br>
+
+    Neka su $A_1, A_2, \ldots , A_n$ neprazni konačni skupovi, tada je
+
+    $$| A_1 \times A_2 \times \ldots \times A_n| = | A_1 | \cdot | A_2 | \cdot \ldots \cdot | A_n | .$$
+
+    <div class="tips-paragraph">
+      <h4>Primer 3.</h4> Koliko elemenata ima dekartov proizvod skupova $A=\{1,2,3,4,5\}$ i $B=\{6,7,8\}$?
+      <br>
+      <br>
+      <b>Rešenje.</b> Kako je $|A|=5$ i $|B|=3$, to prema principu proizvoda sledi da je $|A\times B|=|A|\cdot
+      |B|=5\cdot 3=15$.
+      </center>
+    </div>
+    <div class="tips-paragraph">
+      <h4>Primer 4.</h4> Od grada $A$ do grada $B$ postoje četiri različita puta, a od grada $B$ do grada $C$ tri
+      različita puta.
+      Na koliko različitih načina se može doći od grada $A$ do grada $C$?<br>
+      <br>
+      <b>Rešenje.</b> Kako se od grada $A$ do grada $B$ može doći na 4 načina, a od grada $B$ do grada $C$ na 3 načina,
+      to se od grada $A$ do grada $C$ može doći na $4\cdot 3=12$ načina.
+      <center>
+        <img src="data/courses/kombinatorika/putevi.png" width="50%">
+      </center>
+    </div>
+
+    <div class="tips-paragraph">
+      <h4>Primer 5.</h4>
+      Koliko ima četvorocifrenih prirodnih brojeva deljivih sa 4, zapisanih ciframa skupa $\{1,2,3,5,7\}$?<br><br>
+
+      <b>Rešenje.</b> Broj je deljiv sa 4 ako mu je četvorocifreni završetak deljiv sa 4. U ovom slučaju, četvorocifreni
+      završeci deljivi sa 4 su:
+      $12, 32, 52$ i $72$, pa treba odrediti koliko ima brojeva oblika $\overline{ab12}$, $\overline{ab32}$,
+      $\overline{ab52}$ i $\overline{ab72}$, sa nepoznatim ciframa $a$ i $b$ iz datog skupa. <br>
+      Prve dve cifre takvih brojeva mogu biti odabrane na $5\cdot 5$ načina, pa po principu proizvoda sledi da takvih
+      brojeva ima $5\cdot 5 \cdot 4=100$.
+
+    </div>
+
+    <div class="tips-paragraph">
+      <h4>Primer 6.</h4>
+      Koliko prirodnih delilaca ima broj 36000? <br><br>
+
+      <b>Rešenje.</b> S obzirom da se broj 36000 može predstaviti u kanonskoj faktorizaciji kao $2^5\cdot 3^2 \cdot
+      5^3$, svi njegovi delioci su oblika
+      $$2^i\cdot 3^j \cdot 5^k,$$
+      gde je $i \in \{0,1,2,3,4,5,6\}$, $j\in \{0,1,2\}$ i $k\in \{0,1,2,3\}$. Dakle, po principu proizvoda, broj
+      $36000$ ima $7\cdot 3 \cdot 4=84$ prirodna delioca.
+    </div>
+
+    <div class="dark-paragraph">
+      <b>Teorema.</b> Neka je $n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$ kanonska faktorizacija prirodnog
+      broja $n$. Ukupan broj
+      pozitivnih delilaca broja $n$ jednak je $$\tau(n)=(\alpha_1+1)(\alpha_2+1)\cdots (\alpha_k+1).$$
+    </div>
+
+    <div class="tips-paragraph">
+      <h4>Primer 7.</h4>
+      Koliko ima šestocifrenih prirodnih brojeva kod kojih su bar dve cifre jednake?<br><br>
+
+      <b>Rešenje.</b> Primetimo da su skup svih šestocifrenih prirodnih brojeva kojima su sve cifre različite i skup
+      onih šestocifrenih prirodnih brojeva
+      kojima su bar dve cifre jednake, disjunktni i da u uniji daju skup svih šestocifrenih prirodnih brojeva.
+      Dakle, koristeći se tom činjenicom, broj šestocifrenih prirodnih brojeva koji imaju bar dve cifre jednake,
+      dobićemo kada od ukupnog broja šestocifrenih prirodnih brojeva oduzmemo broj onih koji kojima sve cifre različite.
+      To nam daje $900000-9\cdot 9 \cdot 8\cdot 7\cdot 6\cdot 5=763920$.
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 1.</h4>
+      Koliko ima sedmocifrenih prirodnih brojeva zapisanih u brojnom sistemu sa osnovom:<br>
+      a) $7$, b) $k$?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          a) U sistemu sa osnovom $7$ ima $8$ cifara: $\{0,1,\ldots,7\}$, pa kako broj ne može počinjati nulom, takvih
+          brojeva ima $7\cdot8^6$. <br>
+          b) U sistemu sa osnovom $k$ ima $k$ cifara: $\{0,1,\ldots,k-1\}$, pa sedmocifrenih brojeva ima $(k-1)k^6$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 2.</h4>
+      U finalu jedne atletske trke učestvuje osam takmičara. Na koliko načina je moguće podeliti medalje trojici
+      najboljih na kraju trke?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Medalje je moguće podeliti na $8\cdot 7\cdot 6$ načina.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 3.</h4>
+      Koliko ima petocifrenih prirodnih brojeva u čijem zapisu se pojavljuje bar jedna parna i bar jedna neparna cifra?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Petocifrenih brojeva koji imaju samo parne cifre ima $4\cdot 5^4=2500$, a petocifrenih brojeva koji imaju samo
+          neparne cifre
+          ima $5^5=3125$. <br>
+          Petocifrenih brojeva u čijem zapisu se pojavljuje bar jedna parna i bar jedna neparna cifra ima
+          $90000-3125-2500=84375.$
+
+
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 4.</h4>
+      Na koliko načina je moguće obojiti sve jednocifrene prirodne brojeve koristeći plavu, belu i crvenu boju,
+      a da pritom bilo koja dva broja čiji je zbir neparan ne budu obojena istom bojom?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Kako brojevi čiji je zbir neparan ne mogu biti obojeni istom bojom, sledi da nikoja dva broja različite
+          parnosti
+          iz skupa $\{1,2,\ldots,9\}$ ne mogu biti obojena istom bojom. <br><br>
+          Razlikujemo slučajeve:<br>
+          1 - parni obojeni jednom bojom i neparni obojeni jednom bojom. Takvih bojenja ima ukupno $3\cdot2 = 6$;<br>
+          2 - parni obojeni jednom bojom, a neparni obojeni sa dve boje. Takvih bojenja ima ukupno $3(2^5-2)=90$;<br>
+          3 - neparni obojeni jednom bojom, a parni obojeni sa dve boje. Takvih bojenja ima ukupno $3(2^4-2)=42$.<br>
+          Dakle, takvih bojenja ima ukupno $6+90+43=138$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 5.</h4>
+
+      Na koliko načina je moguće izabrati tri, ne obavezno različita,
+      broja $x$, $y$ и $z$ iz skupa $\{1,2,3,...,15\}$, takva da je $x+5\lt y$ i $x+5\lt z$?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Za svaki izbor broja $x$ iz skupa $\{1,2,\ldots, 9\}$, postoji $15-(x+5)=10-x$ načina da se izabere broj $y$ i
+          isto toliko $z$. Dakle, ukupan broj načina je $9\cdot9+8\cdot8+\ldots+1\cdot 1=285$.
+
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 6.</h4>
+      Koliko podskupova ima dati skup $A$ od $n$ elemenata?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Neka su elementi datog skupa $a_1, a_2, \ldots, a_n$. Svaki podskup $B$ skupa $A$ sastoji se od nekih od tih
+          elemenata. Za svaki od elemenata
+          postoji mogućnost da pripada tom podskupu ili ne pripada (dve mogućnosti). Dakle, prema principu proizvoda,
+          postoji $2\cdot2 \cdot \ldots 2=2^n$
+          mogućnosti za formiranje podskupova, odnosno i tačno toliko različitih podskupova skupa $A$.
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 7.</h4>
+      Na koliko načina se mogu poređati u niz brojevi $1, 2, 3, \ldots, 3n$, tako da svaki broj bude na mestu čiji
+      redni broj daje isti ostatak pri deljenju sa tri kao i taj broj?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Za brojeve $1, 4, \ldots, 3n-2$, kojih ima $n$ rezervisana su mesta u nizu sa tim rednim brojevima.
+          Oni se na njima mogu razmestiti na $n!$ начина. Slično je i za još dve klase brojeva: $2, 5, \ldots, 3n-1$ i
+          $3, 6, \ldots, 3n$.
+          Dakle, ukupna broj različitih rasporeda je $(n!)^3$.
+
+        </p>
+      </div>
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 8.</h4>
+      U ravni je dato $27$ tačaka, takvih da je $7$ obojeno crvenom a po $10$ plavom i zelenom bojom.
+      Ako među ovim tačkama ne postoje tri kolinearne, koliko je određeno trouglova čija su temena obojena sa tačno dve
+      različite boje?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Trouglove čija su temena obojena u tačno dve boje, od tri date, možemo podeliti u tri grupe tako da u svakoj
+          od
+          njih budu oni koji imaju po dva temena jedne boje,
+          a treće teme je obojeno jednom od preostale dve boje. Razmotrimo odgovarajuće slučajeve. <br>
+
+          $1^{\circ}$ [Trouglovi čija su dva temena crvena a treće bilo koje druge boje.] Broj različitih izbora dva
+          temena crvene boje isti je kao i broj duži određenih tačkama te boje, a to je $(7\cdot6):2=21$.
+          Treće teme može biti odabrano na 20 različitih načina. Dakle, takvih trouglova ima $21\cdot20=420$. <br>
+
+          $2^{\circ}$ [Trouglovi čija su dva temena plava treće bilo koje druge boje.] Temena plave boje možemo odabrati
+          na
+          $(10\cdot9):2=45$ načina, a treće teme na 17 načina. Dakle, takvih trouglova ima $45\cdot 17=765$. <br>
+
+          $3^{\circ}$ [Trouglovi čija su dva temena zelena a treće bilo koje druge boje.] Temena zelene boje možemo
+          odabrati na $(10\cdot9):2=45$ načina,
+          a treće teme na 17 načina. Dakle, takvih trouglova ima $45\cdot 17=765$.<br>
+
+          Sabirajući dolazimo do ukupno $420+765+765=1950$ trouglova.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="error-paragraph">
+      <h4>Istraživački zadatak</h4>
+
+      Koliko ima nizova dužine osam, čiji su članovi cifre skupa $\{0,1, \ldots, 9\}$, u kojima je paran broj neparnih
+      cifara?
+
+    </div>
+
+
+  </div>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    extensions: ["[a11y]/accessibility-menu.js"],
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
@@ -22,296 +312,9 @@
   });
 </script>
 
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</head>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
-<style>
-.collapsible {
-background-color: #3cbe63;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #9999ff;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
-<body>
-    <h2 class="display-4">PRINCIPI PREBROJAVANJA SKUPOVA</h2>
-
-    <div class="deffinition-paragraph">
-<h4>Pravilo jednakog broja (pravilo bijekcije)</h4>
-
-Neka su $A$ i $B$ dva neprazna skupa. Ako postoji bijekcija (obostrano jednoznačno pridruživanje) 
-$f : A \rightarrow B$, onda je $ | A | = | B |$.
-
-<div class="tips-paragraph">
-        <h4>Primer 1.</h4>
-Koliko članova ima niz brojeva $5, 9, 13, \ldots, 2021$?<br><br>
-
-<b>Rešenje.</b> Uočimo funkcije $f_1$: $\begin{pmatrix} 5 & 9 & 13 & \cdots & 2021 \\ 4 & 8  & 12 & \cdots & 2020 \end{pmatrix}$, odnosno $f_1(x)=x-1$, i 
-$f_2$: $\begin{pmatrix} 4 & 8 & 12 & \cdots & 2020 \\ 1 & 2  & 3 & \cdots & 505 \end{pmatrix}$, odnosno $f_2(x)=\dfrac{x}{4}$. 
-Jasno je i da 
-$f_2\circ f_1$: $\begin{pmatrix} 5 & 9 & 13 & \cdots & 2021 \\ 1 & 2  & 3 & \cdots & 505 \end{pmatrix}$ i da je ova funkcija bijekcija, kao kompozicija takvih. 
-S obzirom da skup $\{1, 2, \ldots, 505\}$ ima $505$ elemenata, to prema principu bijekcije sledi da niz $5, 9, 13, \ldots, 2021$ 
-ima $505$ članova. 
- </div>
-
-<h4>Pravilo zbira</h4>
-
-Ako se svi elementi nekog skupa $A$ mogu podeliti na neprazne disjunktne podskupove $B$ i $C$ tada je broj elemenata skupa $A$ 
-jednak zbiru broja elemenata skupova $B$ i $C$, tj.
- $$|A|=|B|+|C|.$$
-
-Neka su $A_1, A_2, \ldots , A_n$  neprazni konačni podskupovi skupa $A$, takvi da su svaka dva međusobno disjunktna, tada je
-$$|A|=| A_1  \cup  A_2 \cup \ldots \cup  A_n| = | A_1 | + | A_2 | +  \ldots + | A_n  | .$$
-
-<div class="tips-paragraph">
- <h4>Primer 2.</h4>
-Na koliko različitih načina je moguće dvoma dece podeliti 10 bombona tako da svako dete dobije bar po jednu bombonu?<br><br>
-
-<b>Rešenje.</b>  
-Neka je $A$ skup svih načina da se izvrši takva podela. Neka je $A_1$ skup svih načina da prvo dete dobije jednu bombonu, a drugo devet
- (postoji tačno 1 takav način), $A_2$ da prvo dete dobije dve bombone, a drugo osam i tako dalje do $A_{9}$, da prvo dete dobije devet, 
-a drugo jednu bombonu. 
-Kako su svi ovi skupovi disjunktni, to je ukupan broj načina da se izvrši takva podela jednak $9$. 
- </div>
-
-<h4>Pravilo proizvoda</h4>
-
-Ako se jedan postupak može uraditi na $p$ načina, a drugi na $q$ načina, onda se i jedan i drugi postupak mogu uraditi na 
-$p\cdot q$ načina.<br><br>
-
-Neka su $A_1, A_2, \ldots , A_n$  neprazni konačni skupovi, tada je 
-
-$$| A_1  \times  A_2 \times \ldots \times  A_n| = | A_1 | \cdot | A_2 | \cdot  \ldots \cdot | A_n  | .$$
-
-<div class="tips-paragraph">
-<h4>Primer 3.</h4> Koliko elemenata ima dekartov proizvod skupova $A=\{1,2,3,4,5\}$ i $B=\{6,7,8\}$?
-<br>
-<br>
-<b>Rešenje.</b> Kako je $|A|=5$ i $|B|=3$, to prema principu proizvoda sledi da je $|A\times B|=|A|\cdot |B|=5\cdot 3=15$.
-</center>
- </div>
-<div class="tips-paragraph">
- <h4>Primer 4.</h4> Od grada $A$ do grada $B$ postoje četiri različita puta, a od grada $B$ do grada $C$ tri različita puta.
- Na koliko različitih načina se može doći od grada $A$ do grada $C$?<br>
-<br>
-<b>Rešenje.</b> Kako se od grada $A$ do grada $B$ može doći na 4 načina, a od grada $B$ do grada $C$ na 3 načina,
- to se od grada $A$ do grada $C$ može doći na $4\cdot 3=12$ načina.
-<center>
-<img src="data/courses/kombinatorika/putevi.png" width="50%">
-</center>
- </div>
-
-<div class="tips-paragraph">
- <h4>Primer 5.</h4> 
-Koliko ima četvorocifrenih prirodnih brojeva deljivih sa 4, zapisanih ciframa skupa $\{1,2,3,5,7\}$?<br><br>
-
-<b>Rešenje.</b> Broj je deljiv sa 4 ako mu je četvorocifreni završetak deljiv sa 4. U ovom slučaju, četvorocifreni završeci deljivi sa 4 su:
-$12, 32, 52$ i $72$, pa treba odrediti koliko ima brojeva oblika $\overline{ab12}$, $\overline{ab32}$, $\overline{ab52}$ i $\overline{ab72}$, sa nepoznatim ciframa $a$ i $b$ iz datog skupa. <br>
-Prve dve cifre takvih brojeva mogu biti odabrane na $5\cdot 5$ načina, pa po principu proizvoda sledi da takvih brojeva ima $5\cdot 5 \cdot 4=100$.
-
- </div>
-
-<div class="tips-paragraph">
- <h4>Primer 6.</h4> 
-Koliko prirodnih delilaca ima broj 36000?  <br><br>
-
-<b>Rešenje.</b> S obzirom da se broj 36000 može predstaviti u kanonskoj faktorizaciji kao $2^5\cdot 3^2 \cdot 5^3$, svi njegovi delioci su oblika
-$$2^i\cdot 3^j \cdot 5^k,$$
-gde je $i \in \{0,1,2,3,4,5,6\}$, $j\in \{0,1,2\}$ i $k\in \{0,1,2,3\}$. Dakle, po principu proizvoda, broj $36000$ ima $7\cdot 3 \cdot 4=84$ prirodna delioca.
-</div>
-
-<div class="dark-paragraph">
-<b>Teorema.</b> Neka je $n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$ kanonska faktorizacija prirodnog broja $n$. Ukupan broj 
-pozitivnih delilaca broja $n$ jednak je $$\tau(n)=(\alpha_1+1)(\alpha_2+1)\cdots (\alpha_k+1).$$
-    </div>
-
-<div class="tips-paragraph">
- <h4>Primer 7.</h4> 
-Koliko ima šestocifrenih prirodnih brojeva kod kojih su bar dve cifre jednake?<br><br>
-
-<b>Rešenje.</b> Primetimo da su skup svih šestocifrenih prirodnih brojeva kojima su sve cifre različite i skup onih šestocifrenih prirodnih brojeva
-kojima su bar dve cifre jednake, disjunktni i da u uniji daju skup svih šestocifrenih prirodnih brojeva.
-Dakle, koristeći se tom činjenicom, broj šestocifrenih prirodnih brojeva koji imaju bar dve cifre jednake, 
-dobićemo kada od ukupnog broja šestocifrenih prirodnih brojeva oduzmemo broj onih koji kojima sve cifre različite.
-To nam daje $900000-9\cdot 9 \cdot 8\cdot 7\cdot 6\cdot 5=763920$.
- </div>
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 1.</h4>
-  Koliko ima sedmocifrenih prirodnih brojeva zapisanih u brojnom sistemu sa osnovom:<br>
-a) $7$, b) $k$?
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-  <p>
-a) U sistemu sa osnovom $7$ ima $8$ cifara:  $\{0,1,\ldots,7\}$, pa kako broj ne može počinjati nulom, takvih brojeva ima $7\cdot8^6$. <br>
-b) U sistemu sa osnovom $k$ ima $k$ cifara: $\{0,1,\ldots,k-1\}$, pa sedmocifrenih brojeva ima $(k-1)k^6$. 
-</p>
-</div>
-    </div>
-
- <div class="success-paragraph">
-        <h4>Zadatak 2.</h4>
-U finalu jedne atletske trke učestvuje osam takmičara. Na koliko načina je moguće podeliti medalje trojici najboljih na kraju trke?
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-  <p>
-Medalje je moguće podeliti na $8\cdot 7\cdot 6$ načina.
-</p>
-</div>
-    </div>
-
- <div class="success-paragraph">
-        <h4>Zadatak 3.</h4>
-Koliko ima petocifrenih prirodnih brojeva u čijem zapisu se pojavljuje bar jedna parna i bar jedna neparna cifra?
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-  <p>
-Petocifrenih brojeva koji imaju samo parne cifre ima $4\cdot 5^4=2500$, a petocifrenih brojeva koji imaju samo neparne cifre 
-ima $5^5=3125$. <br>
-Petocifrenih brojeva u čijem zapisu se pojavljuje bar jedna parna i bar jedna neparna cifra ima $90000-3125-2500=84375.$
-
-
-</p>
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 4.</h4>
-Na koliko načina je moguće obojiti sve jednocifrene prirodne brojeve koristeći plavu, belu i crvenu boju,
-a da pritom bilo koja dva broja čiji je zbir neparan ne budu obojena istom bojom?
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-<p>
-Kako brojevi čiji je zbir neparan ne mogu biti obojeni istom bojom, sledi da nikoja dva broja različite parnosti 
-iz skupa $\{1,2,\ldots,9\}$ ne mogu biti obojena istom bojom. <br><br>
-Razlikujemo slučajeve:<br>
-1 - parni obojeni jednom bojom i neparni obojeni jednom bojom. Takvih bojenja ima ukupno  $3\cdot2 = 6$;<br>
-2 - parni obojeni jednom bojom, a neparni obojeni sa dve boje. Takvih bojenja ima ukupno $3(2^5-2)=90$;<br>
-3 - neparni obojeni jednom bojom, a parni obojeni sa dve boje. Takvih bojenja ima ukupno $3(2^4-2)=42$.<br>
-Dakle, takvih bojenja ima ukupno $6+90+43=138$.
-</p>
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 5.</h4>
-
-Na koliko načina je moguće izabrati tri, ne obavezno različita, 
-broja $x$, $y$ и $z$ iz skupa $\{1,2,3,...,15\}$, takva da je $x+5\lt y$ i $x+5\lt z$?
-
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-<p>
-Za svaki izbor broja $x$ iz skupa $\{1,2,\ldots, 9\}$, postoji $15-(x+5)=10-x$ načina da se izabere broj $y$ i isto toliko $z$. Dakle, ukupan broj načina je $9\cdot9+8\cdot8+\ldots+1\cdot 1=285$. 
-
-</p>
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 6.</h4>
-Koliko podskupova ima dati skup $A$ od $n$ elemenata?
-
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-<p>
-Neka su elementi datog skupa $a_1, a_2, \ldots, a_n$. Svaki podskup $B$ skupa $A$ sastoji se od nekih od tih elemenata. Za svaki od elemenata
-postoji mogućnost da pripada tom podskupu ili ne pripada (dve mogućnosti). Dakle, prema principu proizvoda, postoji $2\cdot2 \cdot \ldots 2=2^n$
-mogućnosti za formiranje podskupova, odnosno i tačno toliko različitih podskupova skupa $A$. 
-</p>
-</div>
-    </div>
-
-<div class="success-paragraph">
-        <h4>Zadatak 7.</h4>
- Na koliko načina se mogu poređati u niz brojevi $1, 2, 3, \ldots, 3n$, tako da svaki broj bude na mestu čiji 
-redni broj daje isti ostatak pri deljenju sa tri kao i taj broj? 
-
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-<p>
-Za brojeve $1, 4, \ldots, 3n-2$, kojih ima $n$ rezervisana su mesta u nizu sa tim rednim brojevima.
-Oni se na njima mogu razmestiti na $n!$ начина. Slično je i za još dve klase brojeva: $2, 5, \ldots, 3n-1$ i $3, 6, \ldots, 3n$. 
-Dakle, ukupna broj različitih rasporeda je $(n!)^3$. 
-
-</p>
-</div>
-    </div>
-
-
-<div class="success-paragraph">
-        <h4>Zadatak 8.</h4>
-U ravni je dato $27$ tačaka, takvih da je $7$ obojeno crvenom a po $10$ plavom i zelenom bojom. 
-Ako među ovim tačkama ne postoje tri kolinearne, koliko je određeno trouglova čija su temena obojena sa tačno dve različite boje?
-
-<button type="button" class="collapsible">Rešenje</button> 
-<div class="content">
-<p>
-Trouglove čija su temena obojena u tačno dve boje, od tri date, možemo podeliti u tri grupe tako da u svakoj od 
-njih budu oni koji imaju po dva temena jedne boje, 
-a treće teme je obojeno jednom od preostale dve boje. Razmotrimo odgovarajuće slučajeve. <br>
-
-$1^{\circ}$ [Trouglovi čija su dva temena crvena a treće bilo koje druge boje.] Broj različitih izbora dva temena crvene boje isti je kao i broj duži određenih tačkama te boje, a to je $(7\cdot6):2=21$. 
-Treće teme može biti odabrano na 20 različitih načina. Dakle, takvih trouglova ima $21\cdot20=420$. <br>
-
-$2^{\circ}$ [Trouglovi čija su dva temena plava treće bilo koje druge boje.] Temena plave boje možemo odabrati na
-$(10\cdot9):2=45$ načina, a treće teme na 17 načina. Dakle, takvih trouglova ima $45\cdot 17=765$. <br>
-
-$3^{\circ}$ [Trouglovi čija su dva temena zelena a treće bilo koje druge boje.] Temena zelene boje možemo odabrati na $(10\cdot9):2=45$ načina, 
-a treće teme na 17 načina. Dakle, takvih trouglova ima $45\cdot 17=765$.<br>
-
-Sabirajući dolazimo do ukupno $420+765+765=1950$ trouglova.
-</p>
-</div>
-    </div>
-
-
-
-    <div class="error-paragraph">
-        <h4>Istraživački zadatak</h4>
-
-Koliko ima nizova dužine osam, čiji su članovi cifre skupa $\{0,1, \ldots, 9\}$, u kojima je paran broj neparnih cifara?
-
-    </div>
-
-
-    </div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
 </body>
 
 </html>

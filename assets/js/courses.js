@@ -11,10 +11,10 @@ function loadCourses() {
     data.forEach(function (course) {
       courses.push(
         "<h3 class='course-title'>" +
-        course.title +
-        "</h3><div id='" +
-        course.id +
-        "'></div>"
+          course.title +
+          "</h3><div id='" +
+          course.id +
+          "'></div>"
       );
     });
 
@@ -26,12 +26,12 @@ function loadCourses() {
       course.lessons.forEach(function (lesson) {
         lessons.push(
           "<button onclick='onLessonClick(this)' class='lesson-title' data-course-id='" +
-          course.id +
-          "' data-lesson-id='" +
-          lesson.id +
-          "'>" +
-          lesson.title +
-          "</button>"
+            course.id +
+            "' data-lesson-id='" +
+            lesson.id +
+            "'>" +
+            lesson.title +
+            "</button>"
         );
       });
 
@@ -46,7 +46,7 @@ function onLessonClick(button) {
   var queryParams = "";
   var queryParamsObj = {
     lessonID: lessonID,
-    courseID: courseID
+    courseID: courseID,
   };
   for (var prop in queryParamsObj) {
     queryParams += prop + "=" + queryParamsObj[prop];
@@ -63,15 +63,36 @@ function loadSesson() {
   $.getJSON("data/courses/courses.json", function (data) {
     var courses = data;
 
-    var currentCourse = courses.find(c => c.id === courseID);
-    var currentLesson = currentCourse.lessons.find(l => l.id === lessonID);
+    var coursesHomeList = [];
 
-    $.get("data/courses/" + currentCourse.folder + "/" + currentLesson.file + ".html", function (data) {
-      $("#course-text").html(data);
-    });
+    if (!courseID || !lessonID) {
+      data.forEach(function (course) {
+        coursesHomeList.push(
+          "<h3 class='text-center'>" +
+            course.title +
+            "</h3><div id='" +
+            course.id +
+            "'><p class='lead'>" + course.description + "</p></div>"
+        );
+      });
 
-  })
+      $("#courses-home").html(coursesHomeList.join(""));
+    }
 
+    var currentCourse = courses.find((c) => c.id === courseID);
+    var currentLesson = currentCourse.lessons.find((l) => l.id === lessonID);
+
+    $.get(
+      "data/courses/" +
+        currentCourse.folder +
+        "/" +
+        currentLesson.file +
+        ".html",
+      function (data) {
+        $("#course-text").html(data);
+      }
+    );
+  });
 }
 
 function loadFooter() {
@@ -79,7 +100,7 @@ function loadFooter() {
     {
       id: "#course-footer",
       path: consts.partialsPath + "footer.partial.html",
-      script: consts.assetsPath + "js/footer.js"
-    }
+      script: consts.assetsPath + "js/footer.js",
+    },
   ]);
 }

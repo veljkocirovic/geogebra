@@ -2,19 +2,95 @@
 <html lang="en">
 
 <head>
-<title>Uvod u kurs kombinatorike</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra Lesson</title>
-    <link rel="icon" href="assets/images/geogebra-logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <title>Uvod u kurs kombinatorike</title>
+</head>
 
-<script type="text/x-mathjax-config">
+
+<body>
+  <h2 class="display-4">ELEKTRONSKE LEKCIJE IZ KOMBINATORIKE</h2>
+
+  <P align="right"><i>Mi nikada ne postajemo matematičari, čak i ako naučimo napamet sve tuđe dokaze,<br>
+      ako naš um nije osposobljen da samostalno rešava postavljene probleme.</i><br>
+
+    Rene Dekart</P>
+  <div class="deffinition-paragraph">
+    <h4>Uvod</h4>
+    Pred Vama je kurs kombinatorike sastavljen od niza elektronskih lekcija koje su namenjene mahom učenicima srednjih
+    škola, a mogu ih korisititi
+    i talentovani učenici osnovnih škola u pripremama za takmičenja i ako žele da prodube svoja matematička znanja. <br>
+    Rešavanje kombinatornih i logičko-kombinatornih zadataka u nastavi matematike značajno utiče na razvoj stvaralačkog
+    mišljenja,
+    kreativnosti, sistematičnosti i pravilnog logičkog zaključivanja kod učenika.
+    <center><img width="400" src="data/courses/kombinatorika/kockice2.png"></center><br>
+    Teme iz kombinatorike se eksplicitno skoro i ne izučavaju u programu redovne nastave matematike u osnovnim školama,
+    dok su u nastavnim programima matematike u srednjim školama zastupljene. <br>
+
+    U programima dodatne nastave u osnovnoj i srednjoj školi, kao i programima takmičenja mladih matematičara,
+    kombinatorne teme zauzimaju veoma značajno mesto.<br>
+
+    Za rešavanje kombinatornih zadataka može se reći da se u izvesnoj meri razlikuje od rešavanja zadataka u drugim
+    oblastima matematike.
+    Naime, da biste rešili problem iz teorije brojeva ili geometrije, uspeh u tome često zavisi od poznavanja teorema i
+    pravila. Kod
+    kombinatornih zadataka, pored posedovanja osnovnih teorijskih znanja potrebna je i sposobnost za rešavanje
+    nestandardnih problema.
+    To se stiče iskustvom. Na internetu postoji mnoštvo izvora (literature od osnovnog do olimpijskog nivoa)
+    sa izloženim tehnikama za rešavanje i rešenim problemima. Učenje matematike i počiva na tome - da se rešavaju
+    problemi.<br><br>
+
+    Lekcije u okviru ovog kursa sadrže kratak teorijski uvod, nakon kojeg su navedeni rešeni primeri. Svaka lekcija
+    sadrži jedan set zadataka
+    za koje se preporučuje da se samostalno reše, pa tek onda otvore priložena rešenja, radi provere ili dobijanja
+    potrebne ideje za rešavanje.
+    Na kraju nekih lekcija naveden je istraživački zadatak koji je namenjen za samostalan rad. <br><br>
+
+    Ovaj kurs kombinatorike je doprinos digitalizaciji u oblasti učenja matematike na srpskom jeziku.
+
+
+  </div>
+  <div class="dark-paragraph">
+    <h4>Autor</h4>
+    Autor elektronskih lekcija iz kombinatorike je Veljko Ćirović, student doktorskih studija na Matematičkom fakultetu
+    u Beogradu.
+    Akivno se bavi popularizacijom matematike, radom sa mladim matematičarima i misaonim igrama.
+    Zaposlen je kao profesor matematike u Valjevskoj gimnaziji, a tokom poslednje decenije aktivan je član Društva
+    matematičara Srbije.
+    Predsednik je Podružnice matematičara Valjevo od 2013. godine i član Izvršnog odbora Društva matematičara Srbije od
+    2018. godine.
+    Član je Državne Komisije za takmičenja iz matematike učenika osnovnih škola i redakcije ,,Matematičkog lista".
+    Bio je organizator i predavač na više letnjih i zimskih škola mladih matematičara.
+    Takođe, učesnik je i predavač na više stručnih skupova i akreditovanih seminara stručnog usavršavanja profesora
+    matematike.
+    Teme predavanja na tim skupovima i lična interesovanja su mu u oblasti kombinatorike i unapređenja nastave
+    matematike kroz njeno činjenje funkcionalnom.
+
+
+
+  </div>
+
+
+
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    extensions: ["[a11y]/accessibility-menu.js"],
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
@@ -22,103 +98,9 @@
   });
 </script>
 
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</head>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
-<style>
-.collapsible {
-background-color: #3cbe63;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #9999ff;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
-<body>
-    <h2 class="display-4">ELEKTRONSKE LEKCIJE IZ KOMBINATORIKE</h2>
-
-<P align="right"><i>Mi nikada ne postajemo matematičari, čak i ako naučimo napamet sve tuđe dokaze,<br> 
-ako naš um nije osposobljen da samostalno rešava postavljene probleme.</i><br>
-
-Rene Dekart</P>
-    <div class="deffinition-paragraph">
-        <h4>Uvod</h4>
-Pred Vama je kurs kombinatorike sastavljen od niza elektronskih lekcija koje su namenjene mahom učenicima srednjih škola, a mogu ih korisititi
-i talentovani učenici osnovnih škola u pripremama za takmičenja i ako žele da prodube svoja matematička znanja. <br>
-Rešavanje kombinatornih i logičko-kombinatornih zadataka u nastavi matematike značajno utiče na razvoj stvaralačkog mišljenja,
- kreativnosti, sistematičnosti i pravilnog logičkog zaključivanja kod učenika.
-<center><img width="400" src="data/courses/kombinatorika/kockice2.png"></center><br>
-Teme iz kombinatorike se eksplicitno skoro i ne izučavaju u programu redovne nastave matematike u osnovnim školama, 
-dok su u nastavnim programima matematike u srednjim školama zastupljene. <br>
-
-U programima dodatne nastave u osnovnoj i srednjoj školi, kao i programima takmičenja mladih matematičara, 
-kombinatorne teme zauzimaju veoma značajno mesto.<br>
-
-Za rešavanje kombinatornih zadataka može se reći da se u izvesnoj meri razlikuje od rešavanja zadataka u drugim oblastima matematike.
-Naime, da biste rešili problem iz teorije brojeva ili geometrije, uspeh u tome često zavisi od poznavanja teorema i pravila. Kod
-kombinatornih zadataka, pored posedovanja osnovnih teorijskih znanja potrebna je i sposobnost za rešavanje nestandardnih problema. 
-To se stiče iskustvom. Na internetu postoji mnoštvo izvora (literature od osnovnog do olimpijskog nivoa) 
-sa izloženim tehnikama za rešavanje i rešenim problemima. Učenje matematike i počiva na tome - da se rešavaju problemi.<br><br>
-
-Lekcije u okviru ovog kursa sadrže kratak teorijski uvod, nakon kojeg su navedeni rešeni primeri. Svaka lekcija sadrži jedan set zadataka 
-za koje se preporučuje da se samostalno reše, pa tek onda otvore priložena rešenja, radi provere ili dobijanja potrebne ideje za rešavanje.
-Na kraju nekih lekcija naveden je istraživački zadatak koji je namenjen za samostalan rad. <br><br>
-
-Ovaj kurs kombinatorike je doprinos digitalizaciji u oblasti učenja matematike na srpskom jeziku.  
-  
-
-    </div>
-  <div class="dark-paragraph">
-<h4>Autor</h4>
-   Autor elektronskih lekcija iz kombinatorike je Veljko Ćirović, student doktorskih studija na Matematičkom fakultetu u Beogradu. 
-Akivno se bavi popularizacijom matematike, radom sa mladim matematičarima i misaonim igrama.
-Zaposlen je kao profesor matematike u Valjevskoj gimnaziji, a tokom poslednje decenije aktivan je član Društva matematičara Srbije. 
-Predsednik je Podružnice matematičara Valjevo od 2013. godine i član Izvršnog odbora Društva matematičara Srbije od 2018. godine. 
-Član je Državne Komisije za takmičenja iz matematike učenika osnovnih škola i redakcije ,,Matematičkog lista". 
-Bio je organizator i predavač na više letnjih i zimskih škola mladih matematičara. 
-Takođe, učesnik je i predavač na više stručnih skupova i akreditovanih seminara stručnog usavršavanja profesora matematike. 
-Teme predavanja na tim skupovima i lična interesovanja su mu u oblasti kombinatorike i unapređenja nastave matematike kroz njeno činjenje funkcionalnom. 
-
-
-   
-    </div>
-
-
- 
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
 </body>
 
 </html>

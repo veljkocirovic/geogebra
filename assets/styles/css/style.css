@@ -282,6 +282,7 @@ button:focus {
   width: 350px;
   height: calc(100vh - 60px);
   padding-left: 12px;
+  overflow-y: auto;
 }
 .courses-menu .course-title {
   margin: 24px 0 24px 0;
@@ -339,6 +340,10 @@ button:focus {
 .courses-content h5 {
   margin-bottom: 2rem;
   font-weight: 400;
+}
+
+.display-4 {
+  text-align: unset !important;
 }
 
 .display-5 {
@@ -436,6 +441,30 @@ button:focus {
 
 .btn-danger {
   background-color: #fa1133;
+}
+
+.collapsible {
+  background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }
 
 /*# sourceMappingURL=style.css.map */

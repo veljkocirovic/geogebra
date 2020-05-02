@@ -2,19 +2,294 @@
 <html lang="en">
 
 <head>
-<title>Princip uključenja-isključenja</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra Lesson</title>
-    <link rel="icon" href="assets/images/geogebra-logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <title>Princip uključenja-isključenja</title>
+</head>
 
-<script type="text/x-mathjax-config">
+
+<body>
+  <h2 class="display-4">PRINCIP UKLJUČIVANJA-ISKLJUČIVANJA</h2>
+
+
+  <div class="deffinition-paragraph">
+    <h4></h4>
+    Metod uključivanja-isključivanja je formalan način rešavanja problema Venovih dijagrama.
+    Na početku kursa, prilikom navođenja osnovnih principa prebrojavanja skupova, pomenuto je pravilo zbira.
+    Ono se odnosi na broj elemenata unije dva skupa $A$ i $B$ koji su disjunktni.
+    Međutim, često se sreću opštije situacije kod kojih ovi skupovi nisu disjunktni,
+    pa u tom slučaju treba ustanoviti pravilo koje će se primenjivati za prebrojavanje.<br><br>
+
+    Za proizvoljne skupove $A$ i $B$ važi
+    $$|A \cup B| = |A| + |B| - |A \cap B|.$$
+    <center><img width="450" src="data/courses/kombinatorika/dijagramui2.png"><br></center>
+    Primećujemo da se u ovoj formuli od zbira elemenata dva skupa oduzima broj elemenata njihovog preseka.
+    Moramo to učiniti, tj. isključiti ih iz zbira, jer bu u suprotnom, oni bili uračunati dva puta.
+
+    Slično, za slučaj tri proizvoljna skupa važi formula
+    $$|A \cup B \cup C| =|A| + |B| + |C| - |A \cap B| - |B \cap C| - |A \cap C| + |A \cap B \cap C|.$$
+
+    Često se u literaturi teorema koja se odnosi na princip isključivanja-uključivanja naziva osnovnom teoremom
+    kombinatorike.<br>
+
+    Za više skupova važi
+    $$|A_1 \cup A_2 \cup \ldots \cup A_p| =\sum_{1 \leq i \leq p}{|A_i|} -
+    \sum_{1 \leq i_1, i_2 \leq p}{|A_{i_1} \cap A_{i_2}|} + \ldots + {(-1)}^{p-1}|A_1 \cap A_2 \cap \cdots \cap A_p|.$$
+
+    <div class="tips-paragraph">
+      <h4>Primer 1.</h4>
+      Zapisati formulu za princip uključivanja-isključivanja za proizvoljna četiri skupa $P$, $Q$, $R$ i $S$. <br><br>
+
+      <b>Rešenje.</b>
+      $$|P\cup Q \cup R \cup S|=|P|+|Q|+|R|+|S|-$$
+      $$-|P\cap Q| - |P\cap R| - |P\cap S| - |Q\cap R|- |Q\cap S|-|R\cap S|+$$
+      $$+|P\cap Q\cap R| + |P\cap Q\cap S| + |P\cap R\cap S| + |Q\cap R\cap S|-$$
+      $$- |P\cap Q\cap R \cap S|.$$
+    </div>
+
+    <div class="tips-paragraph">
+      <h4>Primer 2.</h4>
+      U jednoj fabrici zaposleno je 54 radnika. Njih 43 govori engleski jezik, 32 - ruski, a 24 govori oba jezika.
+      Koliko radnika ne govori ni jedan od ova dva jezika? <br><br>
+
+      <b>Rešenje.</b>
+      Ovaj zadatak ćemo rešiti primenom Venovih dijagrama i principa uključivanja-isključivanja.
+      Sledeća ilustracija pokazuje koliko radnika govori samo ruski jezik, koliko samo engleski jezik i koliko dva
+      jezika. <br>
+      <center><img width="450" src="data/courses/kombinatorika/dijagramui.png"><br></center>
+      Dobijamo da radnika koji govore neki strani jezik ima $$19+8+24=51$$
+      pa pošto ih je ukupno 54 zaposlenih to zaključujemo da je u ovoj firmi samo 3 radnika koja ne govore ni jedna od
+      ovih stranih jezika.
+
+      Zapišimo to koristeći odgovarajuću formulu
+      $$54-|E \cup P| = |E| + |P| - |E \cap P|= 43 + 32 - 24=51.$$
+
+    </div>
+
+    <div class="tips-paragraph">
+      <h4>Primer 3.</h4>
+      Koliko ima trocifrenih prirodnih brojeva koji nisu deljivi ni sa 12, ni sa 15, ni sa 18?<br><br>
+
+      <b>Rešenje.</b>
+
+      Neka je $A$ skup trocifrenih brojeva deljivih sa $12$, $B$ skup trocifrenih brojeva deljivih sa $18$ i $C$ skup
+      trocifrenih brojeva
+      deljivih sa $15$. Tada je $|A| = 75$, $|B| = 50$, $|C| = 60$, $|A \cap B| = 25$,
+      $|A\cap C| = 15$, $|B \cap C| = 10$ i $|A\cap B \cap C| = 5$. Sada je
+      $$ |A \cup B \cup C| = |A|+ |B|+ |C| -|A \cap B| - |A\cap C| - |B \cap C| + |A\cap B \cap C| =140.$$
+
+      Dakle, takvih brojeva ima $900 − 140 = 760$.
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 1.</h4>
+      Neka je $A=\{1,2, \ldots, 500\}$. Koliko elemenata tog skupa je deljivo sa 2, 3 ili 5?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Iskoristiti ideju iz primera 3. Takvih brojeva ima $366$.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 2.</h4>
+      Koliko ima celih brojeva $x$ koji su delioci bar jednog od brojeva $10^4$ i $20^3$?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Broj $10^4=2^4\cdot 5^4$ ima $5\cdot 5=25$ delilaca, dok broj $20^3=2^{6}\cdot 5^3$ ima $7\cdot 4=28$
+          delilaca.
+          Najveći zajednički delilac ovih brojeva je broj $2^4\cdot 5^3$, a njegov broj delilaca je $5\cdot 4=20$. <br>
+
+          Neka je $D_{10^4}$ skup svih delilaca broja $10^4$, a $D_{20^3}$ skup svih delilaca broja ${20^3}$. Koristeći
+          princip uključivanja-isključivanja dobijamo da prirodnih brojeva koji su delioci bar jednog od ova dva broja
+          ima
+          $$|D_{10^4} \cup D_{20^3}|=|D_{10^4}|+ |D_{20^3}|-|D_{10^4}\cap D_{20^3}|= 25+28-20=33.$$
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 3.</h4>
+      Na jednom matematičkom takmičenju učesnici su rešavali tri zadatka. Poznato je da je $80\%$ učesnika rešilo prvi
+      zadatak,
+      $75\%$ je rešilo drugi i $70\%$ treći zadatak. Dokazati da je bar $25\%$ takmičara rešilo sva tri zadatka.
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Neka je na tom takmičenju učestvovalo $x > 0$ takmičara. Neka je $A$ skup svih takmičara koji nisu rešili prvi
+          zadatak, $B$ skup svih takmičara
+          koji nisu rešili 2 zadatak, a $C$ skup svih takmičara koji nisu rešili treći zadatak.
+
+          Sada je $|A| = 0,2x$, $|B| = 0,25x$ i $|C| = 0,3x$.
+          Takođe, poznato je da je
+
+          $$|A \cup B \cup C| \leq |A| + |B| + |C| = 0,2x + 0,25x + 0,3x = 0,75x.$$
+          Skup ljudi koji su rešili sva tri problema je komplement skupa $A \cup B \cup C$, pa odatle sledi da je
+
+          $$x − |A \cup B \cup C| \geq x − 0,75x = 0,25x.$$
+          Dakle, bar $25\%$ takmičara je rešilo sva tri zadatka.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 4.</h4>
+      Koliko celobrojnih rešenja ima jednačina $x_1+x_2+x_3=40$, takvih da je $0\leq x_1, x_2, x_3 \leq 17$?
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Jednačina $x_1+x_2+x_3=40$ ima ukupno $\displaystyle \binom{42}{2}=861$ rešenje u skupu nenegativnih celih
+          brojeva.
+          Od tog broja treba oduzeti broj svih rešenja ove jednačine za koja je ispunjen bar jedan od uslova $x_1\geq
+          18$ ili $x_2\geq 18$ ili $x_3\geq 18$.<br>
+
+          Ako sa $A_i$, $i\in \{1,2,3\}$, označimo skup onih rešenja jednačine za koja je $x_i\geq 18$, onda
+          je broj rešenja, pod traženim uslovima, jednak
+          $$861 - |A_1\cup A_2 \cup A_3|.$$
+
+          Broj elemenata skupa $A_1$ jednak je broju nenegativnih celobrojnih rešenja jednačine $x_1'+x_2+x_3=22$, gde
+          je $x_1'=x_1-18$.
+          Broj njenih rešenja je $\displaystyle \binom{24}{2}=276$ rešenja, pa sledi da je $|A_1|=276$.
+          Na sličan način se dobija i da je $|A_2|=|A_3|=276$. <br>
+
+          Skup $A_1 \cap A_2$ sadrži sva rešenja te jednačine za koja je $x_1\geq 18$ i $x_2\geq 18$. Odatle sledi da
+          skup $A_1 \cap A_2$ ima onoliko
+          elemenata koliko ima rešenja jednačina $x_1'+x_2'+x_3=4$, gde je $x_1'=x_1-18$ i $x_2'=x_2-18$. Ta jednačina
+          ima
+          $\displaystyle \binom{6}{2}=15$ rešenja, odakle sledi da je $|A_1\cap A_2|=15$. <br>
+          Na sličan način se dobija i da je $|A_1\cap A_3|=|A_2\cap A_3|=15$. <br>
+
+          Skup $A_1 \cap A_2 \cap A_3$ ne sadrži nijedno rešenje jer za $x_1 \geq 18\ \land x_2 \geq 18 \ \land x_3 \geq
+          18$ ne može biti ispunjeno $x_1+x_2+x_3=40$. <br>
+
+          Koristeći princip uključivanja-isključivanja sledi da je
+          $$861 - |A_1\cup A_2 \cup A_3|= 861 - (|A_1|+ |A_2|+|A_3|- |A_1 \cap A_2|-|A_1 \cap A_3|- |A_2 \cap A_3| +
+          |A_1 \cap A_2 \cap A_3|)$$
+          $$= 861 - (276 + 276 + 276 -15 - 15 - 15 + 0)$$
+          $$=78.$$
+        </p>
+      </div>
+    </div>
+
+    <div class="success-paragraph">
+      <h4>Zadatak 5.</h4>
+      Na koliko različitih načina je moguće izabrati 5 karata iz kompleta koji sadrži 52 karte,
+      tako da među njima budu zastupljene sve četiri boje: karo, herc, tref i pik?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Neka je $K$ skup svih izbora u kojima nije zastupljen karo, $H$ skup svih izbora u kojima nije zastupljen
+          herc,
+          $T$ skup svih izbora u kojima nije zastupljen tref i $P$ skup svih izbora u kojima nije zastupljen pik.
+          <br><br>
+
+          Imamo da je $|K|=|H|=|T|=|P|=\displaystyle \binom{39}{5}$, kao i
+          $$|K\cap H|=|K\cap T|=\ldots = |T\cap P|=\binom{26}{5}.$$
+
+          Takođe, za sve tročlane preseke imamo da je
+          $$|K\cap H \cap T|=\ldots=|H\cap T \cap P|=\binom{13}{5},$$
+          kao i da je $|K\cap H \cap T \cap P|=0$. <br><br>
+
+          Koristeći princip uključivanja-isključivanja, dobijamo da je
+          $$|K\cup H \cup T \cup P|=4\cdot \binom{39}{5} - 6 \cdot\binom{26}{5} + 4 \cdot \binom{13}{5},$$
+
+          a ukupan broj načina da među pet izvučenih karata budu zastupljene sve četiri boje jednak je
+          $$\displaystyle \binom{52}{5}-|K\cup H \cup T \cup P|.$$
+        </p>
+      </div>
+    </div>
+
+
+    <div class="success-paragraph">
+      <h4>Zadatak 6.</h4>
+      Pustinjom je išao karavan sastavljen od 9 kamila. Putovanje je trajalo veoma dugo i u nekom trenutku su se
+      izmešale jer im je
+      dosadilo da ispred sebe uvek gledaju istu kamilu.
+      Na koliko načina je moguće promeniti redosled kamila tako da svaka od njih dalje nastavi putovanje iza različite
+      kamile od pre te promene?
+
+      <button type="button" class="collapsible">Rešenje</button>
+      <div class="content">
+        <p>
+          Jedan od načina da se kamile raspored jeste da, na primer, zamene redosled tako da ona koja je bila deveta po
+          redu sada bude prva,
+          ona koja je bila osma, sada bude druga i tako redom. Međutim, to je samo interesantna ideja, ne i rešenje ovog
+          problema.
+          U cilju nalaženja svih povoljnih načina da se kamile rasporede, numerišimo ih brojevima od 1 do 9,
+          prema njihovom prvom redosledu kretanja u karavanu.
+
+          Prebrojimo sada sve permutacije kamila u kojima neće biti susedni (neuređeni) parovi: $(1;2), (2;3), \ldots
+          (8;9)$.
+          Ovakvih parova ima ukupno osam i možemo ih nazvati ,,zabranjenim" parovima.
+
+          Izbrojimo najpre, koliko je permutacija u kojima su susedni brojevi para $(1;2)$. Na njih možemo gledati kao
+          na jedan element,
+          pa će takvih permutacija biti $8!$. Ovaj rezultat se dobija i za preostalih sedam zabranjenih parova. <br><br>
+
+          Razmotrimo sada permutacije u kojima su prisutna po dva zabranjena para.
+          Tu postoje dva slučaja: da u dva zabranjena para ne postoji zajednički element ili da u njima ima zajedničkog
+          elementa.<br><br>
+
+          U prvom slučaju objedinimo elemente svakog para u jedan i dolazimo do $7!$ takvih permutacija
+          (dva para daju dva bloka u permutovanju, a ostalo je još njih pet, što je ukupno sedam elemenata).
+          I u drugom slučaju dobijamo $7!$ permutacija jer u dva para postoji zajednički element, dakle u njima je tri
+          broja, na primer 5,6,7.
+          Sve tri broja objedinimo u jedan blok, i računajući onih preostalih šest, to daje sedam elemenata za
+          permutovanje.<br><br>
+
+          Uopšte, za $m$ zabranjenih parova, broj permutacija koje sadrže sve te parove je $(9-m)!$, a jasno je da $m$
+          parova od 8 možemo odabrati na $\displaystyle \binom{8}{m}$ načina.
+
+          Konačno, koristeći princip uključivanja-isključivanja dobijamo da broj svih permutacija koje ne sadrže ni
+          jedan zabranjeni par iznosi
+          $$9!-\binom{8}{1}8!+
+          \binom{8}{2}7!-\binom{8}{3}6!+\binom{8}{4}5!-\binom{8}{5}4!+\binom{8}{6}3!-\binom{8}{7}2!+\binom{8}{8}1!=$$
+          $$=8!\left( 9!-\frac{8}{1!}+\frac{7}{2!}-\frac{6}{3!}+\frac{5}{4!}-\frac{4}{5!}+ \frac{3}{6!} -\frac{2}{7!}
+          +\frac{1}{8!}\right)=148329.$$
+        </p>
+      </div>
+
+    </div>
+    <div class="error-paragraph">
+      <h4>Istraživački zadatak</h4>
+
+      Odrediti broj celobrojnih rešenja jednačine $x_1+x_2+x_3+x_4=15$, koja zadovoljavaju uslove
+      $$2\leq x_1 \leq 6,\ -2\leq x_2 \leq 1,\ 0\leq x_3 \leq 6,\ 3\leq x_4 \leq 8.$$
+
+    </div>
+
+  </div>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+    extensions: ["[a11y]/accessibility-menu.js"],
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       processEscapes: true
@@ -22,284 +297,9 @@
   });
 </script>
 
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-</head>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
-<style>
-.collapsible {
-background-color: #3cbe63;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #9999ff;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
-<body>
-    <h2 class="display-4">PRINCIP UKLJUČIVANJA-ISKLJUČIVANJA</h2>
-
-
-    <div class="deffinition-paragraph">
-        <h4></h4>
- Metod uključivanja-isključivanja je formalan način rešavanja problema Venovih dijagrama. 
-Na početku kursa, prilikom navođenja osnovnih principa prebrojavanja skupova, pomenuto je pravilo zbira. 
-Ono se odnosi na broj elemenata unije dva skupa $A$ i $B$ koji su disjunktni. 
-Međutim, često se sreću opštije situacije kod kojih ovi skupovi nisu disjunktni, 
-pa u tom slučaju treba ustanoviti pravilo koje će se primenjivati za prebrojavanje.<br><br>
-
-Za proizvoljne skupove $A$ i $B$ važi
-$$|A \cup B| = |A| + |B| - |A \cap B|.$$
-<center><img width="450" src="data/courses/kombinatorika/dijagramui2.png"><br></center>
-Primećujemo da se u ovoj formuli od zbira elemenata dva skupa oduzima broj elemenata njihovog preseka. 
-Moramo to učiniti, tj. isključiti ih iz zbira, jer bu u suprotnom, oni bili uračunati dva puta.
-
-Slično, za slučaj tri proizvoljna skupa važi formula
-$$|A \cup B \cup C|  =|A| + |B| + |C| - |A \cap B| - |B \cap C| - |A \cap C| + |A \cap B \cap C|.$$
-
-Često se u literaturi teorema koja se odnosi na princip isključivanja-uključivanja naziva osnovnom teoremom kombinatorike.<br>
-
-Za više skupova važi 
-$$|A_1 \cup A_2 \cup \ldots \cup A_p| =\sum_{1 \leq i \leq p}{|A_i|} -
-\sum_{1 \leq i_1, i_2 \leq p}{|A_{i_1} \cap A_{i_2}|} + \ldots + {(-1)}^{p-1}|A_1 \cap A_2 \cap \cdots \cap A_p|.$$
-
-<div class="tips-paragraph">
-        <h4>Primer 1.</h4>
-Zapisati formulu za princip uključivanja-isključivanja za proizvoljna četiri skupa $P$, $Q$, $R$ i $S$. <br><br>
-
-<b>Rešenje.</b> 
-$$|P\cup Q \cup R \cup S|=|P|+|Q|+|R|+|S|-$$
-$$-|P\cap Q| - |P\cap R| - |P\cap S| - |Q\cap R|- |Q\cap S|-|R\cap S|+$$
-$$+|P\cap Q\cap R| + |P\cap Q\cap S| + |P\cap R\cap S| + |Q\cap R\cap S|-$$
-$$- |P\cap Q\cap R \cap S|.$$ 
- </div>
-
-<div class="tips-paragraph">
- <h4>Primer 2.</h4>
-U jednoj fabrici zaposleno je 54 radnika. Njih 43 govori engleski jezik, 32 - ruski, a 24 govori oba jezika. 
-Koliko radnika ne govori ni jedan od ova dva jezika? <br><br>
-
-<b>Rešenje.</b>  
-Ovaj zadatak ćemo rešiti primenom Venovih dijagrama i principa uključivanja-isključivanja. 
-Sledeća ilustracija pokazuje koliko radnika govori samo ruski jezik, koliko samo engleski jezik i koliko dva jezika. <br>
-<center><img width="450" src="data/courses/kombinatorika/dijagramui.png"><br></center>
-Dobijamo da radnika koji govore neki strani jezik ima $$19+8+24=51$$ 
-pa pošto ih je ukupno 54 zaposlenih to zaključujemo da je u ovoj firmi samo 3 radnika koja ne govore ni jedna od ovih stranih jezika.
-
-Zapišimo to koristeći odgovarajuću formulu
-$$54-|E \cup P| = |E| + |P| - |E \cap P|= 43 + 32 - 24=51.$$
-
- </div>
-
-<div class="tips-paragraph">
- <h4>Primer 3.</h4>
-Koliko ima trocifrenih prirodnih brojeva koji nisu deljivi ni sa 12, ni sa 15, ni sa 18?<br><br>
-
-<b>Rešenje.</b> 
-
-Neka je $A$ skup trocifrenih brojeva deljivih sa $12$, $B$ skup trocifrenih brojeva deljivih sa $18$ i $C$ skup trocifrenih brojeva
-deljivih sa $15$. Tada je $|A| = 75$, $|B| = 50$, $|C| = 60$, $|A \cap B| = 25$,
-$|A\cap C| = 15$, $|B \cap C| = 10$ i $|A\cap B \cap C| = 5$. Sada je
-$$ |A \cup B \cup C| = |A|+ |B|+ |C| -|A \cap B| - |A\cap C| - |B \cap C| + |A\cap B \cap C| =140.$$
-
-Dakle, takvih brojeva ima $900 − 140 = 760$. 
-    </div>
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 1.</h4>
-   Neka je $A=\{1,2, \ldots, 500\}$. Koliko elemenata tog skupa je deljivo sa 2, 3 ili 5?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Iskoristiti ideju iz primera 3. Takvih brojeva ima $366$. 
-</p>
-</div>
-    </div>
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 2.</h4>
-Koliko ima celih brojeva $x$ koji su delioci bar jednog od brojeva $10^4$ i $20^3$?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Broj $10^4=2^4\cdot 5^4$ ima $5\cdot 5=25$ delilaca, dok broj $20^3=2^{6}\cdot 5^3$ ima $7\cdot 4=28$ delilaca. 
-Najveći zajednički delilac ovih brojeva je broj $2^4\cdot 5^3$, a njegov broj delilaca je $5\cdot 4=20$. <br>
-
-Neka je $D_{10^4}$ skup svih delilaca broja $10^4$, a $D_{20^3}$ skup svih delilaca broja ${20^3}$. Koristeći princip uključivanja-isključivanja dobijamo da prirodnih brojeva koji su delioci bar jednog od ova dva broja ima
-$$|D_{10^4} \cup D_{20^3}|=|D_{10^4}|+ |D_{20^3}|-|D_{10^4}\cap D_{20^3}|= 25+28-20=33.$$ 
-</p>
-</div>
-    </div>
-
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 3.</h4>
-Na jednom matematičkom takmičenju učesnici su rešavali tri zadatka. Poznato je da je $80\%$ učesnika rešilo prvi zadatak,
-$75\%$ je rešilo drugi i $70\%$ treći zadatak. Dokazati da je bar $25\%$ takmičara rešilo sva tri zadatka. 
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p> 
-Neka je na tom takmičenju učestvovalo $x > 0$ takmičara. Neka je $A$ skup svih takmičara koji nisu rešili prvi zadatak, $B$ skup svih takmičara 
-koji nisu rešili 2 zadatak, a $C$ skup svih takmičara koji nisu rešili treći zadatak. 
-
- Sada je $|A| = 0,2x$, $|B| = 0,25x$ i $|C| = 0,3x$. 
-Takođe, poznato je da je 
-
-$$|A \cup B \cup C| \leq |A| + |B| + |C| = 0,2x + 0,25x + 0,3x = 0,75x.$$
-Skup ljudi koji su rešili sva tri problema je komplement skupa  $A \cup B \cup C$, pa odatle sledi da je
-
-$$x − |A \cup B \cup C| \geq x − 0,75x = 0,25x.$$
-Dakle, bar $25\%$ takmičara je rešilo sva tri zadatka. 
-</p>
-</div>
-    </div>
-
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 4.</h4>
-Koliko celobrojnih rešenja ima jednačina $x_1+x_2+x_3=40$, takvih da je $0\leq x_1, x_2, x_3 \leq 17$?
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Jednačina $x_1+x_2+x_3=40$ ima ukupno $\displaystyle \binom{42}{2}=861$ rešenje u skupu nenegativnih celih brojeva. 
-Od tog broja treba oduzeti broj svih rešenja ove jednačine za koja je ispunjen bar jedan od uslova $x_1\geq 18$ ili $x_2\geq 18$ ili $x_3\geq 18$.<br>
-
-Ako sa $A_i$, $i\in \{1,2,3\}$, označimo skup onih rešenja jednačine za koja je $x_i\geq 18$, onda
-je broj rešenja, pod traženim uslovima, jednak 
-$$861 - |A_1\cup A_2 \cup A_3|.$$
-
-Broj elemenata skupa $A_1$ jednak je broju nenegativnih celobrojnih rešenja jednačine $x_1'+x_2+x_3=22$, gde je $x_1'=x_1-18$.
-Broj njenih rešenja je $\displaystyle \binom{24}{2}=276$ rešenja, pa sledi da je $|A_1|=276$. 
-Na sličan način se dobija i da je $|A_2|=|A_3|=276$. <br>
-
-Skup $A_1 \cap A_2$ sadrži sva rešenja te jednačine za koja je $x_1\geq 18$ i $x_2\geq 18$. Odatle sledi da skup $A_1 \cap A_2$ ima onoliko
-elemenata koliko ima rešenja jednačina $x_1'+x_2'+x_3=4$, gde je $x_1'=x_1-18$ i $x_2'=x_2-18$. Ta jednačina ima 
-$\displaystyle \binom{6}{2}=15$ rešenja, odakle sledi da je $|A_1\cap A_2|=15$. <br>
-Na sličan način se dobija i da je $|A_1\cap A_3|=|A_2\cap A_3|=15$. <br>
-
-Skup $A_1 \cap A_2 \cap A_3$ ne sadrži nijedno rešenje jer za $x_1 \geq 18\ \land x_2 \geq 18 \ \land x_3 \geq 18$ ne može biti ispunjeno $x_1+x_2+x_3=40$. <br>
-
-Koristeći princip uključivanja-isključivanja sledi da je
-$$861 - |A_1\cup A_2 \cup A_3|= 861 - (|A_1|+ |A_2|+|A_3|- |A_1 \cap A_2|-|A_1 \cap A_3|- |A_2 \cap A_3| + |A_1 \cap A_2 \cap A_3|)$$
-$$= 861 - (276 + 276 + 276 -15 - 15 - 15 + 0)$$
-$$=78.$$
-</p>
-</div>
-    </div>
-
-    <div class="success-paragraph">
-        <h4>Zadatak 5.</h4>
-Na koliko različitih načina je moguće izabrati 5 karata iz kompleta koji sadrži 52 karte, 
-tako da među njima budu zastupljene sve četiri boje: karo, herc, tref i pik?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Neka je $K$ skup svih izbora u kojima nije zastupljen karo, $H$ skup svih izbora u kojima nije zastupljen  herc, 
-$T$ skup svih izbora u kojima nije zastupljen tref i $P$ skup svih izbora u kojima nije zastupljen pik. <br><br>
-
-Imamo da je $|K|=|H|=|T|=|P|=\displaystyle \binom{39}{5}$, kao i 
-$$|K\cap H|=|K\cap T|=\ldots = |T\cap P|=\binom{26}{5}.$$
-
-Takođe, za sve tročlane preseke imamo da je 
-$$|K\cap H \cap T|=\ldots=|H\cap T \cap P|=\binom{13}{5},$$
-kao i da je $|K\cap H \cap T \cap P|=0$. <br><br>
-
-Koristeći princip uključivanja-isključivanja, dobijamo da je
-$$|K\cup H \cup T \cup P|=4\cdot \binom{39}{5} - 6  \cdot\binom{26}{5} + 4 \cdot \binom{13}{5},$$
-
-a ukupan broj načina da među pet izvučenih karata budu zastupljene sve četiri boje jednak je 
-$$\displaystyle \binom{52}{5}-|K\cup H \cup T \cup P|.$$
- </p>
-</div>
-    </div>
-
-
-    <div class="success-paragraph">
-        <h4>Zadatak 6.</h4>
-Pustinjom je išao karavan sastavljen od 9 kamila. Putovanje je trajalo veoma dugo i u nekom trenutku su se izmešale jer im je 
-dosadilo da ispred sebe uvek gledaju istu kamilu.
-Na koliko načina je moguće promeniti redosled kamila tako da svaka od njih dalje nastavi putovanje iza različite kamile od pre te promene?
-
-<button type="button" class="collapsible">Rešenje</button>
-<div class="content">
-  <p>
-Jedan od načina da se kamile raspored jeste da, na primer, zamene redosled tako da ona koja je bila deveta po redu sada bude prva, 
-ona koja je bila osma, sada bude druga i tako redom. Međutim, to je samo interesantna ideja, ne i rešenje ovog problema.
-U cilju nalaženja svih povoljnih načina da se kamile rasporede, numerišimo ih brojevima od 1 do 9, 
-prema njihovom prvom redosledu kretanja u karavanu.
-
-Prebrojimo sada sve permutacije kamila u kojima neće biti susedni (neuređeni) parovi: $(1;2), (2;3), \ldots (8;9)$. 
-Ovakvih parova ima ukupno osam i možemo ih nazvati ,,zabranjenim" parovima.
-
-Izbrojimo najpre, koliko je permutacija u kojima su susedni brojevi para $(1;2)$. Na njih možemo gledati kao na jedan element, 
-pa će takvih permutacija biti $8!$. Ovaj rezultat se dobija i za preostalih sedam zabranjenih parova. <br><br>
-
-Razmotrimo sada permutacije u kojima su prisutna po dva zabranjena para. 
-Tu postoje dva slučaja: da u dva zabranjena para ne postoji zajednički element ili da u njima ima zajedničkog elementa.<br><br>
-
-U prvom slučaju objedinimo elemente svakog para u jedan i dolazimo do $7!$ takvih permutacija 
-(dva para daju dva bloka u permutovanju, a ostalo je još njih pet, što je ukupno sedam elemenata).  
-I u drugom slučaju dobijamo $7!$ permutacija jer u dva para postoji zajednički element, dakle u njima je tri broja, na primer 5,6,7. 
-Sve tri broja objedinimo u jedan blok, i računajući onih preostalih šest, to daje sedam elemenata za permutovanje.<br><br>
-
-Uopšte, za $m$ zabranjenih parova, broj permutacija koje sadrže sve te parove je $(9-m)!$, a jasno je da $m$ parova od 8 možemo odabrati na $\displaystyle \binom{8}{m}$ načina.
-
-Konačno, koristeći princip uključivanja-isključivanja dobijamo da broj svih permutacija koje ne sadrže ni jedan zabranjeni par iznosi
-$$9!-\binom{8}{1}8!+ \binom{8}{2}7!-\binom{8}{3}6!+\binom{8}{4}5!-\binom{8}{5}4!+\binom{8}{6}3!-\binom{8}{7}2!+\binom{8}{8}1!=$$
-$$=8!\left( 9!-\frac{8}{1!}+\frac{7}{2!}-\frac{6}{3!}+\frac{5}{4!}-\frac{4}{5!}+ \frac{3}{6!} -\frac{2}{7!} +\frac{1}{8!}\right)=148329.$$
- </p>
-</div>
-
-</div>
- <div class="error-paragraph">
-        <h4>Istraživački zadatak</h4>
-
-Odrediti broj celobrojnih rešenja jednačine $x_1+x_2+x_3+x_4=15$, koja zadovoljavaju uslove
-$$2\leq x_1 \leq 6,\ -2\leq x_2 \leq 1,\ 0\leq x_3 \leq 6,\  3\leq x_4 \leq 8.$$
-
-    </div>
-
-    </div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
 </body>
 
 </html>
