@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Invarijante</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra Lesson</title>
+    <link rel="icon" href="assets/images/geogebra-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<style>
+.collapsible {
+background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+    <h2 class="display-4">INVARIJANTA</h2>
+
+
+    <div class="deffinition-paragraph">
+        <h4>Invarijanta</h4>
+ Svojstvo kombinatorne konfiguracije koje se ne menja primenom dozvoljene transformacije ili operacije na njoj naziva se invarijantom te 
+konfiguracije. 
+<br><br>
+Obično se invarijante koriste za rešavanje zadataka u kojima
+se želi ispitati može li se višestrukom primenom neke zadate transformacije od
+objekta (stanja) $A$ dobiti neki drugi objekat (stanje) $B$ . Ukoliko se pronađe primer koji
+pokazuje kako se to može učiniti, onda je odgovor potvrdan. Ako se pronađe invarijanta te transformacije 
+koja nema iste vrednosti za ta dva objekta, to znači da se primenama te transformacije ne može od $A$ doći do $B$ i odgovor je odričan.
+
+
+<div class="tips-paragraph">
+        <h4>Primer 1.</h4>
+Na tabli je broj 0 zapisan deset puta, a broj 1 petnaest puta. Dozvoljeno
+je obrisati dva broja i umesto njih zapisati broj 0 ako su izbrisani
+brojevi jednaki ili broj 1 ako su izbrisani brojevi različiti.
+Ova operacija se ponavlja sve dok na tabli ne ostane zapisan samo jedan broj. 
+Da li to može biti broj 0?<br><br>
+
+<b>Rešenje.</b> Primetimo da ukoliko se posle primene dozvoljene operacije obrišu dve nule, ili dve jedinice i zapiše nula,
+zbir brojeva na tabli ili ostaje nepromenjen ili se smanji za 2. Takodje, ako se izbrišu dva različita broja i zapiše jedinica, 
+zbir brojeva na tabli se ne menja. 
+Dakle, u svakom slučaju zbir brojeva na tabli ne menja svoju parnost, pa s obzirom da je zbir zapisanih brojeva na početku neparan,
+to će i poslednji zapisani broj na tabli biti neparan, a to je broj 1. Znači, broj koji poslednji ostaje na tabli ne može biti 0. 
+ </div>
+
+<div class="tips-paragraph">
+ <h4>Primer 2.</h4>
+Kvadrat dimenzija $5 \times 5$ podeljen je na 25 polja koja su obojena „šahovski” 
+(polje u donjem levom uglu je crne boje). Na svakom polju postavljen je po jedan žeton. 
+Jedan potez se sastoji u premeštanju bilo koja dva žetona, svakog od njih na susedno polje po vertikali ili horizontali. 
+Uočimo neko belo polje. Da li se mogu, nakon izvesnog broja poteza, svi žetoni naći na tom uočenom polju?  <br><br>
+
+<b>Rešenje.</b>  
+Takva tabla obojena na ,,šahovski način“ ima 12 belih i 13 crnih  polja. 
+Kako se žeton jednim potezom pomeri na polje druge boje može se dogoditi jedan od tri slučaja:<br>
+	- broj žetona na belim poljima se smanji za dva, a na crnim uveća za dva;<br>
+	- broj žetona na crnim poljima se smanji za dva, a na belim uveća za dva;<br>
+	- broj žetona na crnim i belim poljima ostane nepromenjen. <br>
+U svakom slučaju, parnost broja žetona na belim, kao i na crnim poljima se ne menja, pa zaljkučujemo da se ne mogu 
+svi žetoni pomeriti na uočeno belo polje, s obzirom da ih je na početku bio neparan broj na crnim poljima. 
+ </div>
+
+<div class="tips-paragraph">
+ <h4>Primer 3.</h4>
+Data je transformacija uređene trojke brojeva $(a,b,c)$:
+$$(a,b,c) \rightarrow (5a - 4b,5b - 4c,5c - 4a)$$
+Može li se od uređene trojke $(1, 3, 5)$ kočanim brojem primena ovakvih transformacija dobiti:<br>
+a) uređena trojka $(7,9,11)$;   b) uređena trojka $(2,3,4)$?<br><br>
+
+<b>Rešenje.</b> Uočimo da se ovom transformacijom iz trojke $(a, b, c)$ prelazi u trojku $(5a - 4b,5b - 4c,5c - 4a)$
+ kod koje se ne menja zbir koordinata u odnosu na polaznu trojku, 
+a takođe ni parnost komponenti. Ta svojstva nazivamo invarijantama transformacije. 
+S obzirom na to, nije moguće izvršiti transformaciju pod a), a ni pod b) 
+jer se neparne komponente trojke $(1, 3, 5)$ datom transformacijom ne mogu prevesti u parne komponente trojke $(2, 3, 4)$, 
+iako je zbir komponenti, u tom slučaju, jednak.
+
+    </div>
+
+
+    <div class="success-paragraph">
+        <h4>Zadatak 1.</h4>
+   Od brojeva 1, 2, 3, 4, 5 i 7 biraju se tri broja i povećavaju za po 1. Može li se ponavljanjem te
+operacije dobiti da svi brojevi budu jednaki?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> Ne može. Naime, primetimo da je zbir tih brojeva jednak 22. 
+S obzirom da se u svakom potezu taj zbir povećava za 3, on će u svakom momentu
+biti jednak $22+3k$, za neko $k \in N$. Kako taj broj nije deljiv sa 6, to zaključujemo da nije moguće dobiti sve jednake brojeve.</p>
+</div>
+    </div>
+
+
+    <div class="success-paragraph">
+        <h4>Zadatak 2.</h4>
+Na stolu se nalazi osam čaša. Tri od njih su okrenute dnom naviše. 
+Dozvoljeno je istovremeno prevrnuti bilo koje četiri čaše. Može li se postići da sve čaše budu pravilno postavljene?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> Ne može. Prilikom svakog prevrtanja čaša, broj onih koje su okrenute dnom na gore ostaje neparan, pa ni u jednom momentu ne može biti jednak 0.</p>
+</div>
+    </div>
+
+    <div class="success-paragraph">
+        <h4>Zadatak 3.</h4>
+Uređeni par celih brojeva $(m, n)$ možemo transformisati u uređeni par $(n, m)$,
+$(m - n, n)$ ili $(m + 2n, n)$. Može li se od uređenog para $(21,15)$ dobiti uređeni par $(12,20)$?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> Primetimo da se bilo kojom od mogućih transformacija ne menja parnost druge komponente u uredjenoj dvojci, pa se ne može od para $(21,15)$ dobiti par $(12,20)$.</p>
+</div>
+    </div>
+
+    <div class="success-paragraph">
+        <h4>Zadatak 4.</h4>
+U donjem levom uglu šahovske table $8\times 8$ postavljeno je devet žetona, po jedan na svakom polju kvadrata $3 \times 3$. 
+Žeton se može pomeriti na slobodno polje preko susednog žetona, to jest, može se pomeriti simetrično u odnosu na centar susednog žetona 
+(vertikalno, horizontalno ili dijagonalno). Da li je moguće sve žetone
+dovesti u oblik kvadrata $3\times3$ nakon određenog broja takvih poteza, ali u:<br>
+  a) gornjem levom uglu;<br>
+  b) gornjem desnom uglu? (Turnir gradova 1986/1987.)
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>Obojimo neparne horizointale (1, 3, 5. i 7.) table belom bojom, a parne (2, 4, 6. i 8.) crnom bojom. 
+Na početku je šest žetona na belim, a tri na crnim poljima. S obzirom da se definisanom operacijom pomeranja
+žeton pomera na polje iste boje, to ovo nije moguće izvesti, jer su polja gornjih kvadrata $3 \times 3$, u oba slučaja
+po šest obojena u crnu boju, a tri u belu. </p>
+</div>
+    </div>
+
+
+    <div class="success-paragraph">
+        <h4>Zadatak 5.</h4>
+Na tabli su zapisana tri broja $1, \sqrt{2}$ i $1+ \sqrt{2}$. 
+U svakom momentu je moguoće odabrati neka dva od njih i transformisati ih sledećom transformacijom
+$$(a,b)\rightarrow \left[\dfrac{a+b}{\sqrt{2}}, \dfrac{a-b}{\sqrt{2}}\right].$$
+Da li se posle izvesnog broja primene ove transformacije može dogoditi da na tabli budu zapisani brojevi $2, \sqrt{2}$ i $\dfrac{1}{\sqrt{2}}$?
+    
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>Primetimo da je $\left(\dfrac{a+b}{\sqrt{2}}\right)^2+ \left(\dfrac{a-b}{\sqrt{2}}\right)^2=a^2+b^2$. Dakle, invarijanta te transformacije je zbir kavadrata komponenti. S obzirom
+da zbir kvadrata brojeva $1, \sqrt{2}$ i $1+ \sqrt{2}$ nije jednak zbiru kvadrata brojeva $2, \sqrt{2}$ i $\dfrac{1}{\sqrt{2}}$, to nije moguće doći od jedne do druge trojke brojeva na tabli.</p>
+</div>
+
+</div>
+
+    <div class="error-paragraph">
+        <h4>Istraživački zadatak</h4>
+
+Koliko je najmanje boja potrebno da se oboje sve tačke sa celobrojnim koordinatama u Dekartovom pravouglom koordinatnom sistemu, 
+tako da svake dve tačke čije je dostojanje jednako 5 budu obojene različitom bojom. 
+
+    </div>
+
+
+    </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+
+</html>

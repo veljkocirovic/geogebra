@@ -2,79 +2,86 @@
   {
     "id": "Kombinatorika",
     "title": "ELEKTRONSKE LEKCIJE IZ KOMBINATORIKE",
-    "folder": "kombinatorika",
-    "description": "Kurs sadrži elektronske lekcije iz kombinatorike. U njemu se nakon osnovnog osvrta na skupove, predstavljaju principi prebrojavanja, Dirihelov princip i druge kombinatorne metode. Kurs prati potrebe redovne i dodatne nastavi matematike koja se odnosi na ovu temu u osnovnim i srednjim školama.",
+    "folder": "course-1",
+    "description": "Kurs sadrži elektronske lekcije iz kombinatorike. U njemu se nakon osnovnog osvrta na skupove, predstavljaju principi pre
+brojavanja, Dirihelov princip i druge kombinatorne metode. Kurs prati potrebe redovne i dodatne nastavi matematike koja se odnosi na ovu temu u osnovnim i 
+srednjim školama.",
     "lessons": [
       {
         "id": "Predgovor",
-        "file": "uvod",
+        "file": "uvod.html",
         "title": "Uvod u kurs kombinatorike"
       },
       {
         "id": "Osnovno o skupovima",
-        "file": "skupovi",
+        "file": "skupovi.html",
         "title": "Skupovi"
-      },
-      {
+      }
+	{
         "id": "Principi prebrojavanja",
-        "file": "principi",
+        "file": "principi.html",
         "title": "Principi prebrojavanja u kombinatorici"
-      },
-      {
+      }
+{
         "id": "Dirihleov princip",
-        "file": "dirihle",
+        "file": "dirihle.html",
         "title": "Dirihleov princip"
-      },
-      {
+      }
+
+{
         "id": "Varijacije",
-        "file": "varijacije",
+        "file": "varijacije.html",
         "title": "Varijacije"
-      },
-      {
+      }
+{
         "id": "Permutacije",
-        "file": "permutacije",
+        "file": "permutacije.html",
         "title": "Permutacije"
-      },
-      {
+      }
+{
         "id": "Kombinacije",
-        "file": "kombinacije",
+        "file": "kombinacije.html",
         "title": "Kombinacije"
-      },
-      {
+      }
+
+{
         "id": "Binomna formula",
-        "file": "binomna",
+        "file": "binomna.html",
         "title": "Binomna formula"
-      },
-      {
+      }
+
+{
         "id": "Polinomna formula",
-        "file": "polinomna",
+        "file": "polinomna.html",
         "title": "Polinomna formula"
-      },
-      {
+      }
+
+{
         "id": "Princip uključenja-isključenja",
-        "file": "ukljucenje",
+        "file": "ukljucenje.html",
         "title": "Princip uključenja-isključenja"
-      },
-      {
+      }
+{
         "id": "Invarijante",
-        "file": "invarijante",
+        "file": "invarijante.html",
         "title": "Invarijante"
-      },
-      {
+      }
+{
         "id": "Kombinatorika i sah",
-        "file": "kombinatorikaisah",
+        "file": "kombinatorikaisah.html",
         "title": "Kombinatorika i sah"
-      },
-      {
+      }
+{
         "id": "Razni zadaci",
-        "file": "razni zadaci",
+        "file": "razni zadaci.html",
         "title": "Razni zadaci iz kombinatorike"
-      },
-      {
+      }
+{
         "id": "Istorija kombinatorike",
-        "file": "istorijat",
+        "file": "istorijat.html",
         "title": "Iz istorije kombinatorike"
       }
+
     ]
   }
 ]

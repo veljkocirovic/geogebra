@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Dirihleov princip</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra Lesson</title>
+    <link rel="icon" href="assets/images/geogebra-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<style>
+.collapsible {
+background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+    <h2 class="display-4">DIRIHLEOV PRINCIP</h2>
+
+    <div class="deffinition-paragraph">
+        <h4>Dirihleov princip, slaba forma</h4>
+Ako je $n+1$ predmeta raspoređeno u $n$ kutija, tada bar jedna kutija sadrži bar 2 predmeta.
+
+<div class="tips-paragraph">
+        <h4>Primer 1.</h4>
+Ako je 5 golubova sletelo u 4 kućice, onda je u bar jednoj od kućica bar dva goluba.
+<center><img width="270" src="data/courses/kombinatorika/golubovi.png"></center>
+</div>
+
+<h4>Dirihleov princip, jaka forma</h4>
+
+Ako je $kn+1$ predmeta raspoređeno u $n$ kutija, tada bar jedna kutija sadrži bar $k+1$ predmet.
+
+<div class="tips-paragraph">
+ <h4>Primer 2.</h4>
+Dokazati da medju 2200 ljudi postoji bar sedam ljudi koji slave rodjendan istog dana. <br><br>
+
+<b>Rešenje.</b>  
+S obrizom da je $2200:365=6(10)$, kada bi se za svaki od 365 dana u godini ,,rasporedio" isti broj ljudi, po njih 6, ostalo bi još 10 koji se moraju rasporesiti u neki od datuma.
+
+ </div>
+
+<div class="tips-paragraph">
+ <h4>Primer 3.</h4>
+Izabran je 51 prirodan broj iz skupa $\{1,2,\ldots,100\}$. Dokazati da među njima postoje dva koja su susedna.<br><br>
+
+<b>Rešenje.</b> Uočimo sledećih pedeset parova susednih prirodnih brojeva, iz tog skupa:
+$$\{1,2\},\ \{3,4\}, \ldots,\ \{99,100\}$$
+Kako je, po uslovima zadatka izabran 51 broj, to po Dirihleovom principu postoji bar jedan od uočenih podskupova iz koga su odabrana oba broja, što je i trebalo pokazati. 
+    </div>
+
+<div class="tips-paragraph">
+ <h4>Primer 4.</h4>
+U svakom skupu od 11 različitih prirodnih brojeva može se naći dva broja čija je razlika deljiva sa deset. Dokazati.
+<br><br>
+<b>Rešenje.</b> 
+Svaki prirodan broj pri deljenju sa 10 daje jedan od sledećih deset ostataka $0, 1, 2,\ldots, 9$. Kako je na raspolaganju 11 različitih brojeva, to po Dirihleovom principu mora 
+postojati dva od njih koji pri deljenju sa 10, daju isti ostatak. Neka su to brojevi  $a$ i $b$. Pošto su im ostaci pri deljenju sa 10 jednaki, to ih možemo predstaviti kao:
+ $$a=10\cdot m +r,\ \ \ b=10\cdot n+r$$
+za neke prirodne brojeve $m$, $n$ i $r$, odakle je $a-b=10\cdot m +r-(10\cdot n+r)=10(m-n)$.</div>
+
+<div class="tips-paragraph">
+ <h4>Primer 5.</h4>
+Igrač pikado strelicama gađa u kružnu metu poluprečnika $10\ cm$. Ako je pogodi sa 7 strelica, 
+dokazati da će postojati bar dve strelice koje su na rastojanju manjem od $10\ cm$. 
+<br><br>
+<b>Rešenje.</b> 
+Meta je kružnog oblika i možemo je podeliti na 6 delova u obliku kružnog isečka. <br>
+<center><img src="data/courses/kombinatorika/pikado.jpg" width="20%"></center>
+Po Dirihleovom principu postojaće dva pogotka koja su u jednom od tih delova. 
+Pošto je u svakom isečku najduže moguće rastojanje jednako poluprečniku - $10\ cm$, to će dve strelice koje pogode taj deo,
+ biti na rastojanju manjem od $10\ cm$. 
+</div>
+
+
+
+    <div class="success-paragraph">
+
+<h4>Zadatak 1.</h4>
+U državi Literaniji piše se pismom čija azbuka sadrži 19 slova, 
+a ime svakog stanovnika sastoji se od tri reči. Zakon u toj državi propisuje da ne smeju da postoje dva stanovnika 
+sa istim inicijalima (početnim slovima sva tri dela imena). Može li u Literaniji biti 7000 stanovnika?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>
+Najveći broj mogućih različitih troslovnih inicijala u tom pismu je $19\cdot 19 \cdot 19$. Kako je
+	$19^3 = 6859 < 7000$, to bi u slučaju da u Literaniji ima 6860 (ili vishe) stanovnika, 
+bar dva od njih morala imati jednake inicijale, shto je suprotno zakonu. Dakle, u Literaniji ne mozhe biti 7000 stanovnika.
+</p>
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 2.</h4>
+ Strelac gađa metu oblika kvadrata stranice $20\ cm$ i pogodio je sa 18 uspešnih pogodaka. 
+Dokazati da postoje dva njegova pogotka koja su na rastojanju manjem od $8\ cm$.
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>
+Podelimo datu metu na 16 kvadrata stranice $5\ cm$, pa pošto je bilo 18 uspešnih hitaca, po Dirihleovom principu bar 
+dva od njih se nalaze u jednom takvom kvadratu. 
+Najduže rastojanje u takvom kvadratu je dijagonala, a njena dužina je jednaka $5\cdot \sqrt{2}\ cm$ 
+što je manje od $8\ cm$, pa se ta dva pogotka nalaze na rastojanju manjem od $8\ cm$.
+</p>
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 3.</h4>
+Kvadratna tablica $5\times 5$ popunjena se brojevima iz skupa $\{−1, 0, 1\}$. Dokazati da, kako god popunili tablicu, među 12 zbirova 
+izračunatih u 5 vrsta, 5 kolona i 2 glavne dijagonale, moraju postojati bar dva jednaka. 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>
+
+Najmanji mogući zbir takvih sabiraka je $−5$, a najveći $5$. Kako je tih zbirova 12, a celih brojeva od $-5$ do $5$ ima ukupno $11$,
+ to po Dirihleovom principu postoje bar dva jednaka.
+zbira.
+</p>
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 4.</h4>
+
+Neka je $\{x_1, x_2, x_3, x_4, x_5\}$ skup koga čini pet prirodnih brojeva. Dokazati da je za bilo koju permutaciju $x_{i_1}, x_{i_2}, x_{i_3}, x_{i_4}, x_{i_5}$
+elemenata datog skupa, proizvod 
+$$(x_1-x_{i_1})(x_2-x_{i_2})(x_3-x_{i_3})(x_4-x_{i_4})(x_5-x_{i_5})$$
+ uvek paran. 
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>
+S obzirom da dati skup ima pet elemenata, po Dirihleovom principu, bar tri od njih su iste parnosti. Bez gubitka opštosti, neka su to
+brojevi $ x_1, x_2$ i $x_3$. <br>
+ Sada je $\{x_1, x_2, x_3 \} \cap \{x_{i_1}, x_{i_2},x_{i_3}\} \neq \varnothing$, pa je bar jedan od činilaca $x_m-x_{i_m}$ proizvoda $(x_1-x_{i_1})(x_2-x_{i_2})(x_3-x_{i_3})(x_4-x_{i_4})(x_5-x_{i_5})$ paran, a otuda i proizvod. 
+
+</p>
+</div>
+    </div>
+
+    <div class="success-paragraph">
+        <h4>Zadatak 5.</h4>
+U toku priprema za jedno takmičenje odbojkaška reprezentacija je za 15 dana odigrala 20 utakmica, a bar po jednu utakmicu dnevno. 
+Dokazati da postoji nekoliko uzastopnih dana u kojima je odigrano tačno 6 utakmica.
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Neka je $u_j$ broj utakmica odigranih od početka priprema do kraja $j-$tog dana. 
+Uočimo da je niz brojeva $u_1, u_2,\ldots,u_{15}$ strogo rastući i njegov najveći član $u_{15}$ nije veći od 20. Sada za niz brojeva $u_1+6, u_2+6,\ldots, u_{15}+6$ imamo da važi
+$$7\leq u_j +6 \leq 26.$$
+Odatle sledi da je niz brojeva
+$$u_1, u_2,\ldots,u_{15}, u_1+6, u_2+6,\ldots,u_{15}+6$$
+ograničen sa 26 sa gornje strane. 
+
+Kako je ovo niz od 30 brojeva i svi oni su manji ili jednaki 26, među njima postoje bar dva jednaka člana. 
+
+Među brojevima $u_1, u_2,\ldots,u_{15}$ nema jednakih jer su tako definisani, 
+a isto tako jednakih nema ni među brojevima $u_1+6, u_2+6,\ldots,u_{15}+6$. Dakle, moraju postojati po jedan broj iz svakog 
+od ova dva niza koji su jednaki međusobno. To nam upravo obezbeđuje postojanje indeksa $i$ i $j$ takvih da je 
+$u_j=u_i+6$, što je i trebali pokazati, da je od $i+1$-vog dana do $j$-tog dana odigrano tačno 6 utakmica.
+</p>
+</div>
+    </div>
+
+    <div class="success-paragraph">
+        <h4>Zadatak 6.</h4>
+Za stolom koji je oblika pravilnog osmougla smešteno je osam učesnika jedne konferencije. 
+Na svakom mestu označeno je po jedno od njihovih imena. Međutim, oni su seli nasumično i niko nije na svom mestu. 
+Dokazati da se i pri takvom proizvoljnom rasporedu, stolice mogu zarotirati u jedan od dva moguća smera oko stola, 
+tako da najmanje dvoje ljudi dođe na mesto koje je označeno njihovim imenom.
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+<p> 
+Za proizvoljan raspored ljudi za stolom, izbrojimo koliko je svaki od njih udaljen od mesta sa njegovim imenom, brojeći u smeru kretanja kazaljke na časovniku. 
+Na taj način dolazimo do činjenice da je udaljenost svakog od osam učesnika konferencije od njihovog mesta jednaka nekom broju iz skupa
+ $\{1,2,...,7\}$. 
+S obzirom da je njih ukupno osam, a mogućih različitih udaljenosti je sedam, 
+to postoje bar dvojica na jednakoj udaljenosti od mesta sa svojim imenom. 
+Rotiranjem stolica u smeru kretanja kazaljke na časovniku, za uočeni broj koji se pojavio bar dva puta, 
+dobija se da bar dvoje ljudi dođu do mesta označenog njihovim imenom.
+</p>
+</div>
+    </div>
+
+   <div class="success-paragraph">
+        <h4>Zadatak 7.</h4>
+Dokazati da u svakoj grupi koju čini pet ljudi postoje bar dva čoveka koja imaju isti broj prijatelja u toj grupi.
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+<p> 
+Svaka osoba iz ove grupe može imati najviše 4 prijatelja, a  najmanje 0. 
+Ako postoji osoba koja u toj grupi nema prijatelja, tj. ima nula prijatelja, onda ne postoji osoba sa 4 prijatelja. 
+Dakle, u tom slučaju za 5 ljudi i četiri moguća broja prijateljstava po Dirihleovom principu moraju postojati bar dva čoveka
+ sa istim brojem prijatelja.
+Ako ne postoji osoba bez prijatelja, onda na sličan način kao u prethodnom slučaju, za 5 osoba i četiri moguća broja prijateljstava po 
+Dirihleovom principu sledi da mora postojati bar dva čoveka sa istim brojem prijatelja. 
+</p>
+</div>
+    </div>
+
+
+
+
+
+
+    <div class="success-paragraph">
+        <h4>Zadatak 8.</h4>
+
+Neka je $M$ skup koji se sastoji od $2n+1$ realnih brojeva iz intervala $(1,2^n)$. Dokazati da postoje tri elementa skupa $M$ 
+koja mogu biti merni brojevi dužina stranica nekog trougla.
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>
+Podelimo taj interval na disjunktne intervale:<br>
+$$(1,2),[2,2^2 ),[2^2,2^3 ),\ldots,[2^{n-1},2^n ).$$
+Po Dirihleovom principu, od datih $2n+1$ realnih brojeva skupa $M$ postoje bar tri koja su u jednom od intervala $[2^{k-1},2^k )$. 
+Označino ih sa $m,n$ i $p$. Za njih važi:
+$m+n\geq 2\cdot 2^k \gt p$,   $m+p\geq 2\cdot 2^k\gt n$, $n+p\geq 2\dot 2^k\gt m$.<br>
+Dakle, ta tri broja mogu biti dužine stranica trougla. 
+</p>
+</div>
+    </div>
+
+
+    <div class="success-paragraph">
+        <h4>Zadatak 9.</h4>
+Označeno je 15 polja šahovske table. Posmatraju se sve duži sa krajevima u centrima označenih polja. 
+Dokazati da među tim dužima postoje četiri jednake dužine.   <br>
+(JSMO 2017.)
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>
+Broj posmatranih duži je $(15\cdot14):2=105$. 
+Odredimo broj mogućih različitih dužina tih duži. Sve moguće dužine duži na tabli ostvaruju se posmatrano od centra donjeg levog 
+polja do centra nekog od polja na glavnoj dijagonali (određenoj tim poljem i gornjim desnim poljem) i polja ispod nje. 
+Broj takvih polja jednak je $2+3+...+8=35$, pa ne postoji više mogućih dužina od $35$. 
+ Međutim, uočimo da se dužine $5$ i $\sqrt{50}$ postižu na više od jednog načina. 
+Odstojanje $5$ se postiže preko $5^2=3^2+4^2$
+ ili preko horizontalnog odstojanja do polja koje je odaljeno za $5$, a za $\sqrt{50}$ imamo $(\sqrt{50})^2=5^2+5^2=7^2+1^2$.
+ Dakle, broj mogućih dužina je najviše $33$, pa kako je $33\cdot 3=99<105$ to po $DP$ sledi tvrđenje zadatka.
+
+</p>
+</div>
+    </div>
+
+
+
+
+
+
+    <div class="success-paragraph">
+        <h4>Zadatak 10.</h4>
+Dokazati da među sedam različitih realnih brojeva, postoje brojevi $x$ i $y$ za koje važi $\displaystyle 0<\frac{x-y}{1+xy}<\frac{\sqrt{3}}{3}.$ 
+    
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>
+Sedam realnih brojeva $n_1, n_2,\ldots, n_7$ možemo predstaviti kao
+$n_1=\tan \alpha_1, n_2=\tan \alpha_2, \ldots, n_7=\tan \alpha_7$,
+za neke realne brojeve $\displaystyle \alpha_1,\ \alpha_2,\ \ldots,\ \alpha_7 \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$.<br>
+
+Interval $\displaystyle \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$ možemo podeliti na šest disjunktnih intervala:
+$$\left(-\frac{\pi}{2}, -\frac{\pi}{3}\right), \left[-\frac{\pi}{3}, -\frac{\pi}{6}\right), \left[-\frac{\pi}{6}, 0\right), \left[0, \frac{\pi}{6}\right), \left[\frac{\pi}{6}, \frac{\pi}{3}\right), \left[\frac{\pi}{3}, \frac{\pi}{2}\right).$$
+
+Kako imamo šest intervala, a sedam različitih brojeva, to po Dirihleovom principu postoji jedan od ovih intervala koji sadrži bar dva broja. 
+Za ta dva broja, na primer $\alpha_i$ i $\alpha_j$, ispunjeno je $$\displaystyle 0<|\alpha_i-\alpha_j|<\frac{\pi}{6}.$$
+
+Podsetimo se trigonometrijskog identiteta $$\displaystyle \tan(\alpha-\beta)=\frac{\tan \alpha - \tan \beta}{1+\tan \alpha \cdot \tan \beta}.$$
+
+Sada, primenjujući ovaj identitet, dobijamo:
+ $$\frac{x-y}{1+xy}=\frac{\tan \alpha_i- \tan \alpha_j}{1+\tan \alpha_i \cdot \tan \alpha_j}= \tan (\alpha_i-\alpha_j) < \tan \frac{\pi}{6}= \frac{\sqrt{3}}{3},$$
+što je i trebalo pokazati. 
+</div>
+</p>
+</div>
+    <div class="error-paragraph">
+        <h4>Istraživački zadatak</h4>
+
+Dokazati da u bilo kom skupu sa pet brojeva, među njima postoje tri broja čiji je zbir deljiv sa 3. 
+    </div>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+
+</html>

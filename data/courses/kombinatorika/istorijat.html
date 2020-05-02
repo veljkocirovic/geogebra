@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Iz istorije kombinatorike</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra Lesson</title>
+    <link rel="icon" href="assets/images/geogebra-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<style>
+.collapsible {
+background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+    <h2 class="display-4">KRATAK ISTORIJAT</h2>
+
+
+    <div class="deffinition-paragraph">
+        <h4>Razvoj kombinatornih ideja</h4>
+ 
+Može se reći da se kombinatorika, kao grana matematike, razvija od sedamnaestog veka nove ere. 
+Sve do pojave računarskih mašina činilo se da se kombinatorika ne razvija u ritmu ostalih matematičkih disciplina. 
+Od tada ona dobija na značaju, a kombinatorne metode danas imaju veoma značajne primene u statistici, teoriji slučajnih procesa, 
+matematičkom programiranju, informatici i uopšte u pravljenju planova za razne eksperimente. 
+<br><br>
+U matematici je sve počelo brojanjem nekih objekata jer je ljudima postajalo važno da nađu način kako da nekoj grupi predmeta pridruže 
+ neko njeno kvantitativno svojstvo. 
+U kasnijim segmentima razvoja pored brojanja bilo je važno grupe objekata i klasifikovati ili na određeni način kombinovati objekte iz različitih grupa 
+u neke poželjne konfiguracije. Upravo takvi zadaci vremenom su postali predmet kombinatorike.
+<br><br>
+Poznato je da su među predmetima koji su pre više od 3500 godina ostavljeni u piramidi u Egiptu, u kojoj je sahranjen faraon Tutankamon, 
+nađeni ostaci table sa figurama za staru igru <i>senet</i>. Izvesno je da se u to vreme ova igra igrala pravilima koja mi ne možemo precizno znati, 
+ali za nas je korisno saznanje koliko u prošlost sežu podaci o tome kada su ljudi prvi put počeli koristiti neke logičke, misaone, 
+a samim tim i kombinatorne igre. 
+<br><br>
+Jedan od prvih fragmenata bliskih kombinatorici, a koji je zabeležen u kineskim izvorima od pre 4000 godina, 
+govori da je njihov car <i>Ju</i> zapazio, na bregu pored reke <i>Lu</i>, 
+svetu kornjaču na čijem oklopu su bili naslikani simboli sa belim i crnim kružićima za koje se tvrdilo da predstavljaju jednocifrene brojeve.
+<br><br>
+<center><img src="data/courses/kombinatorika/loshu.png" width="300" height="300"></center>
+Odatle je nastala tabela brojeva:
+
+$\begin{matrix}
+	4 & 9 & 2 \\
+	3 & 5 & 7 \\
+	8 & 1 & 6 
+\end{matrix}.$
+
+<br>
+
+Zapažamo da je zbir brojeva u svakom redu, svakoj koloni ili dijagonali jednak 15. 
+Stari Kinezi su ovakvim kvadratima brojeva pridavali mistična i natprirodna svojstva, pa se tako danas svaka 
+kvadratna mreža brojeva za čije članove važi da je njihov zbir u svakom redu, koloni ili dijagonali jednak, naziva <i>magičnim kvadratom</i>.
+<br><br>
+Iz starogrčke matematike, zbog uništavanja čuvene aleksandrijske biblioteke i knjiga koje bi bile značajne za ovaj period, 
+nema mnogo konkretnih podataka o njihovom bavljenju kombinatorikom, ali neki isečci u vidu fragmenata postoje i doprinose zaključcima da su i stari 
+Grci u svom bavljenju matematikom imali određenih kombinatornih ideja koje su veoma značajne u istorijskom kontekstu. 
+Naime, filozof Ksenokrat iz 4. veka pre n.e. bavio se prebrojavanjem slogova u rečima. Stoik Krisip iz 3. veka pre n.e. verovao je da se iz sistema od deset 
+aksioma može izvesti više od milion zaključaka. A po Hiparhovom mišljenju potvrdnih zaključaka se može izvesti 103 049, a odričnih 310 952. 
+Potpuno je nepoznato kako su oni dolazili do ovih brojeva, a nejasna su i pravila po kojima su oni vršili ova kombinatorna prebrajanja, 
+a koja su po svemu sudeći bila pogrešna. Međutim, neke konkretne kombinatorne probleme Grci su rešavali bez grešaka. 
+Aristotel je precizno prebrojao sve tročlane silogizme, a njegov učenik Aristoksen je precizno brojao različite kombinacije dugih i kratkih slogove u pesmama.
+<br><br>
+Negde od drugog veka pre n.e. počinje opadanje nauke u helenističkim državama, a sa njime i kriza samog društva. Mnogi radovi iz tog vremena bili su 
+zaokupljeni uglavnom mističkim svojstvima brojeva. A posle pobede hrišćanstva ova ideja se zadržala u primeru povezivanja jeretika sa brojem 666, 
+koji je smatran simbolom Antihrista. Međutim, čak i tako beskorisne ideje i studije ipak su davale smernice daljeg razvoja matematike.
+<br><br>
+U kriznim vremenima kombinatorikom su se zanimali i astrolozi, koje su zanimali rasporedi i kombinacije planeta kako bi na osnovu znanja o tome 
+zaključivali o ljudskim sudbinama. Astrolog Abraham ibn Ezra je 1140. godine prebrojao kombinacije od po 2, 3, itd. planeta od njih 7. 
+On je tada znao da je broj kombinacija 3 planete od 7 jednak broju kombinacija 4 planete od 7, što bi se savremenim simbolima zapisalo sa
+$$ \binom{7}{3}=\binom{7}{4}.$$
+Do formule za binomne koeficijente došao je jevrejski matematičar Levi ben Geršon (14. vek)
+$$C_k^n=\frac{n\cdot(n-1)\cdot \ldots \cdot  (n-k+1)}{1\cdot 2\cdot \ldots \cdot k},$$
+ali pošto je rad ostao neprimećen i viđen samo u uskom krugu obrazovanih ljudi tog vremena, formulu je u istom obliku, 
+početkom 17. veka objavio francuski matematičar Pjer Herigon. 
+Naravno, notacija obeležavanja nije bila ista kao danas. Ona se vremenom menjala i ,,osavremenjavala".
+<br><br>
+Ni u starim azijskim civilizacijama nije se sedelo ,,skrštenih ruku". U osmom veku naše ere počeo je procvat arapske nauke. 
+Oni su preveli na svoj jezik mnoga grčka dostignuća i iz njih učili, i na osnovu toga u mnogim oblastima i nadmašili same Grke. 
+Posebne rezultate Arabljani su postizali u algebri. Rešavajući pitanja o korenu došli su do formule za stepen zbira dva broja. 
+Postoje naznake da je tu formulu znao i veliki arapski matematičar i pesnik Omar Hajam, koji je živeo u 11. i 12. veku naše ere. 
+Arapski naučnici su znali i za važnu osobinu binomnih koeficijenata
+$$C_k^n=C_{k}^{n-1}+C_{k-1}^{n-1}.$$
+Uporedo sa Arapima računanjem binomnih koeficijenata bavili su se i kineski matematičari. 
+Oni su u 13. veku sastavili jednu od tablica sa binomnim koeficijentima. Za kombinatoriku su naročito bili zainteresovani i u Indiji. 
+Oni su još u 2. veku pre n.e. znali za brojeve $C_k^n$ i to da im je suma jednaka $2^n$. U 12. veku indijski matematičar Bhaskara, 
+napisao je knjigu ,,Sidanta Širomani" u čijem je delu ,,Lilavati" pisao i o problemima kombinatorike. Pisao je o permutacijama i
+ varijacijama i o njihovoj vezi 
+pri računanju. On je dao i pravila za računanje permutacija i kombinacija nekoliko objekata, kao i permutacija sa ponavljanjima. 
+Arapska znanja su kasnije prodirala i u Evropu, osvajanjem Španiju. Evropa je bila upoznata sa arapskim dostignućima u algebri i 
+desetičnim sistemom za računanje. Znanja koja su nudili Arapi koristio je i Fibonači. Njegova angažovanja za matematiku u tom periodu 
+bila su veoma značajna. Fibonačijev rekurentni zapis, kojim se sledeći član niza izražava zbirom prethodna dva, bio je važan zamajac 
+u razvoju kombinatorike.
+Nešto kasnije je <i>metod rekurentnih formula</i> dobio mesto jednog od najmoćnijih aparata za rešavanje nekih kombinatornih problema, a našao je 
+svoje mesto i u programiranju.
+<br><br>
+Moramo napomenuti da kombinatorika, a sa njom i teorija verovatnoće, veliku zahvalnost za svoje postojanje duguju kockarskim igrama 
+na sreću. Naravno, ne samo njima, već i radovima velikih matematičara Paskala i Ferma, koji su svako na svoj način učestvovali u 
+udaranju savremenih temelja ovih disciplina. 
+Paskalov trougao se prvi put pojavljeuje u tom obliku u radu ,,$Traktat\ o\ aritmetičkom\ trouglu$", objavljenom 1665. godine, 
+nakon njegove smrti. 
+Možda najveći posao, za to razdoblje, uradio je Lajbnic svojim delom ,,$Dissertatio\ de\ Artta\ Combinatoria$" iz 1666. godine. 
+U njemu se po prvi put podrobno izlaže o principima kombinatorike i odgovarajućim formulama. 
+Lajbnic je isticao da želi da stvori opšti metod pomoću koga će sve istine do kojih se dolazi razmišljanjem moći da se dobiju 
+i nekakvim računom. Kasnije je kombinatorika bila zanimljiva i Bernuliju i Ojleru, 
+čijim je radovima i doprinosima ona samo mogla postajati zaokruženija i korisnija nauka.
+<br><br>
+Formule koje kombinatorika danas koristi, uz celu savremenu notaciju, dobila je u 19. veku, sa formalizacijom algebarske simbolike.
+
+
+
+    </div>
+
+</body>
+
+</html>

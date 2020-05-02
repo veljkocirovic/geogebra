@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Razni zadaci iz kombinatorike</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra Lesson</title>
+    <link rel="icon" href="assets/images/geogebra-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<style>
+.collapsible {
+background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+    <h2 class="display-4">RAZNI ZADACI</h2>
+
+<div class="deffinition-paragraph">
+U nastavku je izbor zadataka koji su bili sastavni deo nekih testova za upis na fakultete ili na takmičenjima. Za svaki zadatak je naveden izvor.
+<div class="success-paragraph">
+        <h4>Zadatak 1.</h4>
+Broj svih neparnih šestocifrenih brojeva koji sadrže najmanje jednu, a najviše tri cifre $0$, jednak je: <br>
+
+A)  $211680$;  &emsp;  B) $70\cdot 9^4$; &emsp;     C) $14\cdot55$;  &emsp;    D) $1910\cdot 9^2$;  &emsp;    E) $2\cdot 5^6$. <br>
+ (Prijemni ispit, FON 2019.)
+
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Razlikujmo slučajeve kada takvi brojevi sadrže jednu, dve ili tri cifre 0.
+
+Kada sadrže jednu cifru nula, prva cifra može biti bilo koja pozitivna, pa se ona može odabrati na 9 načina. Cifra jedinica je neparna pa se ona može odabrati na 5 načina. Od preostala četiri cifarska mesta biramo jedno na kome je cifra 0, na $\binom{4}{1}$ načina, dok preostale tri cifre mogu biti bilo koje različite od 0, pa  takvih brojeva ima ukupno $9\cdot \binom{4}{1} \cdot 9^3 \cdot 5$. 
+
+Kada sadrže dve cifre 0, na sličan način dobijamo da takvih brojeva ima $9\cdot \binom{4}{2} \cdot 9^2 \cdot 5$, a kada sadrže tri cifre 0 da ih je $9\cdot \binom{4}{3} \cdot 9 \cdot 5$. 
+Sadirajući dobijene rezultate u ova tri slučaja sledi da traženih brojeva ima 
+$$4 \cdot 9^4 \cdot 5 +  6 \cdot 9^3 \cdot 5+ 4 \cdot 9^2 \cdot 5 = (20 \cdot 81 + 30\cdot 9 + 20) \cdot 9^2 = 1910 \cdot 9^2.$$
+
+Dakle, tačan odgovor je D).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 2.</h4>
+Od 12 knjiga 4 su iz matematike. Broj različitih mogućnosti za kupovinu 3 knjige tako da bar jedna bude iz matematike je:<br>
+A) $24$; &emsp;    B) $164$; &emsp;     C) $56$; &emsp;     D) $984$;   &emsp;   E) $220$. <br>
+ (Prijemni ispit, FON 2017.)
+
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+S obzirom da bar jedna kupljena knjiga treba da bude iz matematike, 
+to znači da ih može biti kupljeno jedna, dve ili sve tri. 
+Različitih načina da se obavi ta kupovina ima 
+$\binom{8}{2}\cdot\binom{4}{1} +\binom{8}{1}\cdot\binom{4}{2} +\binom{8}{0}\cdot\binom{4}{3}= 28 \cdot 4 + 8 \cdot 6 + 1 \cdot 4 =164$. 
+Dakle, tačan odgovor je B). 
+
+</p>
+</div>
+    </div>
+
+
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 3.</h4>
+
+Broj svih permutacija slova reči $MOSKVA$ kod kojih se između dva samoglasnika nalazi bar jedan suglasnik jednak je:<br>
+A) $450$;  &emsp;    B) $480$; &emsp;     C) $520$;   &emsp;   D) $560$; &emsp;     E) $600$. <br>
+ (Prijemni ispit, FON 2016.)
+
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Ukupan broj permutacija slova reči $MOSKVA$ je $6!$, a ukupan broj onih permutacija 
+kod kojih su samoglasnici $A$ i $O$ jedan do drugog, je $5!\cdot 2$. 
+
+Primetimo da samoglasnici u paru mogu biti raspoređeni kao $AO$ ili kao $OA$, pa permutacija u kojima se izmedju 
+dva samoglasnika nalazi bar jedan suglasnik ima ukupno $6!-5!\cdot 2=720-240=480$. 
+
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 4.</h4>
+
+Broj svih permutacija slova reči $ZLATIBOR$ koje počinju i završavaju se samoglasnikom je:<br>
+A) $2720$;    &emsp;    B) $1440$;   &emsp;   C) $4320$;  &emsp;      D) $2160$;   &emsp;     E) $3850$.
+<br> (Prijemni ispit, FON 2015.)
+
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+U reči $ZLATIBOR$ ima tri samoglasnika: $A$, $I$ i $O$. 
+Dva od njih mogu biti izabrani na $\binom{3}{2}$ načina i smešteni ih na prvo i poslednje mesto formiranih reči. 
+Preostalih šest slova mogu se permutovati na $6!$ načina. 
+S obzirom da se i samoglasnici na prvom i poslednjem mestu mogu permutovati, ukupan broj takvih permutacija jedanak je $$2\cdot \binom{3}{2} \cdot 6! = 4320.$$
+Dakle, tačan odgovor je C).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 5.</h4>
+
+Broj svih petocifrenih prirodnih brojeva deljivih sa $5$, koji imaju tačno jednu neparnu cifru, jednak je:<br>
+A) $18\cdot 5^3$;  &emsp;    B) $5^5-5^2$;  &emsp;    C) $4\cdot 5^4$; &emsp;     D) $24\cdot 5^3$; &emsp;     E) $21\cdot 5^3$.
+<br> (Prijemni ispit, FON 2014.)
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Primetimo da sve takve brojeve možemo podeliti u dva disjunktna skupa, takva da su u prvom oni koji se završavaju cifrom $5$, 
+a u drugom oni koji se završavaju cifrom $0$.<br>
+
+S obzirom da je cifra $5$ neparna, to u prvom skupu ima ukupno $4\cdot 5^3$ brojeva.<br>
+
+U drugom skupu su svi brojevi oblika $\overline{abcd0}$, $a\neq 0$, i tačno jedna od nepoznatih cifara je neparna. 
+
+Kako je samo jedna od četiri cifre neparna, 
+mesto za nju možemo odabrati na $\binom{4}{1}$ načina, a samu cifru iz skupa $\{1,3,5,7,9\}$ na $\binom{5}{1}$ načina.
+ Na ostala tri cifarska mesta su parne cifre. S obzirom da prva cifra ne može biti $0$, brojeva u tom skupu ima $\binom{4}{1}\cdot \binom{5}{1} \cdot 5^3 - \binom{3}{1}\cdot \binom{5}{1} \cdot 5^2=17\cdot 5^3$.
+<br><br>
+Kako su ta dva skupa disjunktna, to po principu zbira sledi da traženih brojeva ima $4\cdot 5^3 + 17\cdot 5^3=21\cdot 5^3$.<br>
+Tačan odgovor je E).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 6.</h4>
+
+Petocifrenih prirodnih brojeva oblika $\overline{a3cd2}$ koji su deljivi sa $4$ i čije su sve cifre različite ima:<br>
+A) $210$;  &emsp;    B) $180$;  &emsp;     C) $168$;  &emsp;     D) $144$; &emsp;      E) $120$. <br> 
+(Prijemni ispit, MATF 2019.)
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Broj je deljiv sa $4$, ako mu je četvorocifreni završetak deljiv sa $4$. 
+Odgovarajući dvocifreni završeci deljivi sa $4$, a čija je poslednja cifra $2$, su: $12, 52, 72, 92$. <br>
+Dakle, cifra $d$ može biti jedna iz skupa $\{1,5,7,9\}$. <br>
+Za cifru $a$ postoji šest mogućnosti, jer ne dolaze u obzir cifre $0,2,3$ i
+ cifra $d$. Takodje, i cifra $c$ se može odabrati na šest načina, pa takvih brojeva ima $4\cdot 6\cdot 6=144$.<br>
+Tačan odgovor je D).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 7.</h4>
+
+U ravni je dato $n$ tačaka $(n\geq 3)$ tako da nikoje tri nisu kolinearne.
+ Ako je razlika broja trouglova i broja duži određenih ovim tačkama jednaka $2n$, tada je $n$ jednako:<br>
+A) $5$;    &emsp;   B) $6$;  &emsp;     C) $7$;  &emsp;     D) ne postoji takvo $n$; &emsp;      E) $n$ nije jednoznačno određeno. <br>
+ (Prijemni ispit, MATF 2018.)
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Broj trouglova određenih tim tačkama jednak je $\binom{n}{3}$, a broj duži $\binom{n}{2}$. <br>
+Po uslovima zadatka je $\binom{n}{3} -\binom{n}{2}=2n$. Rešavanjem ove jednačine dobija se da je $n=7$. <br>
+Dakle, tačan odgovor je C).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 8.</h4>
+
+Koliko ima prirodnih brojeva manjih od $1000000$ koji su deljivi tačno jednim od brojeva $11$ i $13$? <br>
+
+A) $6993$;  &emsp;      B) $153846$;   &emsp;     C) $160839$;  &emsp;      D) $167832$;  &emsp;      E) $993006$. <br>
+(Prijemni ispit, MATF 2016.)
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Prirodnih brojeva manjih od  $1000000$ deljivih sa $11$ ima $90909$, a deljivih sa $13$ ima $76923$. <br>
+S obzirom da brojeva deljivih sa $11\cdot13=143$ ima $6993$, 
+to onih koji su deljivi tačno jednim od brojeva $11$ i $13$ ima $$90909+76923-2\cdot 6993=153846.$$
+Dakle, tačan odgovor je B).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 9.</h4>
+
+Broj bijekcija skupa $\{1,2,3,4,5,6,7\}$ u sebe, koje preslikavaju parne brojeve u parne brojeve, 
+jednak je:<br>
+
+A) $12$;   &emsp;    B) $24$;   &emsp;    C) $256$; &emsp;      D) $144$;   &emsp;    E) $121$. <br>
+(Prijemni ispit, MATF 2015.)
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Takve funkcije pored toga što preslikavaju parne brojeve u parne, one preslikavaju i neparne u neparne. <br>
+Na taj način se skup $\{2,4,6\}$ slika u sebe, a skup $\{1,3,5,7\}$ u sebe. Takvih funkcija ima $3!\cdot 4!=144$. <br>
+
+Dakle, tačan odgovor je D).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 10.</h4>
+
+ Neka je $A=\{1,2,\ldots,2019\}$ i $B=\{(x,y)\in A\times A\bigm||x-y|\ge2\}$. Broj elemenata skupa $B$ jednak je:<br>
+ 
+A) $2019^2$; &emsp;   B) $2\cdot 2019$;  &emsp;     C) $2018\cdot 2017$; &emsp;      D) $2018!$; &emsp;      E) $\binom{2018}{2}$.<br>
+ (Prijemni ispit, ETF 2019.)
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Primetimo da za $x=1$ odgovarajuće vrednosti $y$ pripadaju skupu $\{3,4,\ldots, 2019\}$, 
+a za $x=2019$ je $y\in \{1,2,\ldots, 2017\}$. <br>
+
+Dakle, u ova dva slučaja postoji po $2017$ različitih vrednosti za $y$. <br>
+Za svaki $x\in \{2,3,\ldots 2018\}$ postoji po tačno 2016 različitih vrednosti za $y$. <br>
+
+Sada je ukupan broj elemenata skupa $B$ jednak $$2\cdot 2017+2017 \cdot 2016=2017\cdot 2018.$$
+Dakle, tačan odgovor je C).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 11.</h4>
+
+Na polici se nalazi 5 knjiga na engleskom, 7 na španskom i 8 na francuskom jeziku. 
+Sve knjige su međusobno različite. Na koliko načina možemo rasporediti knjige ako sve napisane na francuskom jeziku moraju 
+biti jedna do druge?<br>
+A) $13!\cdot 8!$;  &emsp;    B) $13\cdot 8!$; &emsp;       C) $13\cdot \binom{12}{5}+7!\cdot 8!$; &emsp;    D) $\binom{12}{7}\cdot \binom{13}{8}\cdot 5!$; &emsp;   E) Nijedan od ponuđenih odgovora.
+<br>(Prijemni ispit, ETF 2016.)
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+S obzirom da knjige na francuskom jeziku moraju biti jedna do druge to ih možemo posmatrati kao jedan blok u permutovanju. 
+Tako permutujemo $13$ elemenata, a knjige na francuskom jeziku, u okviru bloka, na $8!$ načina, 
+pa različitih načina za raspoređivanje tih knjiga ima $13!\cdot 8!$.<br>
+Dakle, tačan odgovor je A).
+</p>
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 12.</h4>
+
+Dat je skup $A=\{1,2,\ldots,10\}$. Koliko ima preslikavanja $f : A\rightarrow A$ koja svaki paran broj slikaju u paran broj,
+ a svaki broj deljiv sa $3$ u broj deljiv sa $3$?<br>
+ (SRB Okružno takmičenje 2020, 4B)
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Jedini paran broj u ovom skupu deljiv sa $3$ je broj $6$, pa se on pri takvim preslikavanjima slika u sebe. <br>
+ Skup $\{2,4,8,10\}$ se preslikava u skup $\{2,4,6,8,10\}$, skup $\{3,9\}$ u $\{3,6,9\}$, a skup $\{1,5,7\}$ u skup $A$. <br>
+ Odatle sledi da takvih preslikavanja ima $1\cdot 5^4 \cdot 3^2 \cdot 10^3=5625000$.
+</p>
+</div>
+    </div>
+
+
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 13.</h4>
+
+Komplet od $55$ domina sadrži sve moguće kombinacije dva broja od $0$ do $9$, uključujući i domine na kojima je dva puta isti broj. 
+
+<center>
+	<img src="data/courses/kombinatorika/domine.jpg" width="220">
+</center>
+
+	(Na slici su prikazane tri domine:
+domina koja sadrži brojeve $3$ i $4$, domina koja sadrži brojeve $0$ i $9$, i
+ domina koja sadrži dva puta broj $3$.) Koliko tačkica ima ukupno u celom kompletu domina? 
+<br>(SRB Okružno takmičenje 2018, 3B)
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Izračunajmo odvojeno ukupan broj tačkica na dominama na kojima se javljaju dva različita broja i na onima na kojima 
+se javljaju dva ista broja. <br>
+
+Posmatrajmo brojeve na dominama kao uredjene parove. U prvoj grupi domina (sa različitim brojevima) svaki broj se na prvoj koordinati javlja tačno 9 puta (za
+sve moguće vrednosti druge koordinate različite od tog broja), pa je zbir
+svih prvih koordinata jednak
+$$9\cdot(0+1+2+\ldots +9)=9\cdot \dfrac{9\cdot 10}{2}=405.$$ 
+
+Na sličan način se dobija da je zbir svih drugih koordinata takođe jednak $405$, 
+pa zbir svih brojeva koji se javljaju na dominama iz ove grupe jednak 910. <br>
+
+Primetimo da je svaka domina iz ove grupe, sabirajući tačkice na opisani način, računata dva puta (domina na kojoj su brojevi $a$ i $b$ računata je kao par $(a, b)$ i kao par $(b, a)$). Dakle, ukupan broj tačkica na dominama iz ove grupe jednak je $405$.
+<br>
+Ukupan broj tačkica na dominama na kojima je na obe strane isti
+broj jednak je
+
+$$2\cdot(0+1+2+\ldots +9)=2\cdot \dfrac{9\cdot 10}{2}=90.$$
+ 
+  Dakle, ukupan broj tačkica na svim dominama jednak je $405 + 90 = 495$.
+</p>
+</div>
+    </div>
+
+
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 14.</h4>
+
+
+ Da li se tabla $8 \times 8$, iz koje je isečeno donje levo i gornje desno polje, može popločati figurama oblika kao na slici?
+  
+<center>
+	<img src="data/courses/kombinatorika/poplocavanje.jpg" width="220">
+</center>
+  
+  (SRB Opštinsko takmičenje 2010, 2A)
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Ako tu tablu obojimo na ,,šahovski način" oba izbačena polja su crne boje, 
+pa je broj preostalih polja bele boje za dva veći od broja preostalih polja crne boje i razlika tih brojeva pri deljenju sa $3$
+ daje ostatak jednak $2$ (invarijanta!).<br> S druge strane, obe date domine pokrivaju po jedno belo i jedno crno polje, dok figura u obliku krstića pokriva jedno belo i četiri crna polja ili obrnuto. Zaključujemo da je za svaku od datih figura razlika broja belih i broja crnih polja, koje ona pokriva, deljiva sa $3$, pa ne postoji popločavanje table sa datim figurama.
+</p>
+</div>
+    </div>
+
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 15.</h4>
+
+Borna želi svaki od brojeva $2, 3, \ldots , 32$ obojiti jednom od $k$ boja,
+  $k \in N$, tako da nijedan broj ne bude sadržalac nekog drugog broja iste boje. 
+Odrediti najmanji prirodni broj $k$ za koji Borna može to postići.<br>
+ (HRV Gradsko takmičenje 2019, 1A)
+  
+
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Primetimo da, pri takvom bojenju, brojevi $2, 4, 8, 16$ i $32$ moraju biti obojeni različitim bojama.<br>
+ Dakle, potrebno je bar 5 boja. Pokažimo da je to i dovoljno, 
+a to ilustruje naredni primer jednog od bojenja koje zadovoljava uslove zadatka:<br>
+  
+  1. boja: brojevi $2, 3$;<br>
+  2. boja: brojevi $4, 5, 6, 7$;<br>
+  3. boja: brojevi $8, 9, \ldots , 15$;<br>
+  4. boja: brojevi $16, 17, \ldots, 31$;<br>
+  5. boja: broj 32.
+
+</p>
+</div>
+    </div>
+
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 16.</h4>
+
+ Na koliko načina se tri topa mogu postaviti na šahovsku tablu
+  dimenzija $6 \times 2006$ tako da se uzajamno ne tuku (tj. dva topa se
+  ne mogu istovremeno naći u istoj vrsti ili istoj koloni)?<br>
+ (SRB Opštinsko takmičenje 2006, 1A)
+  
+ 
+
+<button type="button" class="collapsible">Rešenje</button> 
+<div class="content">
+  <p>
+Prvi top se na tu tablu može postaviti na bilo koje polje. Dakle,
+   na $6 \cdot 2006$ načina. <br>
+ Sledeći top se može postaviti na neko od polja koja se ne nalaze u istoj vrsti ili koloni sa prethodno postavljenim topom. 
+   Drugim rečima, ako se ,,precrtaju'' zabranjene vrsta i kolona i postavi drugi top na novodobijenu šahovsku tablu dimenzija $5 \times 2005$, to se može uraditi na $5\cdot 2005$ načina. Slično, posledni top se može postaviti na $4 \cdot 2004$ načina.
+  Poredak postavljanja topova nije bitan, tj. ista pozicija se pojavljuje $3! = 6$ puta.<br>
+ Dakle, ukupan broj načina da se tri topa postave na tu tablu jednak je
+  $$(6 \cdot 2006 \cdot 5 \cdot 2005 \cdot 4 \cdot 2004) : 6 = 20 \cdot 2006 \cdot 2005 \cdot 2004.$$
+
+</p>
+</div>
+    </div>
+
+
+
+
+
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+
+</html>

@@ -4,22 +4,24 @@
   "description": "GeoGebra Centar Beograd",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-parallel watch serve",
+    "start": "npm-run-parallel watch serve --force",
     "serve": "live-server",
     "watch": "grunt"
   },
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "parallax-js": "^1.0.0",
+    "particles.js": "^2.0.0"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "live-server": "^1.2.1",
-    "npm-run-parallel": "^0.6.0"
-  },
-  "dependencies": {
-    "parallax-js": "^1.0.0",
-    "particles.js": "^2.0.0"
+    "npm-run-parallel": "^0.6.0",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^4.14.0"
   }
 }

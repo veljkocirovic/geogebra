@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Polinomna formula</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra Lesson</title>
+    <link rel="icon" href="assets/images/geogebra-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<style>
+.collapsible {
+background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+    <h2 class="display-4">POLINOMNA FORMULA</h2>
+    <div class="deffinition-paragraph"> 
+Neka su $n_1,n_2,\ldots,n_k$ nenegativni celi brojevi takvi da je $n_1+n_2+\ldots+n_k=n$, broj određen sa
+$$\binom{n}{n_1,n_2,\ldots,n_k}=\frac{n!}{n_1!\cdot n_2!\cdot \ldots \cdot n_k!}$$
+zvaćemo <i>polinomnim koeficijentom</i>.  
+
+Za prirodne brojeve $k$ i $n$ važi relacija
+$$(a_1+a_2+\ldots +a_k)^n=\sum \binom{n}{n_1,n_2,\ldots,n_k} a_1^{n_1}a_2^{n_2}\ldots a_k^{n_k}$$
+gde se sabiranje vrši po svim $k-$torkama $(n_1,n_2,\ldots,n_k)$ nenegativnih celih brojeva za koje je $n_1+n_2+\ldots+n_k=n$.
+
+<div class="tips-paragraph">
+        <h4>Primer 1.</h4>
+Zapisati razvoj trećeg stepena trinoma $(x+y+z)^3$.
+<br>Primenom uvedene polinomne formule imamo da je:
+$$ (x+y+z)^3=\binom{3}{3,0,0}x^3+\binom{3}{0,3,0}y^3+\binom{3}{0,0,3}z^3+\binom{3}{2,1,0}x^2y+\binom{3}{2,0,1}x^2z 
++ \binom{3}{1,2,0}xy^2 + \binom{3}{0,2,1}y^2z+\binom{3}{1,0,2}xz^2+\binom{3}{0,1,2}yz^2+\binom{3}{1,1,1}xyz=
+$$
+$$ =  \frac{3!}{3!0!0!}x^3
++ \frac{3!}{0!3!0!}y^3+\frac{3!}{0!0!3!}z^3+ \frac{3!}{2!1!0!}x^2y+ \frac{3!}{2!0!1!}x^2z + \frac{3!}{1!2!0!} xy^2 
++ \frac{3!}{0!2!1!}y^2z + \frac{3!}{1!0!2!}xz^2 + \frac{3!}{0!1!2!}yz^2 + \frac{3!}{1!1!1!}xyz=$$ $$ =x^3+y^3+z^3+ 3x^2y+3x^2z + 3xy^2 + 3y^2z + 3xz^2 + 3yz^2+6xyz.$$
+
+ </div>
+
+<div class="tips-paragraph">
+ <h4>Primer 2.</h4>
+Odrediti koeficijent uz član $x^2y^5z^3$ u razvoju stepena trinoma $(x-y+z)^{10}$.
+<br><br><b>Rešenje:</b>  
+<br>Pošto je u ovom trinomu prisutan znak minus ispred $y$, to ćemo primeniti polinomnu formulu na  $$(x+(-y)+z)^{10}$$
+Primenom polinomne formule jednostavno dobijamo da je traženi koeficijent jednak
+$$\binom{10}{2,5,3}\cdot (-1)^5=-2520.\ $$
+
+ </div>
+
+    <div class="success-paragraph">
+        <h4>Zadatak 1.</h4>
+  Odrediti koeficijent uz $x^{23}$ u razvoju stepena polinoma $(x^9+x^5+1)^{23}$?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> Utvrdimo najpre na koji način se dolazi do člana koji sadrži $x^{23}$. Opšti član u ovom razvoju ima oblik
+$$\binom{23}{m,n,p}(x^9)^m\cdot(x^5)^n\cdot 1^p.$$
+Pošto stepen jedinice ne utiče na ono što nam treba, biće $$(x^9)^m(x^5)^n=x^{23}.$$
+ Odavde $9m+5n=23$.
+
+<br> Rešavanjem poslednje diofantseke jednačine dobijamo da je jedino njeno rešenje $m=2$, $n=1$. 
+<br>Koristeći to, dobijamo da član razvoja koji posmatramo, izgleda
+$$\binom{23}{2,1,20}(x^9)^2\cdot(x^5)^1 \cdot 1^{20}=\binom{23}{2,1,20}x^{23}=5313x^{23}.$$
+Dakle, traženi koeficijent jednak je $5313$. </p>
+</div>
+    </div>
+
+
+    <div class="success-paragraph">
+        <h4>Zadatak 2.</h4>
+Odrediti koeficijent člana $x_1^2x_2^2x_3^4x_4$ u razvoju stepena $(x_1+2x_2+x_3+x_4)^9$.
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> Koeficijent uz $x_1^2x_2^2x_3^4x_4$ u razvoju ovog polinoma je
+$$\binom{9}{2,2,4,1}\cdot2=\frac{9!}{2!2!4!1!}\cdot4.\ $$
+</p>
+</div>
+    </div>
+
+    <div class="success-paragraph">
+        <h4>Zadatak 3.</h4>
+Odrediti koeficijent uz $x_1^2x_2^2x_3^6$ u razvoju stepena polinoma $(x_1-2x_2-x_3)^{10}$.
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> Ovaj koeficijent je određen koeficijentom člana razvoja
+$$\binom{10}{2,2,6}\cdot x_1^2 (-2x_2)^2 (-x_3)^6=4\frac{10!}{2!2!6!}x_1^2 x_2^2 x_3^6$$
+ Odatle se dobija da je traženi koeficijent jednak $10080$. </p>
+</div>
+    </div>
+
+    
+    <div class="success-paragraph">
+        <h4>Zadatak 4.</h4>
+Odrediti koeficijent uz $x^{29}$ u razvoju stepena polinoma $(1+x^5+x^7+x^9)^{1000}$.
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> $\displaystyle \binom{1000}{3}\binom{997}{2}+\binom{1000}{4}\binom{996}{1}$. </p>
+</div>
+    </div>
+
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Permutacije</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra Lesson</title>
+    <link rel="icon" href="assets/images/geogebra-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<style>
+.collapsible {
+background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+    <h2 class="display-4">PERMUTACIJE</h2>
+
+
+    <div class="deffinition-paragraph">
+        <h4>Permutacije bez ponavljanja</h4>
+
+
+Neka je $A$ skup sa $n$ elemenata. Permutacija skupa $A$ je svaka $n$-varijacija bez ponavljanja elemenata tog skupa. 
+
+<div class="tips-paragraph">
+        <h4>Primer 1.</h4>
+Napisati sve permutacije elemenata skupa $\{a,b,c\}$.<br><br>
+
+<b>Rešenje.</b> To su: $abc, acb, bac, bca, cab, cba$.
+ </div>
+
+ <div class="dark-paragraph">
+<b>Teorema.</b> Broj permutacija skupa koji ima $n$ elemenata jednak je $n!$.
+</div>
+
+ <h4>Permutacije sa ponavljanjem</h4>
+
+Neka je na elementima datog skupa $A=\{a_{1},a_{2},\ldots, a_{n}\}$ definisan strogi linearni poredak
+ $a_{1}\lt a_{2}\lt \cdots \lt a_{n}$. Neka su $k_{1},k_{2},\ldots,k_{n}$ prirodni brojevi i $k_{1}+k_{2}+\cdots+k_{n}=m$.
+ Permutacija sa ponavljanjem skupa $A$ tipa $(k_{1},k_{2},\ldots,k_{n})$ je uređena $m$-torka  elemenata skupa $A$, u kojoj se 
+svaki element $a_{j}$ pojavljuju tačno $k_{j}$ puta.
+
+<div class="tips-paragraph">
+        <h4>Primer 2.</h4>
+Napisati sve permutacije sa ponavljanjem skupa $\{a,b,c\}$ tipa $(1,2,1)$.<br><br>
+
+<b>Rešenje.</b> To su: $abbc, abcb, acbb, babc, bacb, bbac, bbca, bcab, bcba, cabb, cbab, cbba$. 
+ </div>
+
+<div class="dark-paragraph">
+<b>Teorema.</b> Broj permutacija sa ponavljanjem  tipa $(k_{1},k_{2},\ldots,k_{n})$ skupa koji ima $n$ elemenata jednak je $\dfrac{(k_{1}+k_{2}+\cdots +k_{n})!}{k_{1}!k_{2}!\cdots k_{n}!}$.
+</div>
+
+
+<div class="tips-paragraph">
+        <h4>Primer 3.</h4>
+Koliko se različitih reči može napisati koristeći sva slova reči $STATISTIKA$?<br><br>
+
+<b>Rešenje.</b> Slovo $S$ se pojavljuje dva puta, slovo $T$ tri puta, slovo $A$ dva puta, slovo $I$ dva puta i slovo $K$ jednom, pa takvih reči ima koliko i 
+permutacija skupa $\{S,T,A,I,K\}$, tipa $(2,3,2,2,1)$. Njih, prema formuli iz prethodne teoreme, ima ukupno
+$$\dfrac{10!}{2!\cdot 3! \cdot 2! \cdot 2! \cdot 1!}.$$
+ </div>
+
+<div class="tips-paragraph">
+        <h4>Primer 4.</h4>
+Koliko ima petocifrenih prirodnih brojeva zapisanih ciframa skupa $\{1,2,3,4,5\}$, takvih da medju ciframa nema jednakih i 
+cifre $1$ i $2$ se pojavljuju jedna do druge?<br><br>
+
+<b>Rešenje.</b> Cifre $1$ i $2$ možemo posmatrati kao jedan blok i računati koliko ima permutacija od 4 elementa. Kako se one u takvim brojevima
+mogu javiti u dva različita redosleda $12$ ili $21$, sledi da takvih brojeva ima $2\cdot 4!=48$. <br>
+<center><img width="300" src="data/courses/kombinatorika/permutacije.png"></center>
+ </div>
+
+ <h4>Kružne permutacije</h4>
+
+Pored permutacija koje se odnose na različite linearne rasporede objekata, 
+razmotrićemo na koji način je moguće rasporediti $n$ objekata u kružnom ili cikličnom obliku.<br>
+
+Kružnim permutacijama smatraćemo rasporede različitih objekata na kružnici ili ljudi oko okruglog stola. <br>
+
+Smatraćemo da su sva mesta za okruglim stolom iste važnosti i da nisu na bilo koji način obeležena. 
+
+Specifičnost ovakvog rasporeda je što ako zarotiramo sto zajedno sa osobama, koje za njim sede, dobijamo isti raspored. <br>
+<center><img width="300" src="data/courses/kombinatorika/kruznep.jpg"></center><br>
+Tako se, na primer, permutacije $a_1a_2a_3\ldots a_{k-1}a_ka_{k+1}\ldots a_n$ i $a_ka_{k+1}\ldots a_na_1a_2a_3\ldots a_{k-1}$ međusobno ne razlikuju. <br> 
+
+Odatle zaključujemo da za svaku permutaciju $n$ različitih objekata u kružnom obliku, 
+postoji još $n-1$ permutacija koje su joj jednake (koje se dobijaju rotacijama). 
+Tako dolazimo da je ukupan broj različitih kružnih permutacija $n$ puta manji od permutacija kada su ti objekti linearno raspoređeni. Dakle, 
+kružnih permutacija ima ukupno 
+
+ $$\dfrac{n!}{n}=(n-1)!.$$
+
+<div class="tips-paragraph">
+        <h4>Primer 5.</h4>
+Na sledećoj ilustraciji dat je raspored pet osoba oko okruglog stola. Osobe su numerisane brojevima od $1$ do $5$. <br>
+<center><img width="450" src="data/courses/kombinatorika/kruzneppr.jpg"></center><br>
+
+Prva dva rasporeda na ilustraciji smatramo jednakim, jer je samo razlikuju do na rotaciju, ali ne i sa izmenom suseda.
+ Treći raspored je različit od prethodna dva.
+
+Inače, tih pet osoba se na $\dfrac{5!}{5}=4!=24$ različita načina može razmestiti za okruglim stolom.
+ </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 1.</h4>
+ 
+Na slici je prikazan jedan deo plana grada. Između blokova naselja označenih pravougaonicima su ulice. 
+Na koliko načina se od označenog donjeg levog trga može doći do označenog gornjeg desnog trga, 
+krećući se samo u pravcima jug-sever ili zapad-istok?<br>
+<center><img src="data/courses/kombinatorika/plangrada.jpg" width="25%"></center><br>
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Uočavamo da prelazaka iz jedne u druge raskrsnicu, idući u pravcu zapad-istok (desno od označenog trga), ima ukupno 4. 
+Takođe, pralazaka iz jedne u druge raskrsnicu, idući u pravcu jug-sever (na gore), ima ukupno 3.<br>
+Na osnovu izloženog zaključujemo da različitih načina za dolazak od jednog do drugog trga ima koliko i nizova dužine 7 
+u kojima postoje 4 slova D (desno) i 3 slova G (gore). Takvih nizova ima $\dfrac{7!}{4!\cdot3!}.$ 
+
+</p> 
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 2.</h4>
+Koliko ima permutacija slova reči $KORIDA$ u kojima su suglasnici raspoređeni po abecednom redu?
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Treba prebrojati permutacije u kojima su suglasnici $K$, $D$ i $R$ poređani u poretku: 
+$D$, $K$, $R$ (abecedni red). Takvih permutacija ima koliko i permutacija slova: $S, O, S, I, S, A$ (svaki suglasnik zamenjen slovom $S$), a njih ima 
+$$\dfrac{6!}{3! \cdot 1! \cdot 1! \cdot 1!}=120.$$
+
+<b>Napomena.</b> Primetimo da permutacija slova $S, O, S, I, S, A$ ima 6 (3!) puta manje od permutacija slova $S_1, O, S_2, I, S_3, A$, jer se na 
+svakoj permutaciji slova $S, O, S, I, S, A$ odgovara 6 permutacija slova $S_1, O, S_2, I, S_3, A$. 
+</p> 
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 3.</h4>
+
+Na koliko načina se na 10 stolica u jednom redu mogu rasporediti 5 dečaka i 5 devojčica, 
+tako da nikoje dve osobe istog pola ne sede jedna pored druge?
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Razlikujemo dva slučaja. Da na prvom mestu u redu sedi dečak a na drugom devojčica 
+(i u tom slučaju na neparnim mestima sede dečaci, a na parnim devojčice), ili da na prvom mestu sedi devojčica, a na drugom dečak
+ (i u tom slučaju su devojčice na neparnim, a dečaci na parnim mestima). 
+U oba slučaja, mogućih rasporeda ima $5!\cdot5!$, što ukupno daje $2 \cdot 5!\cdot5! =28 800$.
+</p> 
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 4.</h4>
+Iz kompleta koji sadrži 16 karata, od kojih su osam crvene a osam crne boje, izvlače se jedna po jedna karta bez vraćanja, 
+dok se ne izvuče svih 16. Na koliko se različitih načina može prvo izvući 8 crnih a zatim 8 crvenih?
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Prvih osam crnih možemo izvući na $8!$ načina, a zatim i osam crvenih takođe na $8!$ načina. 
+To ukupno daje $8!\cdot8!=40320^2$ mogućnosti da prvo budu izvučene sve crne pa sve crvene karte.
+</p> 
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 5.</h4>
+Na jednoj polici se nalazi pet matematičkih knjiga, tri romana i dve istorijske knjige. 
+Na koliko načina ih je moguće rasporediti tako da knjige iste vrste budu jedna do druge?
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Matematičke knjige možemo permutovati na $5!$ načina, romane na $3!$, a istorijske knjige na $2!$ načina. Konačno, knjige možemo permutovati i po vrstama na $3!$ načina.
+Dakle, ukupan broj načina za raspoređivanje knjiga na polici je $5!\cdot 3!\cdot 2! \cdot 3!$.
+
+</p> 
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 6.</h4>
+Odrediti 25. po redu permutaciju, u leksikografskom poretku, slova skupa $\{A, B, C, D, E\}$.
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Permutacija koje počinju slovom $A$ ima $4!=24$. Dakle, prva sledeća permutacija je 25. i to je prva koja počinje slovom $B$ - $BACDE$.
+</p> 
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 7.</h4>
+Na koliko načina tri muškarca i tri dame mogu sesti na šest mesta za okruglim stolom, tako da osobe istog pola ne sede jedna do druge?
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+
+Da bi se postiglo da osobe istog pola ne sede jedna do druge, muškarci i žene za tim stolom moraju sedeti naizmenično.
+Ako najpre za stolom na tri mesta, između kojih ostaje po jedno prazno, sednu tri dame, one to mogu učiniti na $2!$ načina. Na tri preostala mesta muškarci mogu sesti na $3!$ načina.
+Po prinicpu proizvoda sledi da svih šest osoba mogu sesti na $2!\cdot 3!=12$ različitih načina. 
+
+</p> 
+</div>
+    </div>
+
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 8.</h4>
+Na koliko načina je moguće postaviti osam istobojnih topova na šahovsku tablu, tako da se oni medjusobno ne napadaju?
+ 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Pri svakom takvom postavljanju osam topova na tablu, na svakoj horizontali i vertikali table biće postavljen po tačno jedan top.  <br>
+<center><img width="300" src="data/courses/kombinatorika/topovi.jpg"></center><br>
+S obzirom da se na svakoj horizontali nalazi po tačno jedan top, to ovakvih rasporeda ima ukupno $8!$
+</p> 
+</div>
+    </div>
+
+<div class="success-paragraph">
+        <h4>Zadatak 9.</h4>
+Koliko ima funkcija $f: \{1,2,3,4,5\} \rightarrow \{1,2,3,4,5\}$ koje su bijekcije? 
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Da bi funkcija $f: \begin{pmatrix} 1 & 2 & 3 & 4 & 5 \\ x & y  & z & t & v \end{pmatrix}$ bila bijekcija (svaka dva različita elementa domena 
+preslikavala u dva različita elementa kodomena, što je uslov za ,,1-1" i svaki element kodomena bio slika nekog iz domena, što je uslov za ,,na" ) 
+$x, y, z, t, v$ moraju biti različiti elementi skupa $\{1,2,3,4,5\}$. Dakle, $x, y, z, t, v$ su sve permutacije skupa $\{1,2,3,4,5\}$.
+S obzirom da njih ima $5!=120$, toliko ima i odgovarajućih funkcija. 
+</p> 
+</div>
+    </div>
+
+    <div class="error-paragraph">
+        <h4>Istraživački zadatak</h4>
+Na koliko načina je moguće postaviti 8 topova različitih boja na šahovsku tablu, tako da se oni medjusobno ne napadaju?
+ 
+    </div>
+
+
+    </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+
+</html>

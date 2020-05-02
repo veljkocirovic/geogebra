@@ -5,33 +5,33 @@ loadSesson();
 loadFooter();
 
 function loadCourses() {
-  $.getJSON("data/courses/courses.json", function(data) {
+  $.getJSON("data/courses/courses.json", function (data) {
     var courses = [];
 
-    data.forEach(function(course) {
+    data.forEach(function (course) {
       courses.push(
         "<h3 class='course-title'>" +
-          course.title +
-          "</h3><div id='" +
-          course.id +
-          "'></div>"
+        course.title +
+        "</h3><div id='" +
+        course.id +
+        "'></div>"
       );
     });
 
     $("#courses-menu").html(courses.join(""));
 
-    data.forEach(function(course) {
+    data.forEach(function (course) {
       var lessons = [];
 
-      course.lessons.forEach(function(lesson) {
+      course.lessons.forEach(function (lesson) {
         lessons.push(
           "<button onclick='onLessonClick(this)' class='lesson-title' data-course-id='" +
-            course.id +
-            "' data-lesson-id='" +
-            lesson.id +
-            "'>" +
-            lesson.title +
-            "</button>"
+          course.id +
+          "' data-lesson-id='" +
+          lesson.id +
+          "'>" +
+          lesson.title +
+          "</button>"
         );
       });
 
@@ -59,9 +59,19 @@ function loadSesson() {
   const urlParams = new URLSearchParams(window.location.search);
   const courseID = urlParams.get("courseID");
   const lessonID = urlParams.get("lessonID");
-  $.get("data/courses/" + courseID + "/" + lessonID + ".html", function(data) {
-    $("#course-text").html(data);
-  });
+
+  $.getJSON("data/courses/courses.json", function (data) {
+    var courses = data;
+
+    var currentCourse = courses.find(c => c.id === courseID);
+    var currentLesson = currentCourse.lessons.find(l => l.id === lessonID);
+
+    $.get("data/courses/" + currentCourse.folder + "/" + currentLesson.file + ".html", function (data) {
+      $("#course-text").html(data);
+    });
+
+  })
+
 }
 
 function loadFooter() {

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Varijacije</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra Lesson</title>
+    <link rel="icon" href="assets/images/geogebra-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<style>
+.collapsible {
+background-color: #3cbe63;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #9999ff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<body>
+    <h2 class="display-4">VARIJACIJE</h2>
+
+
+    <div class="deffinition-paragraph">
+        <h4>Varijacije bez ponavljanja</h4>
+Neka je $k$ prirodan broj i $A$ proizvoljan skup. <br><br>
+$k$-varijacija bez ponavljanja elemenata skupa $A$ je uređena $k$-torka različitih elemenata skupa $A$.
+
+<div class="tips-paragraph">
+        <h4>Primer 1.</h4>
+Napisati sve 2-varijacije bez ponavljanja elemenata skupa $\{a,b,c\}$.<br><br>
+
+<b>Rešenje.</b> To su: $ab, ac, ba, bc, ca, cb$.
+ </div>
+
+ <div class="dark-paragraph">
+<b>Teorema.</b> Broj $k$-varijacija bez ponavljanja $n-$točlanog skupa, $k\leq n$, jednak je $n\cdot(n-1)\cdots(n-k+1)$.
+</div>
+
+<h4>Varijacije са ponavljanjima</h4>
+
+$k$-varijacija sa ponavljanjem elemenata skupa $A$ je uređena $k$-torka  elemenata skupa $A$.
+
+<div class="tips-paragraph">
+        <h4>Primer 2.</h4>
+
+Napisati sve 3-varijacije sa ponavljanjem elemenata skupa $\{a,b\}$.<br><br>
+
+<b>Rešenje.</b> To su: $aaa, aab, aba, abb, baa, bab, bba, bbb$.
+ </div>
+ <div class="dark-paragraph">
+<b>Teorema.</b> Broj $k$-varijacija sa ponavljanjem elemenata $n$-točlanog skupa jednak je $n^{k}$.
+</div>
+
+
+<div class="tips-paragraph">
+        <h4>Primer 3.</h4>
+
+Koliko različitih lista odgovora se može dobiti na testu koji ima 8 pitanja a odgovora se zaokruživanjem DA ili NE?<br><br>
+
+<b>Rešenje.</b> Pošto se na svako pitanje može ostaviti jedan od dva moguća odgovora, različitih lista može biti $2^8=256$.
+ </div>
+
+<div class="tips-paragraph">
+        <h4>Primer 4.</h4>
+
+U jednom odeljenju je 28 učenika. Na koliko načina se mogu izabratri predsednik, zamenik predsednika i sekretar odeljenjske zajednice?<br><br>
+
+<b>Rešenje.</b> Izbor rukovodstva te odeljenjske zajednice može se modelirati 3-varijacijama bez ponavljanja skupa koji ima 28 elemenata. 
+Njihov ukupan broj jednak je $28 \cdot 27 \cdot 26$.
+ </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 1.</h4>
+  Koliko četvorocifrenih prirodnih brojeva počinje cifrom 4, ako se:<br>
+a) cifre ne mogu ponavljati; <br>    b) cifre mogu ponavljati?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+a) Brojeva $\overline{4abc}$, takvih da među nepoznatim ciframa $a, b$ i $c$ 
+ne može biti jednakih, ima koliko i 3-varijacija bez ponavljanja, elemenata skupa $\{0,1,2,3,5,6,7,8,9\}$, 
+a njih ima $9 \cdot 8 \cdot 7=504$; <br><br>
+b) Brojeva $\overline{4abc}$, takvih da za nepoznate cifre $a, b$ i $c$ nema ograničenja, ima koliko i 3-varijacija sa ponavljanjem 
+elemenatra skupa $\{0,1,\ldots,9\}$, a njih ima $10^3=1000.$
+</p> 
+</div>
+    </div>
+
+    <div class="success-paragraph">
+        <h4>Zadatak 2.</h4>
+  Koliko ima šestocifrenih prirodnih brojeva kojima su sve cifre parne?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> Šestocifrenih prirodnih brojeva čije su sve cifre parne ima koliko i svih 6-varijacia petočlanog skupa $\{0,2,4,6,8\}$, ne računajući one
+koje počinju cifrom 0. Svih takvih varijacija ima $5^6$, a onih koje počinju cifrom nula ima $5^5$. 
+Odatle sledi da traženih brojeva ima $5^6-5^5=12500$.</p> 
+</div>
+    </div>
+
+  <div class="success-paragraph">
+        <h4>Zadatak 3.</h4>
+  Koliko ima sedmocifrenih telefonskih brojeva sa svim različitim ciframa, ako oni ne mogu počinjati cifrom 0?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+Te brojeve možemo modelitati 7-varijacijama skupa svih cifara i isključiti sve takve varijacije koje počinju cifrom 0, pa tako dobijamo da ih
+ima $$10\cdot 9 \cdot 8\cdot 7\cdot 6 \cdot 5 \cdot 4 - 1 \cdot 9 \cdot 8\cdot 7\cdot 6 \cdot 5 \cdot 4 = 9\cdot 9 \cdot 8\cdot 7\cdot 6 \cdot 5 \cdot 4.$$
+Do tog rezultata smo mogli doći i koristeći princip proizvoda insistirajući da prva cifra na može biti jednaka 0. 
+  </p> 
+</div>
+    </div>
+
+
+  <div class="success-paragraph">
+        <h4>Zadatak 4.</h4>
+Iz kompleta koji ima 52 karte izvlače se tri, tako da:<br>
+a) se izvučena karta vraća u komplet;<br>
+b) se izvučena karta ne vraća u komplet.<br>
+Na koliko različitih načina je to moguće uraditi?
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+a) Ovde se radi o 3-varijacijama sa ponavljanjima elemenata 52-članog skupa i njih ima ukupno $52^3$;<br>
+b) Ovde je reč o 3-varijacijama bez ponavljanja elemenata 52-članog i njih ima ukupno $52\cdot 51\cdot 50$.
+  </p> 
+</div>
+    </div>
+
+
+  <div class="success-paragraph">
+        <h4>Zadatak 5.</h4>
+Koliko se može formirati različitih lozinki koje sadrže tačno 8 karaktera, koristeći:<br>
+a) svih 30 malih i velikih slova abecede (na primer, jedna takva lozinka je $AffBbsj$);<br>
+b) svih 30 malih slova abecede i svih 10 cifara, a da se karakteri ne mogu ponavljati (na primer, jedna takva lozinka je $12sd9kj5$);<br>
+c) samo velika slova $M$ i $N$ i cifru $1$ (na primer, jedna takva lozinka je $M1NNN1MM$).
+
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p> 
+a) $60^8$;<br>
+b) $40\cdot 39 \cdot 38 \cdot 37\cdot 36 \cdot 35 \cdot 34 \cdot 33$;<br>
+c) $3^8$.
+  </p> 
+</div>
+    </div>
+
+
+<div class="success-paragraph">
+        <h4>Zadatak 6.</h4>
+
+Na koliko načina 3 osobe mogu sesti na 5 praznih mesta?<br><br>
+
+<button type="button" class="collapsible">Rešenje</button>
+<div class="content">
+  <p>  Prva osoba može odabrati jedno od 5 mesta, druga osoba može odabrati jedno od 4 preostala mesta, 
+a treća jedno od 3 preostala mesta. 
+Dakle, mogućih načina da ove tri osobe sednu je $5\cdot4\cdot3=60$.
+ </div>
+</div>
+
+    <div class="error-paragraph">
+        <h4>Istraživački zadatak</h4>
+U binarnom brojevnom sistemu se brojevi zapisuju korišćenjem cifara 0 i 1. Koliko elemenata ima skup $A$ koji sadrži sve
+prirodne brojeve zapisane u binarnom sistemu sa bar tri i ne više od sedam cifara?
+
+    </div>
+
+
+    </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+
+</html>
