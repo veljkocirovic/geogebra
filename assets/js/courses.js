@@ -72,7 +72,9 @@ function loadSesson() {
             course.title +
             "</h3><div id='" +
             course.id +
-            "'><p class='lead'>" + course.description + "</p></div>"
+            "'><p class='lead'>" +
+            course.description +
+            "</p></div>"
         );
       });
 
@@ -104,3 +106,11 @@ function loadFooter() {
     },
   ]);
 }
+
+$("#courses-menu-btn").click(function () {
+  $("#courses-menu-wrapper").show();
+});
+
+$("#courses-menu-close-btn").click(function () {
+  $("#courses-menu-wrapper").hide();
+});

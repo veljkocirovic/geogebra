@@ -27,12 +27,44 @@
       color: $main-color;
     }
   }
+  @media (max-width: 992px) {
+    display: none;
+    background-color: $light-color;
+    position: absolute;
+    width: 100vw;
+    z-index: 1000;
+  }
+}
+
+.courses-menu-header{
+  height: 24px;
 }
 
 .courses-content {
   width: calc(100vw - 350px);
   height: calc(100vh - 60px);
   overflow-y: auto;
+  @media (max-width: 992px) {
+    width: 100vw;
+  }
+}
+
+#courses-menu-close-btn {
+  position: absolute;
+  right: 0;
+  margin: 12px;
+  display: none;
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+
+#courses-menu-btn {
+  margin: 12px;
+  display: none;
+  @media (max-width: 992px) {
+    display: block;
+  }
 }
 
 #course-text {

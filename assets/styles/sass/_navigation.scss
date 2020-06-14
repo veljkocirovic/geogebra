@@ -1,11 +1,16 @@
-.navbar{
-    height: 60px;
+.navbar {
+  height: 60px;
 }
 
-.nav-item{
-    margin: 0 10px 0 10px;
+.nav-item {
+  margin: 0 10px 0 10px;
 }
 
-.navbar-toggler{
-    border: none;
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-collapse {
+  background-color: $light-color;
+  text-align: right;
 }

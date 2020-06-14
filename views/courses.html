@@ -1,18 +1,38 @@
 <div class="container-fluid courses-wrapper p-0">
-    <div class="courses-menu" id="courses-menu">
-
+  <div class="courses-menu" id="courses-menu-wrapper">
+    <div class="courses-menu-header">
+      <button
+        class="btn btn-secondary"
+        id="courses-menu-close-btn"
+        title="Zatvori"
+      >
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
     </div>
-    <div class="courses-content">
-        <div id="course-text" class="text-justify">
-            <div class="col-lg-12 text-center">
-                <h1 class="display-4">Kursevi</h1>
-            </div>
-            <div class="col-8 offset-2 justify-content-center">
-                <div class="justify-content-center font-md my-3" id="courses-home">
-                </div>
-            </div>
-        </div>
-        <div id="course-footer"></div>
+    <div class="courses-menu-body" id="courses-menu"></div>
+  </div>
+  <div class="courses-content">
+    <div class="courses-menu-mobile">
+      <button
+        class="btn btn-secondary"
+        id="courses-menu-btn"
+        title="Svi Kursevi"
+      >
+        <i class="fa fa-bars mr-2" aria-hidden="true"></i> Svi Kursevi
+      </button>
     </div>
 
+    <div id="course-text">
+      <div class="col-lg-12 text-center">
+        <h1 class="display-4">Kursevi</h1>
+      </div>
+      <div class="col-8 offset-2 justify-content-center">
+        <div
+          class="justify-content-center font-md my-3"
+          id="courses-home"
+        ></div>
+      </div>
+    </div>
+    <div id="course-footer"></div>
+  </div>
 </div>
