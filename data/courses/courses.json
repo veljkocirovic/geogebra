@@ -76,5 +76,69 @@
         "title": "Iz istorije kombinatorike"
       }
     ]
+  },
+  {
+    "id": "3D_GeoGebra",
+    "title": "ELEKTRONSKE LEKCIJE IZ 3D GEOGEBRE",
+    "folder": "3D_GeoGebra",
+    "description": "Kurs sadrži elektronske lekcije iz 3D GeoGebre. U njemu se prikazuje kako se pokreće 3D GeoGebra i kako izgleda osnovni prozor 3D GeoGebre. Takođe, kurs sadrži lekcije o konstrukciji osnovnih geometrijskih tela koje se obrađuju u 8. razredu osnovne škole(prizma, piramida, valjak, kupa i lopta). ",
+    "lessons": [
+      {
+        "id": "Uvod",
+        "file": "3D_GeoGebra_Uvod_u_3D_GeoGebru",
+        "title": "3D GeoGebra"
+      },
+      {
+        "id": "Prizma",
+        "file": "3D_GeoGebra_Prizma",
+        "title": "Prizma"
+      },
+      {
+        "id": "Prizma_primer",
+        "file": "3D_GeoGebra_Prizma_primer",
+        "title": "Primer prizme"
+      },
+      {
+        "id": "Piramida",
+        "file": "3D_GeoGebra_Piramida",
+        "title": "Piramida"
+      },
+      {
+        "id": "Piramida_primer",
+        "file": "3D_GeoGebra_Piramida_primer",
+        "title": "Primer piramide"
+      },
+      {
+        "id": "Valjak",
+        "file": "3D_GeoGebra_Valjak",
+        "title": "Valjak"
+      },
+      {
+        "id": "Valjak_primer",
+        "file": "3D_GeoGebra_Valjak_primer",
+        "title": "Primer valjka"
+      },
+      {
+        "id": "Kupa",
+        "file": "3D_GeoGebra_Kupa",
+        "title": "Kupa"
+      },
+      {
+        "id": "Kupa_primer",
+        "file": "3D_GeoGebra_Kupa_primer",
+        "title": "Primer kupe"
+      },
+      {
+        "id": "Lopta",
+        "file": "3D_GeoGebra_Lopta",
+        "title": "Lopta"
+      },
+      {
+        "id": "Lopta_primer",
+        "file": "3D_GeoGebra_Lopta_primer",
+        "title": "Primer lopte"
+      }
+    
+    ]
   }
 ]
