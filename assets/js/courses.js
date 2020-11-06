@@ -4,6 +4,8 @@ loadCourses();
 loadSesson();
 loadFooter();
 
+var menuScrollPosition = null;
+
 function loadCourses() {
   $.getJSON("data/courses/courses.json", function (data) {
     var courses = [];
@@ -11,10 +13,10 @@ function loadCourses() {
     data.forEach(function (course) {
       courses.push(
         "<h3 class='course-title'>" +
-          course.title +
-          "</h3><div id='" +
-          course.id +
-          "'></div>"
+        course.title +
+        "</h3><div id='" +
+        course.id +
+        "'></div>"
       );
     });
 
@@ -26,12 +28,12 @@ function loadCourses() {
       course.lessons.forEach(function (lesson) {
         lessons.push(
           "<button onclick='onLessonClick(this)' class='lesson-title' data-course-id='" +
-            course.id +
-            "' data-lesson-id='" +
-            lesson.id +
-            "'>" +
-            lesson.title +
-            "</button>"
+          course.id +
+          "' data-lesson-id='" +
+          lesson.id +
+          "'>" +
+          lesson.title +
+          "</button>"
         );
       });
 
@@ -52,7 +54,14 @@ function onLessonClick(button) {
     queryParams += prop + "=" + queryParamsObj[prop];
     queryParams += "&";
   }
+
   document.location.search = queryParams;
+}
+
+function onScroll() {
+  const coursesMenu = document.getElementById("courses-menu-wrapper");
+  menuScrollPosition = coursesMenu.scrollTop;
+  localStorage.setItem('menuScrollPosition', menuScrollPosition)
 }
 
 function loadSesson() {
@@ -69,12 +78,12 @@ function loadSesson() {
       data.forEach(function (course) {
         coursesHomeList.push(
           "<h3 class='text-center'>" +
-            course.title +
-            "</h3><div id='" +
-            course.id +
-            "'><p class='lead'>" +
-            course.description +
-            "</p></div>"
+          course.title +
+          "</h3><div id='" +
+          course.id +
+          "'><p class='lead'>" +
+          course.description +
+          "</p></div>"
         );
       });
 
@@ -86,12 +95,16 @@ function loadSesson() {
 
     $.get(
       "data/courses/" +
-        currentCourse.folder +
-        "/" +
-        currentLesson.file +
-        ".html",
+      currentCourse.folder +
+      "/" +
+      currentLesson.file +
+      ".html",
       function (data) {
         $("#course-text").html(data);
+
+        menuScrollPosition = localStorage.getItem('menuScrollPosition');
+        const coursesMenu = document.getElementById("courses-menu-wrapper");
+        coursesMenu.scrollTop = menuScrollPosition;
       }
     );
   });
